@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 
@@ -64,11 +64,10 @@ const NavBar = () => {
                             </Link>
                         </li>
                     ))}
+
                     <div className="flex flex-col justify-center items-center">
                         <p className='text-2xl'>
-
                         </p>
-                        
                     </div>
                 </ul>
             )}
