@@ -9,28 +9,23 @@ const NavBar = () => {
     const links = [
         {
             id: 1,
-            link: 'Estaciones',
-            defaultMsg: 'estaciones'
+            link: 'Estaciones'
         },
         {
             id: 2,
-            link: 'SubEstaciones',
-            defaultMsg: 'subestaciones'
+            link: 'SubEstaciones'
         },
         {
             id: 3,
-            link: 'Comunicaciones',
-            defaultMsg: 'comunicaciones'
+            link: 'Comunicaciones'
         },
         {
             id: 4,
-            link: 'Cambios',
-            defaultMsg: 'cambios'
+            link: 'Cambios'
         },
         {
             id: 5,
-            link: 'Listas',
-            defaultMsg: 'listas'
+            link: 'Listas'
         },
     ]
 
@@ -43,10 +38,10 @@ const NavBar = () => {
                 </h1>
             </div>
 
-            <ul className='hidden md:flex'>
+            <ul className='flex hidden md:flex'>
                 {links.map(({ id, link }) => (
-                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-                        <Link to={link} smooth duration={500}>
+                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200'>
+                        <Link to={link} smooth duration={500}>{link}
                         </Link>
                     </li>
                 ))}
@@ -61,6 +56,7 @@ const NavBar = () => {
                     {links.map(({ id, link }) => (
                         <li key={id} className='px-4 cursor-pointer capitalize py-6 text-4xl'>
                             <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>
+                                {link}
                             </Link>
                         </li>
                     ))}
@@ -71,7 +67,6 @@ const NavBar = () => {
                     </div>
                 </ul>
             )}
-
 
         </div>
     )
