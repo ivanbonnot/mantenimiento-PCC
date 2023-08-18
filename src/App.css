@@ -1,10 +1,12 @@
-.App__bg {
+.app__bg {
+  height: 100%;
+  width: 100vw;
   text-align: center;
   background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(55,55,55,1) 0%, rgba(0,93,116,1) 100%);
 }
 
-.App-logo {
+.app-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -15,7 +17,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(55,55,55,1) 0%, rgba(
   }
 }
 
-.App-header {
+.app-header {
  
   min-height: 100vh;
   display: flex;
@@ -26,8 +28,35 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(55,55,55,1) 0%, rgba(
   color: white;
 }
 
-.App-link {
+.app-link {
   color: #61dafb;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  line-height: 29.9px;
+  font-size: 23px;
+}
+
+.p__opensans {
+  font-family: var(--font-alt);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
 }
 
 @keyframes App-logo-spin {

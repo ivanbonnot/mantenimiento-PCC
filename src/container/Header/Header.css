@@ -1,0 +1,7 @@
+.app__header-wrapper {
+    padding-top: 100px;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
