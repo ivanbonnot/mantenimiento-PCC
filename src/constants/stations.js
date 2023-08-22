@@ -1,181 +1,178 @@
-
-
 const et = [
   {
     title: "Basso",
-    id: 1,
+    id: "basso",
   },
   {
     title: "Chajarí",
-    id: 2,
+    id: "chajarí",
   },
   {
     title: "Colón",
-    id: 3,
+    id: "colón",
   },
   {
     title: "Colonia Elia",
-    id: 4,
+    id: "colonia elia",
   },
   {
     title: "Concordia",
-    id: 5,
+    id: "concordia",
   },
   {
     title: "Gualeguaychú",
-    id: 6,
+    id: "gualeguaychú",
   },
   {
     title: "Masisa",
-    id: 7,
+    id: "masisa",
   },
   {
     title: "San José",
-    id: 8,
+    id: "san josé",
   },
   {
     title: "Uruguay Norte",
-    id: 9,
+    id: "uruguay norte",
   },
   {
     title: "Uruguay Sur",
-    id: 10,
+    id: "uruguay sur",
   },
   {
     title: "San Salvador",
-    id: 11,
+    id: "san salvador",
   },
   {
     title: "Villa Elisa",
-    id: 12,
+    id: "villa elisa",
   },
 ];
-
 
 const set = [
   {
     title: "Baylina",
-    id: 1,
+    id: "baylina",
   },
   {
     title: "Bonn",
-    id: 2,
+    id: "bonn",
   },
   {
     title: "Caseros",
-    id: 3,
+    id: "caseros",
   },
   {
     title: "Ceibas",
-    id: 4,
+    id: "ceibas",
   },
   {
     title: "Colón",
-    id: 5,
+    id: "colón",
   },
   {
     title: "Colonia Oficial",
-    id: 6,
+    id: "colonia oficial",
   },
   {
     title: "Colonia Roca",
-    id: 7,
+    id: "colonia roca",
   },
   {
     title: "El Puente",
-    id: 8,
+    id: "el puente",
   },
   {
     title: "Federación",
-    id: 9,
+    id: "federación",
   },
   {
     title: "General Campos",
-    id: 10,
+    id: "general campos",
   },
   {
     title: "Humaitá",
-    id: 11,
+    id: "humaitá",
   },
   {
     title: "Ibicuicito",
-    id: 12,
+    id: "ibicuicito",
   },
   {
     title: "Ibicuy",
-    id: 13,
+    id: "ibicuy",
   },
   {
     title: "Juan Jorge",
-    id: 14,
+    id: "juan jorge",
   },
   {
     title: "Jubileo",
-    id: 15,
+    id: "jubileo",
   },
   {
     title: "Larroque",
-    id: 16,
+    id: "larroque",
   },
   {
     title: "Mabragaña",
-    id: 17,
+    id: "mabragaña",
   },
   {
     title: "Móvil 5MVA",
-    id: 18,
+    id: "móvil 5mva",
   },
   {
     title: "Nueva Escocia",
-    id: 19,
+    id: "nueva escocia",
   },
   {
     title: "Paranacito",
-    id: 20,
+    id: "paranacito",
   },
   {
     title: "Pronunciamiento",
-    id: 21,
+    id: "pronunciamiento",
   },
   {
     title: "Puente Quebracho",
-    id: 22,
+    id: "puente quebracho",
   },
   {
     title: "Redomón",
-    id: 23,
+    id: "redomón",
   },
   {
     title: "Rocamora",
-    id: 24,
+    id: "rocamora",
   },
   {
     title: "Rosario del Tala",
-    id: 25,
+    id: "rosario del tala",
   },
   {
     title: "San Marcial",
-    id: 26,
+    id: "san marcial",
   },
   {
     title: "San Vicente",
-    id: 27,
+    id: "san vicente",
   },
   {
     title: "Santa Anita",
-    id: 28,
+    id: "santa anita",
   },
   {
     title: "Urdinarrain",
-    id: 29,
+    id: "urdinarrain",
   },
   {
     title: "Villa Elisa",
-    id: 30,
+    id: "villa elisa",
   },
   {
     title: "Zenón Roca",
-    id: 31,
+    id: "zenón roca",
   },
 ];
 
