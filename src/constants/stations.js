@@ -1,4 +1,4 @@
-const et = [
+export const et = [
   {
     title: "Basso",
     id: "basso",
@@ -49,7 +49,7 @@ const et = [
   },
 ];
 
-const set = [
+export const set = [
   {
     title: "Baylina",
     id: "baylina",
@@ -176,4 +176,4 @@ const set = [
   },
 ];
 
-export default { et, set };
+
