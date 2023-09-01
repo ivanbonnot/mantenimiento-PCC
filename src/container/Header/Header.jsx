@@ -14,7 +14,7 @@ const Header = () => (
             <p className="p__opensans">
               <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
               <button>
-                <Link to={`notes`}> {title} </Link>
+                <Link to={`notes/${id}`}> {title} </Link>
               </button>
             </p>
           </div>
@@ -29,14 +29,14 @@ const Header = () => (
             <p className="p__opensans">
               <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
               <button>
-                <Link to={`notes`}> {title} </Link>
+                <Link to={`notes/${id}`}> {title} </Link>
               </button>
             </p>
           </div>
         ))}
       </div>
     </div>
-    
+
   </div>
 );
 
