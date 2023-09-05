@@ -1,3 +1,11 @@
+.then(response => {
+        // Filtrar la nota por ID
+        const note = response.data.find(item => item.estacion === id);
+        setNoteData(note); // Almacenar la nota en el estado
+        console.log(note)
+      })
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
