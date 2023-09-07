@@ -1,38 +1,49 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { et, set } from "../../constants/stations.js";
+import './Notes.css'
 
 const Notes = () => {
   const { id } = useParams();
-  const [noteData, setNoteData] = useState([]); // Estado para almacenar los datos de la nota
-
-  // Buscar el objeto en las listas "et" y "set" que coincida con el ID
-  const note = [...et, ...set].find((item) => item.id === id);
-  console.log(note); //aca devuelve objeto con title e id, el que seleccione
+  const [noteData, setNoteData] = useState([]);
 
   useEffect(() => {
-    // Realizar la solicitud para cargar los datos de notes.json
     axios
-      .get("./notes.json") // Reemplaza 'ruta-a-tu-notes.json' con la ruta correcta
-      .then((res) => setNoteData(res));
-      console.log(noteData)
-      .catch((error) => {
-      console.error("Error al cargar los datos:", error);
-    });
-    
-  }, []);
+      .get("../notes.json")
+      .then(res => {
+        const note = res.data.filter(item => item.estacion === id);
+        setNoteData(note);
+      })
+      .catch(err => console.log(err))
+  }, [id]);
 
-  useEffect(() => {
-    // Mover la lógica que depende de noteData aquí
-    console.log(noteData);
-  }, [noteData]);
 
   return (
-    <div>
+    <div className="app__bg app__notes-container">
       {console.log(noteData)}
-      {note ? (
-        <div>{/* Resto del contenido del componente */}</div>
+      {noteData ? (
+        <div className="app__notes-wrapper">
+
+          <div className="app__notes-read">
+            <h1 className="p__cormorant">Notas ET {id}</h1>
+            {noteData.map(({ idnota, title, nota, fecha, creador }) =>
+              <div className="app__notes-note" key={idnota}>
+                <p className="title p__opensans">Título:  {title}</p>
+                <p className="note p__opensans">Aclaración:  {nota}</p>
+                <p className="author p__opensans">Fecha:  {fecha}</p>
+                <p className="date p__opensans">Autor:  {creador}</p>
+              </div>
+            )}
+          </div>
+
+          <div className="app__notes-write">
+
+            <input type="text" placeholder="Titulo" className="app__notes-write_title" />
+            <textarea type="textarea" row={10} placeholder="Aclaración" className="app__notes-write_note" />
+            <button type="button" className="custom__button">Agregar nota</button>
+
+          </div>
+        </div>
       ) : (
         <div>
           <h2>Note not found</h2>
