@@ -39,6 +39,12 @@
     font-size: 0.75rem;
 }
 
+.app__notes-note .delete__button:hover {
+    transition: all ease-in-out 300ms;
+    color: white;
+    transform: scale(1.02);
+}
+
 .app__notes-write {
     background-color: var(--color-black);
     margin-top: 25px;
@@ -60,12 +66,6 @@
     resize: none;
 }
 
-<<<<<<< HEAD
-.app__notes-write button{
-    margin: 1rem 0 1rem 3rem;
-}
-
-=======
 .app__notes-write h2 {
     margin: 2rem 0 0rem 2rem;
     font-size: 1.75rem;
@@ -75,8 +75,15 @@
     margin: 1rem 0 3rem 2rem;
 }
 
+.app__notes-write button:hover {
+    transition: all ease-in-out 300ms;
+    color: white;
+    transform: scale(1.02);
+}
 
->>>>>>> 09351eab1cfd168d3817c321b79da536a6fbc188
+
+
 input[type=text]:focus {
     border: 3px solid #555;
 }
+
