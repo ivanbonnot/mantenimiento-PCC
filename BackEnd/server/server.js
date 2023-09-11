@@ -1,143 +1,141 @@
-/* Consigna: 
-----------------------------------------------------------------------------------
+const morgan = require('morgan');
+const express = require('express');
+const compression = require('compression')
+const logger = require('../log/log4js')
+const expressSession = require('express-session')
+const mongoStore = require('connect-mongo')
+const { engine } = require('express-handlebars');
+const path = require('path');
 
------------------------------------------------------------------------------------------
-*/
 
-const { config, staticFiles, mongocredentialsession, usersessiontime } = require('../config/environment')
-const { logger, loggererr } = require('../log/logger')
-const { websocket } = require('../websocket/socketservice')
-
-const express = require('express')
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
-const http = require('http')
-const socketIo = require('socket.io')
-const mongoStore = require('connect-mongo')
-const expressSession = require('express-session')
-const { engine } = require('express-handlebars')
+const { config, mongodbSecretPin, userSessionTime, mongodbUri } = require('../config/enviroment')
 
-const path = require ("path")
-const productRouter = require('../routes/productRouter')
-const cartRouter = require('../routes/cartRouter')
-const chatRouter = require('../routes/chatRouter.js')
-const sessionRouter = require('../routes/sessionRouter')
-const infoRouter = require('../routes/infoRouter')
+require('dotenv').config()
 
 const advancedOptions = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 }
 
 
-// --------------------- SERVER
-const createServer = () => {
+const baseProcces = () => {
 
-  const app = express()
-  const server = http.createServer(app)
-  const io = socketIo(server)
-
-  app.set('views', path.resolve(__dirname, '../views'))
-  app.engine('hbs', engine({ extname: 'hbs' }))
-  app.set('view engine', 'hbs')
-   
-  //---------------------- MIDDLEWARES
-  app.use(express.json())
-  app.use(express.urlencoded({ extended: true }))
-  app.use(express.static(staticFiles))
-  try {
-    app.use(expressSession({
-      store: mongoStore.create({
-        mongoUrl: mongocredentialsession,
-        mongoOptions: advancedOptions
-      }),
-      secret: 'secret-pin',
-      resave: false,
-      saveUninitialized: false,
-      cookie: {
-        maxAge: Number(usersessiontime)
-      }
-    }))
-  } catch (error) {
-    logger.error(`Error en la conexion a la base de datos: ${error}`)  
-  } 
-
-  //---------------------- SOCKET
-  websocket( io )
-
-  //---------------------- ROUTES
-  //--- SESSION ROUTER 
-  app.use('/session', sessionRouter)
-
-  //--- API REST ROUTER 
-  app.use('/api', productRouter)
-
-  //--- CART ROUTER
-  app.use('/api', cartRouter)
-
-  //--- CHAT ROUTER
-  app.use('/api', chatRouter)
-
-  //--- INFO ROUTER
-  app.use('/info', infoRouter)
-
-  //--- Rutas no implementadas
-  app.get('*', (req, res, next) => {
-    const fileExtension = path.extname(req.url)
-    if (fileExtension === '.ico') {
-      next()
-    } else {
-      logger.warn(`Ruta: ${req.url}, método: ${req.method} no implementada`)
-      res.send(`Ruta: ${req.url}, método: ${req.method} no implementada`)
-    }
-  })
-
-  return { server, io }
-}
-
-
-
-//---------------------------- CLUSTER / FORK  -------------------------------
-
-const startCluster = () => {
-  if (cluster.isPrimary) {
-    logger.info('Server in CLUSTER mode')
-    logger.info('----------------------')
-    for (let i = 0; i < numCPUs; i++) {
-      cluster.fork()
-    }
-  } else {
-    logger.info(`Worker ${cluster.worker.id} started`)
-    PORT = config.same === 1 ? PORT + cluster.worker.id - 1 : PORT
-    try {
-      createServer().server.listen(PORT, () => {
-        logger.info(`Worker ${cluster.worker.id} listening on port ${PORT}`)
-      })
-    } catch (error) {
-      logger.error(`Error starting worker ${cluster.worker.id}: ${error}`)
-    }
-  }
-}
-
-const startFork = () => {
-  logger.info('Server in FORK mode')
-  logger.info('-------------------')
-  try {
-    createServer().server.listen(PORT, () => {
-      logger.info(`Server listening on port ${PORT}`)
+    cluster.on('exit', (worker, code, signal) => {
+        console.log(`Process ${worker.process.pid} failure!`)
+        cluster.fork()
     })
-  } catch (error) {
-    logger.error(`Error starting server: ${error}`)
-  }
+
+    const { Server: HTTPServer } = require('http');
+    const { Server: IOServer } = require('socket.io');
+
+    const infoRouter = require('../routes/api/infoRouter')
+    const productsRouter = require("../routes/api/productRouter");
+    const authWebRouter = require('../routes/web/authRouter')
+    const homeWebRouter = require('../routes/web/homeRouter')
+    const cartRouter = require("../routes/api/cartRouter")
+
+    const connectToDb = require("../config/connectToDB");
+
+    const app = express();
+
+
+    const httpServer = new HTTPServer(app);
+    const io = new IOServer(httpServer);
+
+    const { addChatController, getAllChatsController, deleteAllChatsController } = require('../controllers/chatsController')
+
+    //Settings
+    app.engine('hbs', engine());
+    app.set('view engine', 'hbs');
+    //app.set('views', 'views');
+    app.set('port', process.env.PORT || 8080)
+    app.set('json spaces', 2)
+    
+
+    //Middlewares
+    app.set(express.static(path.join(__dirname, 'public')));
+    app.use(compression())
+    app.use(morgan('dev'))
+    app.use(express.urlencoded({ extended: true }))
+    app.use(express.json())
+    //app.use(express.static(staticFiles))
+    //app.use(express.static('./public'))
+
+
+    app.use(expressSession({
+        store: mongoStore.create({
+            mongoUrl: mongodbUri,
+            mongoOptions: advancedOptions
+        }),
+        secret: mongodbSecretPin,
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            maxAge: Number(userSessionTime)
+        }
+    }))
+
+
+    const PORT = 8080
+    const server = httpServer.listen(PORT, () => {
+        connectToDb("mongo")
+        logger.info(`Servidor http escuchando en el puerto ${server.address().port}`)
+    })
+    server.on('error', error => logger.error(`Error en servidor ${error}`))
+
+
+    //Routes
+    app.use("/", infoRouter)
+    app.use("/", productsRouter)
+    app.use("/", cartRouter)
+    //__ WebServ Routes __//
+    app.use("/", authWebRouter)
+    app.use("/", homeWebRouter)
+
+
+    //websocket
+    io.on('connection', async socket => {
+        logger.info('Nuevo cliente conectado!');
+        // carga inicial de mensajes
+        socket.emit('mensajes', await getAllChatsController());
+
+        // actualizacion de mensajes
+        socket.on('nuevoMensaje', async mensaje => {
+            mensaje.date = new Date().toLocaleString()
+            addChatController(mensaje)
+            io.sockets.emit('mensajes', await getAllChatsController());
+        })
+
+        socket.on('borrarMensajes', async => {
+            deleteAllChatsController()
+            io.sockets.emit('mensajes', getAllChatsController());
+        })
+            
+    });
+
 }
 
 
-// MAIN
+if (config.mode != 'CLUSTER') {
 
-let PORT = ( config.port ) ? config.port : 8080 // puerto por defecto 8080
-
-if (config.mode === 'CLUSTER') {
-  startCluster()
+    //-- Servidor FORK
+    logger.info('Server en modo FORK')
+    logger.info('-------------------')
+    baseProcces()
 } else {
-  startFork()
+
+    //-- Servidor CLUSTER   
+    if (cluster.isPrimary) {
+        logger.info('Server en modo CLUSTER')
+        logger.info('----------------------')
+        for (let i = 0; i < numCPUs; i++) { // creo tantos procesos como cpus tengo
+            cluster.fork()
+        }
+    } else {
+        baseProcces()
+    }
 }
+
+

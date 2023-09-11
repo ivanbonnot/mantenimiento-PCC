@@ -1,15 +1,10 @@
-const { getAllByUserDto, addMessageDto } = require('../DTO/chatDto')
+const { getAllChatsDTO, addChatDTO, deleteAllChatsDTO } = require('../DTO/chatDto')
 
 
-const getAllByUserController = async( username ) => {
-  const allChats = await getAllByUserDto( username )
-  return allChats
-}
+const getAllChatsController = () =>  getAllChatsDTO()
 
+const addChatController =  ( message ) => addChatDTO( message )
 
-const addMessageController = async ( username, type, body ) => {
-  addMessageDto( username, type, body )
-  return 
-}
+const deleteAllChatsController = () => deleteAllChatsDTO()
 
-module.exports = { getAllByUserController, addMessageController }
+module.exports = { getAllChatsController, addChatController, deleteAllChatsController }

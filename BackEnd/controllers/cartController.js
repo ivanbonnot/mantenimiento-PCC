@@ -1,35 +1,25 @@
-const { getCartDto, addProductToCartDto, delProductFromCartDto, delCartDto, newOrderDto } = require('../DTO/cartDto')
+const { getCartDto, addProductToCartDto, deleteProductFromCartDto, deleteCartDto, newOrderDto } = require('../DTO/cartDto')
 const { getAllProductsController } = require('../controllers/productsController')
-const { sendEmail } = require('../messages/email')
-const { adminmail } = require('../config/environment')
+const sendEmail = require('../helpers/nodeMailer')
+const { emailAdmin, emailNodeMailer } = require('../config/enviroment')
 
-const getCartController = async( username ) => {
-  const cart = await getCartDto( username )
-  return cart
-}
+const getCartController = (userEmail) => getCartDto(userEmail)
 
-const addProductToCartController = async( itemId, number, username ) => {
-  const response = await addProductToCartDto( itemId, number, username )
-  return response
-}
+const addProductToCartController = (itemId, number, userEmail) => addProductToCartDto(itemId, number, userEmail)
 
-const delProductFromCartController = async( itemId, username ) => {
-  const response = await delProductFromCartDto( itemId, username )
-  return response
-}
+const deleteProductFromCartController = (itemId, userEmail) => deleteProductFromCartDto(itemId, userEmail)
 
-const delCartController = async( username ) => {
-  const response = await delCartDto( username )
-  return response
-}
+const deleteCartController = (userEmail) => deleteCartDto(userEmail)
 
-const newOrderController = async( username ) => {
-  const cart = await getCartDto( username )
-  if ( cart.products.length === 0 ) return false
+const newOrderController = async (userEmail) => {
+
+  const cart = await getCartDto(userEmail)
+
+  if (cart.products.length === 0) return false
 
   const products = await getAllProductsController()
-  const orderArray = cart.products.map ( cartItem => {
-    const productDetails = products.find( product => product.id === cartItem.id )
+  const orderArray = cart.products.map(cartItem => {
+    const productDetails = products.find(product => product.id === cartItem.id)
     return {
       ...cartItem,
       price: productDetails.price,
@@ -37,37 +27,64 @@ const newOrderController = async( username ) => {
     }
   })
   const order = {
-    username: username,
-    sendaddress: cart.sendaddress,
+    userEmail: cart.userEmail,
     products: orderArray
   }
-  const responseOrder = await newOrderDto( order )
-  const responseDelete = await delCartDto( username )
-  sendEmail({
-    from: 'Administrador',
-    to: adminmail,
-    subject: 'Nuevo pedido',
-    text: '',
-    html: `
-    <table>
-      <tbody>
-        <tr>
-          <td>Username</td>
-          <td>${username}</td>
-        </tr>
-        <tr>
-          <td>Send address</td>
-          <td>${cart.sendaddress}</td>
-        </tr>
-        <tr>
-          <td>Products</td>
-          <td>${JSON.stringify(orderArray)}</td>
-        </tr>
-      </tbody>
-    </table>`
-  })
-  return ( responseOrder & responseDelete) ? true : false
+  const responseOrder = await newOrderDto(order)
+  //const responseDelete =  await deleteCartDto( userEmail )
+  let messageToSend = ''
+  let html = `
+  <table>
+    <tbody>
+      <tr>
+        <td>Email del usuario</td>
+        <td>${cart.userEmail}</td>
+      </tr>
+      <tr>
+        <td>Products</td>
+        <td>${JSON.stringify(orderArray)}</td>
+      </tr>
+    </tbody>
+  </table>`
+
+  await sendEmail(
+    emailAdmin,
+    messageToSend,
+    `Nuevo pedido de ${userEmail}`,
+    html
+  )
+
+  return responseOrder
+  // && responseDelete
+
 }
 
 
-module.exports = { getCartController, addProductToCartController, delProductFromCartController, delCartController, newOrderController }
+module.exports = { getCartController, addProductToCartController, deleteProductFromCartController, deleteCartController, newOrderController }
+
+/*
+sendEmail({
+  from: 'Administrador',
+  to: emailNodeMailer,
+  subject: 'Nuevo pedido',
+  text: '',
+  html: `
+  <table>
+    <tbody>
+      <tr>
+        <td>Username</td>
+        <td>${userEmail}</td>
+      </tr>
+      <tr>
+        <td>Email del usuario</td>
+        <td>${cart.userEmail}</td>
+      </tr>
+      <tr>
+        <td>Products</td>
+        <td>${JSON.stringify(orderArray)}</td>
+      </tr>
+    </tbody>
+  </table>`
+})
+
+*/

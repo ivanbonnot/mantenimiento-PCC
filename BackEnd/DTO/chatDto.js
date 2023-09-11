@@ -1,18 +1,11 @@
-const getDao = require('../DAO/factory')
+const factoryDAO = require("../DAO/factory");
 
+const chats = factoryDAO()
 
-const getAllByUserDto = async( username ) => {
-  const chats = await ( await getDao()).chats
-  const allChats = await chats.getAllByUser( username )
-  return allChats
-}
+const getAllChatsDTO = () => chats.getAllChats();
 
-const addMessageDto = async( username, type, body ) => {
-  const chats = await ( await getDao()).chats
-  await chats.addMessage( username, type, body )
-  return 
-}
+const addChatDTO = (message) => chats.saveChat(message);
+ 
+const deleteAllChatsDTO = () => chats.deleteAllChats()
 
-
-
-module.exports = { getAllByUserDto, addMessageDto }
+module.exports = { getAllChatsDTO, addChatDTO, deleteAllChatsDTO };

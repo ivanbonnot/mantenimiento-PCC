@@ -1,54 +1,15 @@
-const { 
-    getAllProductsDto,
-    getProductByIdDto,
-    getProductsByCategoryDto,
-    delProductByIdDto,
-    addNewProductDto,
-    modifyProductByIdDto
-  } = require('../DTO/productDto')
-
-const { validateProductData } = require('../controllers/valitationFunctions')
+const { getAllProductsDTO, getProductByIdDTO, deleteProductDTO, addNewProductDTO, updateProductDTO } = require('../DTO/productsDTO')
 
 
-const newProductController = async ( productToAdd ) => {
-  if ( validateProductData( productToAdd ) ) {
-    await addNewProductDto ( productToAdd )
-    return true
-  }
-  return false  
-}
+const addNewProductController = (productToAdd) => addNewProductDTO(productToAdd)
 
-const getAllProductsController = async() => {
-  const products = await getAllProductsDto()
-  return products
-}
+const getAllProductsController = () => getAllProductsDTO()
+ 
+const getProductByIdController = (id) => getProductByIdDTO(id)
 
-const getProductByIdController = async( id ) => {
-  const product = await getProductByIdDto( id )
-  return product
-}
+const updateProductController = (id, productToUpdate) => updateProductDTO(id, productToUpdate)
 
-const getProductsByCategoryController = async( category ) => {
-  const products = await getProductsByCategoryDto( category )
-  return products
-}
-
-const delProductByIdController = async( id ) => {
-  const response = await delProductByIdDto( id )
-  return response
-}
-
-const modifyProductByIdController = async( id, item ) => {
-  const response = await modifyProductByIdDto( id, item )
-  return response
-}
+const deleteProductController = (id) => deleteProductDTO(id)
 
 
-module.exports = { 
-  newProductController,
-  getAllProductsController,
-  getProductByIdController,
-  getProductsByCategoryController,
-  delProductByIdController,
-  modifyProductByIdController
-}
+module.exports = { addNewProductController, getAllProductsController, getProductByIdController, deleteProductController, updateProductController }

@@ -1,381 +1,1467 @@
-[2023-03-16T07:32:19.655] [WARN] default - Ruta: /api/carrito/, metodo: GET no implemantada
-[2023-03-16T07:33:12.458] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-16T07:33:50.718] [WARN] default - Ruta: /api/carrito/, metodo: GET no implemantada
-[2023-03-16T07:34:46.516] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-16T07:34:49.330] [WARN] default - No hay usuario logeado
-[2023-03-16T07:34:49.355] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-16T07:34:55.416] [WARN] default - No hay usuario logeado
-[2023-03-16T07:34:55.438] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-23T10:36:47.708] [WARN] default - No hay usuario logeado
-[2023-03-23T10:36:47.740] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-31T11:20:54.532] [WARN] default - No hay usuario logeado
-[2023-03-31T11:20:54.540] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-31T11:21:40.572] [WARN] default - No hay usuario logeado
-[2023-03-31T11:21:40.603] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-03-31T11:42:37.405] [WARN] default - No hay usuario logeado
-[2023-03-31T11:42:37.887] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-03T10:03:20.333] [WARN] default - No hay usuario logeado
-[2023-04-03T10:03:20.372] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-03T10:03:25.874] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T11:41:47.764] [WARN] default - No hay usuario logeado
-[2023-04-05T11:41:47.801] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T11:42:16.435] [WARN] default - No hay usuario logeado
-[2023-04-05T11:42:16.906] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T11:46:33.312] [WARN] default - No hay usuario logeado
-[2023-04-05T11:46:33.781] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:48:06.676] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:50:07.062] [WARN] default - No hay usuario logeado
-[2023-04-05T12:50:07.084] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:50:18.067] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:50:24.797] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:51:18.681] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:51:28.669] [WARN] default - No hay usuario logeado
-[2023-04-05T12:51:28.688] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:51:38.112] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:52:07.520] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:52:17.930] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:52:22.609] [WARN] default - No hay usuario logeado
-[2023-04-05T12:52:22.629] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:52:33.402] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:52:40.199] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:52:40.200] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T12:54:49.169] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:55:29.866] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:55:51.672] [WARN] default - No hay usuario logeado
-[2023-04-05T12:55:51.706] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T12:55:59.820] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T12:55:59.833] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:56:06.964] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T12:56:06.967] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T12:56:07.251] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T12:59:42.391] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:00:01.251] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:01:02.799] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:01:06.281] [WARN] default - No hay usuario logeado
-[2023-04-05T13:01:06.301] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:01:14.374] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:01:14.376] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:01:14.609] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:01:21.154] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:01:21.156] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:01:21.158] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:01:40.925] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:01:40.927] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:01:40.929] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:02:19.623] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:02:19.626] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:02:19.628] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:04:35.471] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:04:35.473] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:04:35.477] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:05:08.289] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:08:36.735] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:12:32.827] [WARN] default - No hay usuario logeado
-[2023-04-05T13:12:32.857] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:13:02.305] [WARN] default - No hay usuario logeado
-[2023-04-05T13:13:02.375] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:13:13.899] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:13:13.904] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:13:13.918] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:13:27.497] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:13:27.721] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:13:27.731] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:13:47.050] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:13:47.052] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:13:47.055] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:13:56.704] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:13:56.706] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:13:56.708] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:14:21.330] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:14:21.332] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:14:21.334] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:17:42.420] [WARN] default - Ruta: /653, metodo: GET no implemantada
-[2023-04-05T13:17:42.422] [WARN] default - Ruta: /6546, metodo: GET no implemantada
-[2023-04-05T13:17:42.423] [WARN] default - Ruta: /543, metodo: GET no implemantada
-[2023-04-05T13:20:56.724] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:22:00.569] [WARN] default - No hay usuario logeado
-[2023-04-05T13:22:00.588] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-05T13:55:16.737] [WARN] default - No hay usuario logeado
-[2023-04-05T13:55:16.813] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T09:17:17.555] [WARN] default - No hay usuario logeado
-[2023-04-10T09:17:17.584] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T09:21:39.661] [WARN] default - No hay usuario logeado
-[2023-04-10T09:21:39.681] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T09:22:13.362] [WARN] default - No hay usuario logeado
-[2023-04-10T09:22:13.866] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T09:22:20.011] [WARN] default - No hay usuario logeado
-[2023-04-10T09:22:20.032] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T09:25:40.629] [WARN] default - No hay usuario logeado
-[2023-04-10T09:44:00.900] [WARN] default - No hay usuario logeado
-[2023-04-10T09:44:03.466] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T09:44:56.452] [WARN] default - No hay usuario logeado
-[2023-04-10T09:45:04.078] [WARN] default - No hay usuario logeado
-[2023-04-10T09:45:22.642] [WARN] default - No hay usuario logeado
-[2023-04-10T09:45:27.686] [WARN] default - No hay usuario logeado
-[2023-04-10T09:45:30.173] [WARN] default - No hay usuario logeado
-[2023-04-10T10:56:52.983] [WARN] default - No hay usuario logeado
-[2023-04-10T10:56:56.574] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T11:00:41.739] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T11:06:45.818] [WARN] default - No hay usuario logeado
-[2023-04-10T11:06:48.259] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-10T11:08:38.360] [WARN] default - No hay usuario logeado
-[2023-04-12T09:55:15.640] [WARN] default - No hay usuario logeado
-[2023-04-12T10:25:41.564] [WARN] default - No hay usuario logeado
-[2023-04-12T10:26:08.086] [WARN] default - No hay usuario logeado
-[2023-04-12T10:26:14.496] [WARN] default - No hay usuario logeado
-[2023-04-12T10:26:21.864] [WARN] default - No hay usuario logeado
-[2023-04-12T11:12:04.326] [WARN] default - No hay usuario logeado
-[2023-04-12T11:12:13.591] [WARN] default - No hay usuario logeado
-[2023-04-12T11:12:19.576] [WARN] default - Ruta: /register.html, metodo: GET no implemantada
-[2023-04-12T11:12:19.661] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-12T11:12:56.278] [WARN] default - No hay usuario logeado
-[2023-04-12T11:15:59.306] [WARN] default - No hay usuario logeado
-[2023-04-12T11:17:04.515] [WARN] default - No hay usuario logeado
-[2023-04-12T11:25:30.793] [WARN] default - No hay usuario logeado
-[2023-04-12T11:25:59.478] [WARN] default - No hay usuario logeado
-[2023-04-12T11:26:27.130] [WARN] default - No hay usuario logeado
-[2023-04-12T11:27:20.826] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-12T11:27:23.356] [WARN] default - No hay usuario logeado
-[2023-04-12T11:27:45.785] [WARN] default - No hay usuario logeado
-[2023-04-12T11:27:59.094] [WARN] default - No hay usuario logeado
-[2023-04-12T11:32:28.238] [WARN] default - No hay usuario logeado
-[2023-04-12T11:33:03.409] [WARN] default - No hay usuario logeado
-[2023-04-12T11:34:50.654] [WARN] default - No hay usuario logeado
-[2023-04-12T11:35:08.556] [WARN] default - No hay usuario logeado
-[2023-04-12T11:35:34.751] [WARN] default - No hay usuario logeado
-[2023-04-12T11:44:13.841] [WARN] default - No hay usuario logeado
-[2023-04-12T11:46:53.256] [WARN] default - No hay usuario logeado
-[2023-04-12T11:46:55.341] [WARN] default - No hay usuario logeado
-[2023-04-12T12:54:32.275] [WARN] default - No hay usuario logeado
-[2023-04-12T12:54:50.449] [WARN] default - No hay usuario logeado
-[2023-04-12T13:22:58.007] [WARN] default - No hay usuario logeado
-[2023-04-12T13:24:37.736] [WARN] default - No hay usuario logeado
-[2023-04-12T13:24:58.106] [WARN] default - No hay usuario logeado
-[2023-04-12T13:47:58.188] [WARN] default - No hay usuario logeado
-[2023-04-12T13:49:47.885] [WARN] default - No hay usuario logeado
-[2023-04-12T13:50:28.671] [WARN] default - No hay usuario logeado
-[2023-04-12T13:53:15.604] [WARN] default - No hay usuario logeado
-[2023-04-12T13:54:47.685] [WARN] default - No hay usuario logeado
-[2023-04-12T13:56:39.678] [WARN] default - No hay usuario logeado
-[2023-04-12T13:56:42.522] [WARN] default - No hay usuario logeado
-[2023-04-12T14:00:27.780] [WARN] default - No hay usuario logeado
-[2023-04-12T14:00:29.715] [WARN] default - No hay usuario logeado
-[2023-04-12T14:10:09.784] [WARN] default - Ruta: /52345.jpg, metodo: GET no implemantada
-[2023-04-12T14:11:04.850] [WARN] default - No hay usuario logeado
-[2023-04-13T09:28:35.843] [WARN] default - No hay usuario logeado
-[2023-04-13T09:29:52.414] [WARN] default - No hay usuario logeado
-[2023-04-13T09:30:23.568] [WARN] default - No hay usuario logeado
-[2023-04-13T09:31:39.083] [WARN] default - Ruta: /5254.jpg, metodo: GET no implemantada
-[2023-04-13T09:31:58.347] [WARN] default - Ruta: /5254.jpg, metodo: GET no implemantada
-[2023-04-13T09:31:58.788] [WARN] default - Ruta: /54235.jpg, metodo: GET no implemantada
-[2023-04-13T09:32:40.988] [WARN] default - Ruta: /5254.jpg, metodo: GET no implemantada
-[2023-04-13T09:32:40.990] [WARN] default - Ruta: /54235.jpg, metodo: GET no implemantada
-[2023-04-13T09:32:42.032] [WARN] default - Ruta: /7467645.jpg, metodo: GET no implemantada
-[2023-04-13T09:34:22.272] [WARN] default - Ruta: /67467.jpg, metodo: GET no implemantada
-[2023-04-13T09:34:41.656] [WARN] default - Ruta: /67467.jpg, metodo: GET no implemantada
-[2023-04-13T09:34:41.949] [WARN] default - Ruta: /54235243543542353425234.jpg, metodo: GET no implemantada
-[2023-04-13T09:38:56.519] [WARN] default - Ruta: /7467.jpg, metodo: GET no implemantada
-[2023-04-13T09:42:47.940] [WARN] default - No hay usuario logeado
-[2023-04-13T09:43:07.798] [WARN] default - Ruta: /75675674.jpg, metodo: GET no implemantada
-[2023-04-13T09:45:39.411] [WARN] default - Ruta: /65636.jpg, metodo: GET no implemantada
-[2023-04-14T09:38:31.349] [WARN] default - No hay usuario logeado
-[2023-04-14T09:57:38.441] [WARN] default - No hay usuario logeado
-[2023-04-14T09:58:56.389] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T09:59:17.949] [WARN] default - No hay usuario logeado
-[2023-04-14T10:02:59.089] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:10:47.973] [WARN] default - No hay usuario logeado
-[2023-04-14T10:10:50.102] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:12:45.797] [WARN] default - No hay usuario logeado
-[2023-04-14T10:12:48.981] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:14:34.317] [WARN] default - No hay usuario logeado
-[2023-04-14T10:14:45.225] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:15:56.455] [WARN] default - No hay usuario logeado
-[2023-04-14T10:16:01.394] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:17:17.354] [WARN] default - No hay usuario logeado
-[2023-04-14T10:17:19.429] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:17:36.780] [WARN] default - No hay usuario logeado
-[2023-04-14T10:18:58.382] [WARN] default - No hay usuario logeado
-[2023-04-14T10:19:00.997] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:19:29.578] [WARN] default - No hay usuario logeado
-[2023-04-14T10:20:48.368] [WARN] default - No hay usuario logeado
-[2023-04-14T10:20:51.127] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:21:06.068] [WARN] default - No hay usuario logeado
-[2023-04-14T10:21:07.214] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:21:34.066] [WARN] default - No hay usuario logeado
-[2023-04-14T10:21:37.203] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:23:34.631] [WARN] default - No hay usuario logeado
-[2023-04-14T10:23:50.604] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:24:08.166] [WARN] default - No hay usuario logeado
-[2023-04-14T10:24:10.335] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:24:43.057] [WARN] default - No hay usuario logeado
-[2023-04-14T10:30:30.911] [WARN] default - No hay usuario logeado
-[2023-04-14T10:30:40.928] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:31:00.501] [WARN] default - No hay usuario logeado
-[2023-04-14T10:31:16.496] [WARN] default - No hay usuario logeado
-[2023-04-14T10:31:24.505] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-04-14T10:31:27.336] [WARN] default - No hay usuario logeado
-[2023-04-17T10:15:34.681] [WARN] default - No hay usuario logeado
-[2023-04-17T10:16:17.596] [WARN] default - Ruta: /hgjg, metodo: GET no implemantada
-[2023-04-17T10:16:27.137] [WARN] default - Ruta: /hgjg, metodo: GET no implemantada
-[2023-04-17T10:16:42.022] [WARN] default - Ruta: /hgjg, metodo: GET no implemantada
-[2023-04-17T10:16:50.175] [WARN] default - No hay usuario logeado
-[2023-04-17T10:16:50.229] [WARN] default - Ruta: /hgjg, metodo: GET no implemantada
-[2023-04-17T10:17:19.204] [WARN] default - Ruta: /hgjg, metodo: GET no implemantada
-[2023-04-17T10:17:19.206] [WARN] default - Ruta: /iuy, metodo: GET no implemantada
-[2023-04-17T10:17:19.210] [WARN] default - Ruta: /hgjg, metodo: GET no implemantada
-[2023-04-17T10:17:19.212] [WARN] default - Ruta: /iuy, metodo: GET no implemantada
-[2023-04-19T12:05:18.386] [WARN] default - No hay usuario logeado
-[2023-04-25T08:50:16.614] [WARN] default - No hay usuario logeado
-[2023-04-25T08:51:12.820] [WARN] default - No hay usuario logeado
-[2023-04-25T08:51:20.469] [WARN] default - No hay usuario logeado
-[2023-04-25T08:52:08.750] [WARN] default - No hay usuario logeado
-[2023-04-25T08:53:01.664] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-05T10:17:06.643] [WARN] default - No hay usuario logeado
-[2023-05-05T10:32:00.763] [WARN] default - No hay usuario logeado
-[2023-05-05T10:32:58.697] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:33:10.059] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:37:37.701] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:41:33.863] [WARN] default - No hay usuario logeado
-[2023-05-05T10:41:33.972] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:53:43.160] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-05T10:53:47.667] [WARN] default - No hay usuario logeado
-[2023-05-05T10:53:47.768] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:54:15.425] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:55:27.062] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:55:27.714] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:55:31.704] [WARN] default - No hay usuario logeado
-[2023-05-05T10:55:31.799] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:55:52.708] [WARN] default - No hay usuario logeado
-[2023-05-05T10:55:52.812] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:56:48.915] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:57:21.789] [WARN] default - No hay usuario logeado
-[2023-05-05T10:57:21.891] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T10:57:24.375] [WARN] default - No hay usuario logeado
-[2023-05-05T10:57:24.472] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:09:03.673] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:11:45.154] [WARN] default - Ruta /productos/c4f03541-0317-4753-af74 , metodo DELETE no autorizado
-[2023-05-05T11:13:01.107] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:13:34.776] [WARN] default - Metodo PUT no autorizado
-[2023-05-05T11:14:07.650] [WARN] default - Metodo POST no autorizado
-[2023-05-05T11:15:00.042] [WARN] default - Metodo POST no autorizado
-[2023-05-05T11:15:14.274] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:16:16.517] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:18:40.182] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:19:00.835] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-05T11:19:21.227] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:19:28.124] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:30:00.239] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:30:05.319] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T11:30:10.265] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T12:00:27.829] [WARN] default - Ruta: /432, metodo: GET no implemantada
-[2023-05-05T12:00:30.315] [WARN] default - Ruta: /js/googleauth.js, metodo: GET no implemantada
-[2023-05-05T12:06:36.516] [WARN] default - Ruta: /js/googleauth.js, metodo: GET no implemantada
-[2023-05-05T12:06:50.495] [WARN] default - Ruta: /js/googleauth.js, metodo: GET no implemantada
-[2023-05-05T12:08:24.973] [WARN] default - Ruta: /js/googleauth.js, metodo: GET no implemantada
-[2023-05-08T10:24:05.726] [WARN] default - No se ha encontrado el usuario arnaldo@andre.com
-[2023-05-08T10:35:02.175] [WARN] default - No se ha encontrado el usuario arnaldo@andre.com
-[2023-05-08T10:42:09.382] [WARN] default - No se ha encontrado el usuario arnaldo@andre.com
-[2023-05-08T11:09:02.527] [WARN] default - Ruta: /undefined, metodo: GET no implemantada
-[2023-05-08T11:09:30.241] [WARN] default - Ruta: /undefined, metodo: GET no implemantada
-[2023-05-08T13:10:23.547] [WARN] default - Ruta: /api/carrito/arnaldo@andre.com, metodo: GET no implemantada
-[2023-05-08T13:10:49.612] [WARN] default - Ruta: /api/carrito/arnaldo@andre.com, metodo: GET no implemantada
-
-[2023-05-08T20:19:44.108] [WARN] default - Ruta: /api/carrito/arnaldo@andre.com, metodo: GET no implemantada
-[2023-05-08T20:20:58.571] [WARN] default - Ruta: /api/carrito/arnaldo@andre.com, metodo: GET no implemantada
-[2023-05-08T20:21:12.867] [WARN] default - Error: ReferenceError: getCartController is not defined al intentar recuperar el carrito.
-[2023-05-08T20:21:45.368] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar recuperar el carrito.
-[2023-05-08T20:22:21.795] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar recuperar el carrito.
-[2023-05-08T20:23:23.730] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar recuperar el carrito.
-[2023-05-08T20:23:57.152] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar recuperar el carrito.
-[2023-05-08T20:30:14.275] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar agregar el producto al carrito.
-[2023-05-08T20:30:15.104] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar agregar el producto al carrito.
-[2023-05-08T20:31:22.955] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar agregar el producto al carrito.
-[2023-05-08T20:32:58.776] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar agregar el producto al carrito.
-[2023-05-08T20:40:27.487] [WARN] default - Metodo POST no autorizado
-[2023-05-08T20:42:55.346] [WARN] default - Error: TypeError: cartModel.insert is not a function al intentar agregar el producto al carrito.
-[2023-05-08T20:56:45.626] [WARN] default - Error: ValidationError: sendaddress: Path `sendaddress` is required. al intentar agregar el producto al carrito.
-[2023-05-08T20:56:46.444] [WARN] default - Error: ValidationError: sendaddress: Path `sendaddress` is required. al intentar agregar el producto al carrito.
-[2023-05-08T20:56:46.782] [WARN] default - Error: ValidationError: sendaddress: Path `sendaddress` is required. al intentar agregar el producto al carrito.
-[2023-05-08T20:56:48.340] [WARN] default - Error: ValidationError: sendaddress: Path `sendaddress` is required. al intentar agregar el producto al carrito.
-[2023-05-08T21:05:43.925] [WARN] default - Error: TypeError: cartModel.insertOne is not a function al intentar agregar el producto al carrito.
-[2023-05-08T21:05:44.975] [WARN] default - Error: TypeError: cartModel.insertOne is not a function al intentar agregar el producto al carrito.
-[2023-05-09T09:02:21.811] [WARN] default - Ruta: /api/carrito/compra/gustavo@fring.com, metodo: GET no implemantada
-[2023-05-09T09:03:03.885] [WARN] default - Ruta: /api/carrito/compra/gustavo@fring.com, metodo: GET no implemantada
-[2023-05-09T09:03:23.812] [WARN] default - Ruta: /api/carrito/compra/gustavo@fring.com, metodo: GET no implemantada
-[2023-05-09T10:23:21.516] [WARN] default - Error: ReferenceError: newOrderController is not defined al intentar crear el pedido.
-[2023-05-09T10:24:53.070] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'username') al intentar crear el pedido.
-[2023-05-09T10:46:03.099] [WARN] default - Error: CastError: Cast to date failed for value "[Function: now]" (type function) at path "timestamp" al intentar borrar el carrito.
-[2023-05-09T10:49:40.492] [WARN] default - Error: ReferenceError: getTimestamp is not defined al intentar borrar el carrito.
-[2023-05-09T10:50:00.669] [WARN] default - Error: ReferenceError: getTime is not defined al intentar borrar el carrito.
-[2023-05-09T10:50:31.930] [WARN] default - Error: TypeError: Date(...).getTime is not a function al intentar borrar el carrito.
-[2023-05-09T11:19:13.765] [WARN] default - Metodo GET no autorizado
-[2023-05-09T11:19:37.573] [WARN] default - Metodo GET no autorizado
-[2023-05-09T11:30:01.366] [WARN] default - Metodo GET no autorizado
-[2023-05-09T21:14:51.107] [WARN] default - Metodo GET no autorizado
-[2023-05-09T21:15:03.734] [WARN] default - Metodo GET no autorizado
-[2023-05-09T21:16:17.264] [WARN] default - Ruta: /api/carritoio, metodo: GET no implemantada
-[2023-05-09T21:16:24.320] [WARN] default - Metodo GET no autorizado
-[2023-05-09T21:21:25.320] [WARN] default - Producto id: 63d288723314fbc76e3c31fa5 no encontrado
-[2023-05-10T15:58:52.171] [WARN] default - Producto id: 64087a723fbf2aa4617905a14 no encontrado
-[2023-05-10T16:02:30.410] [WARN] default - Error: CastError: Cast to ObjectId failed for value "64087a723fbf2aa4617905a14" (type string) at path "_id" for model "Product" al intentar recuperar el producto.
-[2023-05-10T16:02:30.412] [WARN] default - Producto id: 64087a723fbf2aa4617905a14 no encontrado
-[2023-05-10T16:11:06.821] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-10T16:11:47.985] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T10:50:40.755] [WARN] default - Error: ReferenceError: adminmail is not defined al intentar crear el pedido.
-[2023-05-11T12:01:47.395] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:02:01.391] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:03:29.663] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:03:36.672] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:03:58.897] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:49:58.361] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:53:29.223] [WARN] default - Ruta: /public/images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:55:08.557] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T12:55:38.730] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:05:48.954] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:06:31.094] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:10:46.993] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:11:36.742] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:17:23.251] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:21:03.372] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:22:15.422] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:22:19.861] [WARN] default - Ruta: /favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:22:28.405] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:22:37.398] [WARN] default - Ruta: /images/favicon.ico, metodo: GET no implemantada
-[2023-05-11T13:57:37.695] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T13:57:44.307] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T13:58:12.979] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T13:58:19.437] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T13:59:20.806] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T13:59:41.508] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T14:00:17.473] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T14:00:53.502] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T14:00:55.526] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T14:00:58.471] [WARN] default - Ruta: /info/info/:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T14:01:34.825] [WARN] default - Ruta: /:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-11T14:01:56.996] [WARN] default - Ruta: /:Error%20al%20intentar%20cerrar%20la%20session%20de%20usuario., método: GET no implementada
-[2023-05-12T10:49:14.254] [WARN] default - Ruta: /undefined, método: GET no implementada
-[2023-05-12T10:49:37.562] [WARN] default - Ruta: /undefined, método: GET no implementada
-[2023-05-12T12:22:16.166] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:22:17.538] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:23:09.803] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:23:39.532] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:24:48.688] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:25:07.029] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:25:14.338] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:27:02.909] [WARN] default - Error: CastError: Cast to number failed for value "undefined" (type undefined) at path "products.$" al intentar agregar el producto al carrito.
-[2023-05-12T12:27:39.603] [WARN] default - Error: MongoServerError: Cannot increment with non-numeric argument: {products.$.number: "1"} al intentar agregar el producto al carrito.
-[2023-05-12T12:49:33.061] [WARN] default - Ruta: /api/chat/brigitte@bardot.com, método: GET no implementada
-[2023-05-12T12:59:35.477] [WARN] default - Error: Error: Request failed with status code 401 al intentar agregar el mensaje.
-[2023-05-12T13:02:24.027] [WARN] default - Error: Error: Request failed with status code 401 al intentar agregar el mensaje.
-[2023-05-12T13:02:38.056] [WARN] default - Error: Error: Request failed with status code 401 al intentar agregar el mensaje.
-[2023-05-12T13:03:26.357] [WARN] default - Ruta: /api/chat/brigitte@bardot.com, método: GET no implementada
-[2023-05-12T13:05:43.028] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:07:08.877] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:08:01.930] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:08:30.218] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:13:27.435] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:14:17.899] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:15:02.523] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:16:17.532] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-12T13:16:27.811] [ERROR] default - Error starting server: TypeError: Router.use() requires a middleware function but got a Object
-[2023-05-15T08:09:38.582] [WARN] default - Error: Error: Request failed with status code 401 al intentar agregar el mensaje.
+[2023-03-14T19:19:13.841] [WARN] default - Ruta: /info/coso, metodo: GET no existe
+[2023-03-15T17:48:36.233] [WARN] default - Ruta: /favicon.ico, metodo: GET no existe
+[2023-05-24T20:36:12.264] [ERROR] default - MongoAPIError: URI must include hostname, domain name, and tld
+    at resolveSRVRecord (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:53:15)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:122:78
+    at maybeCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\utils.js:338:21)
+    at MongoClient.connect (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:116:42)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:810:12
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-05-24T20:38:42.393] [ERROR] default - MongoParseError: Password contains unescaped characters
+    at new ConnectionString (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb-connection-string-url\lib\index.js:115:23)
+    at parseOptions (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:201:17)
+    at new MongoClient (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:46:63)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:802:16
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+[2023-05-24T20:39:08.606] [ERROR] default - MongoParseError: Password contains unescaped characters
+    at new ConnectionString (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb-connection-string-url\lib\index.js:115:23)
+    at parseOptions (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:201:17)
+    at new MongoClient (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:46:63)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:802:16
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+[2023-05-24T20:40:21.916] [ERROR] default - MongoParseError: Password contains unescaped characters
+    at new ConnectionString (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb-connection-string-url\lib\index.js:115:23)
+    at parseOptions (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:201:17)
+    at new MongoClient (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:46:63)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:802:16
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+[2023-05-24T20:41:27.116] [ERROR] default - MongoParseError: Password contains unescaped characters
+    at new ConnectionString (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb-connection-string-url\lib\index.js:115:23)
+    at parseOptions (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:201:17)
+    at new MongoClient (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:46:63)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:802:16
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+[2023-05-24T20:41:31.606] [ERROR] default - MongoParseError: Password contains unescaped characters
+    at new ConnectionString (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb-connection-string-url\lib\index.js:115:23)
+    at parseOptions (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:201:17)
+    at new MongoClient (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:46:63)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:802:16
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+[2023-05-24T20:42:15.598] [ERROR] default - MongoParseError: Password contains unescaped characters
+    at new ConnectionString (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb-connection-string-url\lib\index.js:115:23)
+    at parseOptions (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\connection_string.js:201:17)
+    at new MongoClient (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongodb\lib\mongo_client.js:46:63)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:802:16
+    at new Promise (<anonymous>)
+    at Connection.openUri (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\connection.js:799:19)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\index.js:411:10
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+[2023-05-25T14:20:01.050] [ERROR] default - ReferenceError: cart is not defined
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:78:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T14:07:42.995] [ERROR] default - Ruta: /, método: GET. Sesión no iniciada
+[2023-05-26T14:28:42.326] [ERROR] default - El método y la ruta son: POST /. Sesión no iniciada.
+[2023-05-26T14:35:08.307] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:48:51.108] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:49:09.549] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:49:58.145] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:52:12.126] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:52:55.747] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:53:16.719] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:54:11.018] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:54:52.832] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:56:07.188] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:56:33.037] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:58:48.244] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T15:59:47.488] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T16:00:37.868] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T20:19:16.439] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T20:19:39.849] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T20:31:27.389] [ERROR] default - ReferenceError: userData is not defined
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:35:38
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at complete (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\http\request.js:41:7
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\sessionmanager.js:51:9
+[2023-05-26T20:31:55.806] [ERROR] default - ReferenceError: Cannot access 'userData' before initialization
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:35:44
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at complete (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\http\request.js:41:7
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\sessionmanager.js:51:9
+[2023-05-26T20:32:24.421] [ERROR] default - TypeError: generateJwtToken is not a function
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:36:62
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at complete (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\http\request.js:41:7
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\passport\lib\sessionmanager.js:51:9
+[2023-05-26T20:34:28.903] [ERROR] default - TypeError: Cannot read properties of null (reading '_doc')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:36:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:35:09.691] [ERROR] default - TypeError: Cannot read properties of null (reading '_doc')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:35:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:35:37.778] [ERROR] default - TypeError: Cannot read properties of null (reading '_doc')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:35:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:38:58.936] [ERROR] default - TypeError: Cannot read properties of null (reading '_doc')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:36:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:39:04.501] [ERROR] default - TypeError: Cannot read properties of null (reading '_doc')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:36:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:39:33.557] [ERROR] default - TypeError: generateJwtToken is not a function
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:36:62
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:40:39.659] [ERROR] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:644:11)
+    at ServerResponse.header (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.location (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:915:15)
+    at ServerResponse.redirect (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:953:18)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:37:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2023-05-26T20:41:34.180] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'send')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:37:38
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:43:08.087] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'send')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:37:38
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:45:45.412] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'send')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:37:38
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-26T20:49:37.192] [ERROR] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:644:11)
+    at ServerResponse.header (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.location (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:915:15)
+    at ServerResponse.redirect (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:953:18)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:38:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2023-05-26T21:08:40.424] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-26T21:09:35.654] [WARN] default - Error: CastError: Cast to string failed for value "<ref *2> IncomingMessage {
+  _readableState: ReadableState {
+    objectMode: false,
+    highWaterMark: 16384,
+    buffer: BufferList { head: null, tail: null, length: 0 },
+    length: 0,
+    pipes: [],
+    flowing: true,
+    ended: true,
+    endEmitted: true,
+    reading: false,
+    constructed: true,
+    sync: false,
+    needReadable: false,
+    emittedReadable: false,
+    readableListening: false,
+    resumeScheduled: false,
+    errorEmitted: false,
+    emitClose: true,
+    autoDestroy: true,
+    destroyed: true,
+    errored: null,
+    closed: true,
+    closeEmitted: true,
+    defaultEncoding: 'utf8',
+    awaitDrainWriters: null,
+    multiAwaitDrain: false,
+    readingMore: false,
+    dataEmitted: true,
+    decoder: null,
+    encoding: null,
+    [Symbol(kPaused)]: false
+  },
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  socket: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0 },
+      length: 0,
+      pipes: [],
+      flowing: true,
+      ended: false,
+      endEmitted: false,
+      reading: true,
+      constructed: true,
+      sync: false,
+      needReadable: true,
+      emittedReadable: false,
+      readableListening: false,
+      resumeScheduled: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: true,
+      destroyed: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      defaultEncoding: 'utf8',
+      awaitDrainWriters: null,
+      multiAwaitDrain: false,
+      readingMore: false,
+      dataEmitted: false,
+      decoder: null,
+      encoding: null,
+      [Symbol(kPaused)]: false
+    },
+    _events: [Object: null prototype] {
+      end: [Array],
+      timeout: [Function: socketOnTimeout],
+      data: [Function: bound socketOnData],
+      error: [Array],
+      close: [Array],
+      drain: [Function: bound socketOnDrain],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _eventsCount: 8,
+    _maxListeners: undefined,
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: false,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      buffered: [],
+      bufferedIndex: 0,
+      allBuffers: true,
+      allNoop: true,
+      pendingcb: 0,
+      constructed: true,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: true,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      [Symbol(kOnFinished)]: []
+    },
+    allowHalfOpen: true,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      _events: [Object: null prototype],
+      _eventsCount: 6,
+      _maxListeners: undefined,
+      _connections: 4,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::8080',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 23,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 673,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 21,
+        [Symbol(triggerId)]: 1
+      },
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      _events: [Object: null prototype],
+      _eventsCount: 6,
+      _maxListeners: undefined,
+      _connections: 4,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::8080',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 23,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 673,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 21,
+        [Symbol(triggerId)]: 1
+      },
+      [Symbol(kUniqueHeaders)]: null
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *2],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      flush: [Function: flush],
+      write: [Function: write],
+      end: [Function: end],
+      on: [Function: on],
+      writeHead: [Function: writeHead],
+      _startAt: undefined,
+      _startTime: undefined,
+      __onFinished: [Function],
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kEndCalled)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 54253 },
+    [Symbol(async_id_symbol)]: 434,
+    [Symbol(kHandle)]: TCP {
+      reading: true,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  httpVersion: '1.1',
+  complete: true,
+  rawHeaders: [
+    'content-length',
+    '70',
+    'accept-encoding',
+    'gzip, deflate, br',
+    'cookie',
+    'connect.sid=s%3Ap4t8xiHJ1CB2gaPE0tCKrfgw6LGT341M.SHIwK1wqhA7Y6bvm8r25cRQwGaAPd12GFnpjqwY8Z5Q',
+    'Accept',
+    '*/*',
+    'User-Agent',
+    'Thunder Client (https://www.thunderclient.com)',
+    'Content-Type',
+    'application/json',
+    'Host',
+    'localhost:8080',
+    'Connection',
+    'close'
+  ],
+  rawTrailers: [],
+  aborted: false,
+  upgrade: false,
+  url: '/?itemId=646fabf006eb946588958882&number=2',
+  method: 'POST',
+  statusCode: null,
+  statusMessage: null,
+  client: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0 },
+      length: 0,
+      pipes: [],
+      flowing: true,
+      ended: false,
+      endEmitted: false,
+      reading: true,
+      constructed: true,
+      sync: false,
+      needReadable: true,
+      emittedReadable: false,
+      readableListening: false,
+      resumeScheduled: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: true,
+      destroyed: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      defaultEncoding: 'utf8',
+      awaitDrainWriters: null,
+      multiAwaitDrain: false,
+      readingMore: false,
+      dataEmitted: false,
+      decoder: null,
+      encoding: null,
+      [Symbol(kPaused)]: false
+    },
+    _events: [Object: null prototype] {
+      end: [Array],
+      timeout: [Function: socketOnTimeout],
+      data: [Function: bound socketOnData],
+      error: [Array],
+      close: [Array],
+      drain: [Function: bound socketOnDrain],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _eventsCount: 8,
+    _maxListeners: undefined,
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: false,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      buffered: [],
+      bufferedIndex: 0,
+      allBuffers: true,
+      allNoop: true,
+      pendingcb: 0,
+      constructed: true,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: true,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      [Symbol(kOnFinished)]: []
+    },
+    allowHalfOpen: true,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      _events: [Object: null prototype],
+      _eventsCount: 6,
+      _maxListeners: undefined,
+      _connections: 4,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::8080',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 23,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 673,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 21,
+        [Symbol(triggerId)]: 1
+      },
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      _events: [Object: null prototype],
+      _eventsCount: 6,
+      _maxListeners: undefined,
+      _connections: 4,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::8080',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 23,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 673,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 21,
+        [Symbol(triggerId)]: 1
+      },
+      [Symbol(kUniqueHeaders)]: null
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *2],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      flush: [Function: flush],
+      write: [Function: write],
+      end: [Function: end],
+      on: [Function: on],
+      writeHead: [Function: writeHead],
+      _startAt: undefined,
+      _startTime: undefined,
+      __onFinished: [Function],
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kEndCalled)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 54253 },
+    [Symbol(async_id_symbol)]: 434,
+    [Symbol(kHandle)]: TCP {
+      reading: true,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  _consuming: true,
+  _dumped: false,
+  next: [Function: next],
+  baseUrl: '/api/carrito',
+  originalUrl: '/api/carrito/?itemId=646fabf006eb946588958882&number=2',
+  _parsedUrl: Url {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: '?itemId=646fabf006eb946588958882&number=2',
+    query: 'itemId=646fabf006eb946588958882&number=2',
+    pathname: '/',
+    path: '/?itemId=646fabf006eb946588958882&number=2',
+    href: '/?itemId=646fabf006eb946588958882&number=2',
+    _raw: '/?itemId=646fabf006eb946588958882&number=2'
+  },
+  params: {},
+  query: { itemId: '646fabf006eb946588958882', number: '2' },
+  res: <ref *3> ServerResponse {
+    _events: [Object: null prototype] {
+      finish: [Array],
+      end: [Function: onevent]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: true,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: null,
+    _hasBody: true,
+    _trailer: '',
+    finished: false,
+    _headerSent: false,
+    _closed: false,
+    socket: <ref *1> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 8,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: [Server],
+      _server: [Server],
+      parser: [HTTPParser],
+      on: [Function: socketListenerWrap],
+      addListener: [Function: socketListenerWrap],
+      prependListener: [Function: socketListenerWrap],
+      setEncoding: [Function: socketSetEncoding],
+      _paused: false,
+      _httpMessage: [Circular *3],
+      _peername: [Object],
+      [Symbol(async_id_symbol)]: 434,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: false,
+      [Symbol(kSetKeepAliveInitialDelay)]: 0,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    _header: null,
+    _keepAliveTimeout: 5000,
+    _onPendingData: [Function: bound updateOutgoingData],
+    req: [Circular *2],
+    _sent100: false,
+    _expect_continue: false,
+    _maxRequestsPerSocket: 0,
+    locals: [Object: null prototype] {},
+    flush: [Function: flush],
+    write: [Function: write],
+    end: [Function: end],
+    on: [Function: on],
+    writeHead: [Function: writeHead],
+    _startAt: undefined,
+    _startTime: undefined,
+    __onFinished: [Function: listener] { queue: [Array] },
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kEndCalled)]: false,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] { 'x-powered-by': [Array] },
+    [Symbol(kUniqueHeaders)]: null
+  },
+  _startAt: [ 684028, 509724100 ],
+  _startTime: 2023-05-27T00:09:35.520Z,
+  _remoteAddress: '::ffff:127.0.0.1',
+  body: { id: '646fabf006eb946588958882', number: '2' },
+  _body: true,
+  length: undefined,
+  _parsedOriginalUrl: Url {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: '?itemId=646fabf006eb946588958882&number=2',
+    query: 'itemId=646fabf006eb946588958882&number=2',
+    pathname: '/api/carrito/',
+    path: '/api/carrito/?itemId=646fabf006eb946588958882&number=2',
+    href: '/api/carrito/?itemId=646fabf006eb946588958882&number=2',
+    _raw: '/api/carrito/?itemId=646fabf006eb946588958882&number=2'
+  },
+  sessionStore: MongoStore {
+    _events: [Object: null prototype] {
+      disconnect: [Function: ondisconnect],
+      connect: [Function: onconnect]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    crypto: null,
+    transformFunctions: {
+      serialize: [Function: stringify],
+      unserialize: [Function: parse]
+    },
+    clientP: Promise { [MongoClient] },
+    options: {
+      collectionName: 'sessions',
+      ttl: 1209600,
+      mongoOptions: [Object],
+      autoRemove: 'native',
+      autoRemoveInterval: 10,
+      touchAfter: 0,
+      stringify: true,
+      crypto: [Object],
+      mongoUrl: 'mongodb+srv://coderhouse:coderhouse123@cluster0.xvejx.gcp.mongodb.net/ecommerce'
+    },
+    collectionP: Promise { [Collection] },
+    generate: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  },
+  sessionID: 'p4t8xiHJ1CB2gaPE0tCKrfgw6LGT341M',
+  session: Session {
+    cookie: {
+      path: '/',
+      _expires: 2023-09-19T17:55:21.094Z,
+      originalMaxAge: 10000000000,
+      httpOnly: true
+    },
+    flash: { error: [Array] }
+  },
+  route: Route { path: '/', stack: [ [Layer] ], methods: { post: true } },
+  [Symbol(kCapture)]: false,
+  [Symbol(kHeaders)]: {
+    'content-length': '70',
+    'accept-encoding': 'gzip, deflate, br',
+    cookie: 'connect.sid=s%3Ap4t8xiHJ1CB2gaPE0tCKrfgw6LGT341M.SHIwK1wqhA7Y6bvm8r25cRQwGaAPd12GFnpjqwY8Z5Q',
+    accept: '*/*',
+    'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+    'content-type': 'application/json',
+    host: 'localhost:8080',
+    connection: 'close'
+  },
+  [Symbol(kHeadersCount)]: 16,
+  [Symbol(kTrailers)]: null,
+  [Symbol(kTrailersCount)]: 0
+}" (type IncomingMessage) at path "userEmail" for model "Cart" al agregar el producto al cart
+[2023-05-26T21:10:32.970] [WARN] default - Error: CastError: Cast to string failed for value "Session {
+  cookie: {
+    path: '/',
+    _expires: 2023-09-19T17:55:21.094Z,
+    originalMaxAge: 10000000000,
+    httpOnly: true
+  },
+  flash: {
+    error: [
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials', 'Missing credentials', 'Missing credentials',
+      'Missing credentials',
+      ... 77 more items
+    ]
+  }
+}" (type Session) at path "userEmail" for model "Cart" al agregar el producto al cart
+[2023-05-26T21:12:42.201] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2. Sesión no iniciada.
+[2023-05-27T18:00:33.857] [ERROR] default - ReferenceError: userData is not defined
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:17:38
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T18:01:09.746] [ERROR] default - ReferenceError: Cannot access 'userData' before initialization
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:17:44
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T18:01:34.976] [ERROR] default - TypeError: Assignment to constant variable.
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:17:19
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T18:03:14.159] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'send')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:18:87
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T18:03:14.464] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'send')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:18:87
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T18:03:14.539] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'send')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:18:87
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T18:03:43.161] [ERROR] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:644:11)
+    at ServerResponse.header (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.json (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:275:10)
+    at ServerResponse.send (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:162:21)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:19:17
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2023-05-27T18:03:43.447] [ERROR] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:644:11)
+    at ServerResponse.header (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.json (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:275:10)
+    at ServerResponse.send (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:162:21)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:19:17
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2023-05-27T18:03:43.501] [ERROR] default - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:644:11)
+    at ServerResponse.header (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.json (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:275:10)
+    at ServerResponse.send (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\response.js:162:21)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:19:17
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+[2023-05-27T18:20:42.253] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAaG90bWFpbC5jb20iLCJpYXQiOjE2ODUyMjI0MzMsImV4cCI6MTY5NTIyMjQzM30.I1fBVEZ5zJX5I01Q7T6dAJ7X6LsQ2E7Q-Q25TdtjbuA. Sesión no iniciada.
+[2023-05-27T19:10:27.010] [ERROR] default - El método y la ruta son: POST /?itemId=646fabf006eb946588958882&number=2&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAaG90bWFpbC5jb20iLCJpYXQiOjE2ODUyMjU0MTgsImV4cCI6MTY5NTIyNTQxOH0.4vKwJSeObXRkOrI1qVefoTheHff9EU-ghkLraZw_d4Y. Sesión no iniciada.
+[2023-05-27T19:13:50.626] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:14:58.179] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:15:30.978] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:16:20.486] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:16:31.615] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:24:26.231] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:25:31.868] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:26:00.184] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:27:44.429] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:30:17.231] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T19:33:04.666] [ERROR] default - Error al agregar producto al carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T20:38:32.393] [ERROR] default - ReferenceError: userData is not defined
+    at mongoDBDAO.saveUser (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\DAO\mongoDBDAO.js:14:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addUserDTO (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\DTO\usersDTO.js:7:37)
+    at async C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:83:13
+[2023-05-27T20:39:59.688] [ERROR] default - Error: Cart validation failed: adress: Path `adress` is required.
+    at ValidationError.inspect (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\log4js\lib\appenders\logLevelFilter.js:10:7
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>) {
+  errors: {
+    adress: ValidatorError: Path `adress` is required.
+        at validate (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\schematype.js:1346:13)
+        at SchemaType.doValidate (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\schematype.js:1330:7)
+        at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\mongoose\lib\document.js:2905:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'adress',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'Cart validation failed'
+}
+[2023-05-27T20:51:33.158] [ERROR] default - Ruta: /carrito/, método: GET. Sesión no iniciada
+[2023-05-27T21:01:56.944] [ERROR] default - Ruta: /carrito/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAaG90bWFpbC5jb20iLCJpYXQiOjE2ODUyMzIxMDYsImV4cCI6MTY5NTIzMjEwNn0.3Q0zRqwN9H3Plf8MtrEEC2yD3t1xfOCofF6YB-Gdn98, método: GET. Sesión no iniciada
+[2023-05-27T21:02:55.785] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:03:31.830] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:11:27.335] [ERROR] default - ReferenceError: passport is not defined
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:13:21
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T21:12:50.003] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:23:29.483] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:30:08.579] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:43:14.056] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:43:47.118] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:44:11.090] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:50:52.869] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T21:56:50.579] [ERROR] default - TypeError: generateJwtToken is not a function
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:16:66
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T21:57:07.112] [ERROR] default - TypeError: generateJwtToken is not a function
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:16:66
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T21:57:56.553] [ERROR] default - TypeError: generateJwtToken is not a function
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:16:66
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-27T21:58:56.851] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T22:47:12.891] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T22:47:30.459] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T22:49:39.277] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T22:58:09.214] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T22:58:38.120] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T22:58:55.514] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T23:00:01.902] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T23:00:20.184] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T23:03:15.545] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-27T23:04:31.592] [ERROR] default - Error en la solicitud del carrito: TypeError: carts.getCartByEmail is not a function
+[2023-05-28T10:28:55.925] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T10:30:49.342] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T10:31:31.266] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:32:18.083] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:33:03.338] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:35:26.736] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:36:19.825] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:38:32.642] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'email')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:22
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:39:50.241] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:43:28.017] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:46:34.657] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:47:18.850] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:34
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:48:02.768] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:19:48
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T10:50:10.325] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T10:50:45.618] [ERROR] default - Ruta: /carrito?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJpdmFuYm9ubm90QGhvdG1haWwuY29tIiwiaWF0IjoxNjg1MjgxNzkwLCJleHAiOjE2OTUyODE3OTB9.sfZvYKjaHH-P1it5V02ofqT2X40SqpPEDYpYclu30kM, método: GET. Sesión no iniciada
+[2023-05-28T11:22:43.529] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:13:48
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-28T11:23:21.191] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:13:48
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-28T11:23:31.969] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:13:48
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-28T11:30:31.469] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\home.js:13:47
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:47:12)
+[2023-05-28T12:00:29.489] [ERROR] default - TypeError: Cannot read properties of null (reading '_doc')
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\auth.js:36:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-05-28T12:01:36.471] [ERROR] default - Ruta: /carrito?token=yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg2MDc2LCJleHAiOjE2OTUyODYwNzZ9.iztXV6Mn8ubEJCXm1R4w3qJFrWcRKexoczeNobR0Mbs, método: GET. Sesión no iniciada
+[2023-05-28T12:09:18.996] [ERROR] default - Ruta: /carrito?token=yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg2MDc2LCJleHAiOjE2OTUyODYwNzZ9.iztXV6Mn8ubEJCXm1R4w3qJFrWcRKexoczeNobR0Mbs, método: GET. Sesión no iniciada
+[2023-05-28T12:09:50.408] [ERROR] default - Ruta: /carrito?token=yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg2MDc2LCJleHAiOjE2OTUyODYwNzZ9.iztXV6Mn8ubEJCXm1R4w3qJFrWcRKexoczeNobR0Mbs, método: GET. Sesión no iniciada
+[2023-05-28T12:15:20.912] [ERROR] default - Error: Error: data and hash arguments required
+[2023-05-28T12:18:09.476] [ERROR] default - Ruta: /carrito?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg2ODc3LCJleHAiOjE2OTUyODY4Nzd9.iLkU8Fcu43lH2XCf8Fl7Nvc2-dlEL6Lvf8ONb4DleHw, método: GET. Sesión no iniciada
+[2023-05-28T12:18:29.375] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T12:21:21.133] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T12:21:44.404] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T12:22:14.974] [ERROR] default - Error en la solicitud del carrito: TypeError: Cannot read properties of undefined (reading 'user')
+[2023-05-28T12:22:57.318] [ERROR] default - Error: Error: data and hash arguments required
+[2023-05-28T12:22:57.321] [ERROR] default - Ruta: /carrito?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg2ODc3LCJleHAiOjE2OTUyODY4Nzd9.iLkU8Fcu43lH2XCf8Fl7Nvc2-dlEL6Lvf8ONb4DleHw, método: GET. No existe la cuenta
+[2023-05-28T12:23:41.365] [ERROR] default - Error: Error: data and hash arguments required
+[2023-05-28T12:23:41.367] [ERROR] default - Ruta: /carrito?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mjg2ODc3LCJleHAiOjE2OTUyODY4Nzd9.iLkU8Fcu43lH2XCf8Fl7Nvc2-dlEL6Lvf8ONb4DleHw, método: GET. No existe la cuenta
+[2023-05-28T16:24:52.066] [ERROR] default - Error en la solicitud: TypeError: delCartDto is not a function
+[2023-05-28T21:35:27.202] [ERROR] default - ReferenceError: destroyJWT is not defined
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\routes\web\authRouter.js:102:13
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Coder House\Curso BackEnd\Final Sin React\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-28T21:41:35.261] [WARN] default - El JWT ya no es valido, token: undefined
+[2023-05-29T19:32:23.895] [ERROR] default - El método y la ruta son: GET /carrito/confirm/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mzk4OTc3LCJleHAiOjE2OTUzOTg5Nzd9.W95B7fSEQ5lC5ja_xr65rIZoKoEzI_mnmO9w63a9QLA. Intento de acceso sin loggueo.
+[2023-05-29T19:33:05.401] [ERROR] default - El método y la ruta son: POST /carrito/confirm/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mzk4OTc3LCJleHAiOjE2OTUzOTg5Nzd9.W95B7fSEQ5lC5ja_xr65rIZoKoEzI_mnmO9w63a9QLA. Intento de acceso sin loggueo.
+[2023-05-29T19:34:43.207] [ERROR] default - El método y la ruta son: POST /carrito/confirm/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mzk4OTc3LCJleHAiOjE2OTUzOTg5Nzd9.W95B7fSEQ5lC5ja_xr65rIZoKoEzI_mnmO9w63a9QLA. Intento de acceso sin loggueo.
+[2023-05-29T19:35:23.606] [ERROR] default - El método y la ruta son: POST /carrito/confirm/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAZ21haWwuY29tIiwiaWF0IjoxNjg1Mzk4OTc3LCJleHAiOjE2OTUzOTg5Nzd9.W95B7fSEQ5lC5ja_xr65rIZoKoEzI_mnmO9w63a9QLA. Intento de acceso sin loggueo.
+[2023-05-29T19:46:43.929] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'length') al generar pedido.
+[2023-05-29T19:47:48.517] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'map') al generar pedido.
+[2023-05-29T19:52:44.119] [WARN] default - Error: TypeError: products.find is not a function al generar pedido.
+[2023-05-29T19:53:51.265] [WARN] default - Error: TypeError: Cannot read properties of undefined (reading 'products') al generar pedido.
+[2023-05-29T19:54:02.932] [WARN] default - Error: TypeError: products.find is not a function al generar pedido.
+[2023-05-29T19:57:59.824] [WARN] default - Error: TypeError: products.find is not a function al generar pedido.
+[2023-05-29T20:10:28.678] [WARN] default - Error: TypeError: products.find is not a function al generar pedido.
+[2023-05-29T20:18:27.442] [WARN] default - Error: ReferenceError: orderModel is not defined al intentar crear el pedido.
+[2023-05-29T20:19:09.994] [WARN] default - Se ha produciodo error ValidationError: orderNumber: Path `orderNumber` is required. al intentar crear una nueva orden de compra
+[2023-05-29T20:24:58.275] [WARN] default - Se ha produciodo error ValidationError: orderNumber: Path `orderNumber` is required. al intentar crear una nueva orden de compra
+[2023-05-29T20:24:58.285] [WARN] default - Error: ReferenceError: responseDelete is not defined al generar pedido.
+[2023-05-29T20:25:41.398] [WARN] default - Se ha produciodo error ValidationError: orderNumber: Path `orderNumber` is required. al intentar crear una nueva orden de compra
+[2023-05-31T16:54:51.821] [WARN] default - JWT dejo de ser valido, token: undefined
+[2023-05-31T16:55:10.934] [WARN] default - JWT dejo de ser valido, token: undefined
+[2023-05-31T16:56:58.019] [WARN] default - JWT dejo de ser valido, token: undefined
+[2023-05-31T16:57:31.585] [WARN] default - JWT dejo de ser valido, token: undefined
+[2023-05-31T17:02:59.804] [WARN] default - JWT dejo de ser valido, token: undefined
