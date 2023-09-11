@@ -13,7 +13,7 @@ const Notes = () => {
 
   useEffect(() => {
     axios
-      .get("../notes.json")
+      .get("/notes")
       .then((res) => {
         const note = res.data.filter((item) => item.estacion === id);
         setNoteData(note);
@@ -31,6 +31,12 @@ const Notes = () => {
       estacion: id,
     };
 
+    axios
+      .post("/notes")
+      .then((res) => {
+        console.log(res)
+      })
+      .catch((err) => console.log(err));
     // Obtener las notas existentes del almacenamiento local (si las hay)
     const existingNotes = JSON.parse(localStorage.getItem("notes")) || [];
 
@@ -46,12 +52,12 @@ const Notes = () => {
   };
 
   const handelDeleteNote = (idDelete) => {
-      axios
-        .delete(`/notes/${id}/${idDelete}`)
-        .then((res) => {
-          console.log(`Borrada ${idDelete}, ${res}`);
-        })
-        .catch((err) => console.log(err));
+    axios
+      .delete(`/notes/${id}/${idDelete}`)
+      .then((res) => {
+        console.log(`Borrada ${idDelete}, ${res}`);
+      })
+      .catch((err) => console.log(err));
 
     //Implementar ruta delete
   };

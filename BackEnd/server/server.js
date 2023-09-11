@@ -28,23 +28,18 @@ const baseProcces = () => {
     })
 
     const { Server: HTTPServer } = require('http');
-    const { Server: IOServer } = require('socket.io');
 
     const infoRouter = require('../routes/api/infoRouter')
-    const productsRouter = require("../routes/api/productRouter");
+    const notesRouter = require("../routes/api/notesRouter");
     const authWebRouter = require('../routes/web/authRouter')
     const homeWebRouter = require('../routes/web/homeRouter')
-    const cartRouter = require("../routes/api/cartRouter")
+
 
     const connectToDb = require("../config/connectToDB");
 
     const app = express();
 
-
     const httpServer = new HTTPServer(app);
-    const io = new IOServer(httpServer);
-
-    const { addChatController, getAllChatsController, deleteAllChatsController } = require('../controllers/chatsController')
 
     //Settings
     app.engine('hbs', engine());
@@ -52,7 +47,7 @@ const baseProcces = () => {
     //app.set('views', 'views');
     app.set('port', process.env.PORT || 8080)
     app.set('json spaces', 2)
-    
+
 
     //Middlewares
     app.set(express.static(path.join(__dirname, 'public')));
@@ -88,32 +83,10 @@ const baseProcces = () => {
 
     //Routes
     app.use("/", infoRouter)
-    app.use("/", productsRouter)
-    app.use("/", cartRouter)
+    app.use("/", notesRouter)
     //__ WebServ Routes __//
     app.use("/", authWebRouter)
     app.use("/", homeWebRouter)
-
-
-    //websocket
-    io.on('connection', async socket => {
-        logger.info('Nuevo cliente conectado!');
-        // carga inicial de mensajes
-        socket.emit('mensajes', await getAllChatsController());
-
-        // actualizacion de mensajes
-        socket.on('nuevoMensaje', async mensaje => {
-            mensaje.date = new Date().toLocaleString()
-            addChatController(mensaje)
-            io.sockets.emit('mensajes', await getAllChatsController());
-        })
-
-        socket.on('borrarMensajes', async => {
-            deleteAllChatsController()
-            io.sockets.emit('mensajes', getAllChatsController());
-        })
-            
-    });
 
 }
 

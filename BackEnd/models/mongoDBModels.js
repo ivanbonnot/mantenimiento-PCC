@@ -3,29 +3,7 @@ const bcrypt = require('bcrypt');
 const { Schema, model } = mongoose
 
 
-const cartSchema = new Schema({
-    userEmail: { type: String, required: true },
-    timestamp: { type: Date, default: Date.now },
-    products: { type: Array, required: true },
-    address: { type: String, required: true },
-})
-
-const orderSchema = new Schema({
-    products: { type: Array, required: true },
-    orderNumber: { type: Number, required: true },
-    timestamp: { type: Date, default: Date.now },
-    status: { type: String, default: 'Generada' },
-    userEmail: { type: String, required: true }
-})
-
-const chatSchema = new Schema({
-    name: { type: String, require: true },
-    text: { type: String, require: true },
-    date: { type: Date, require: true },
-});
-
-
-const productschema = new Schema({
+const notesSchema = new Schema({
     timestamp: { type: Number, require: true },
     title: { type: String },
     thumbnail: { type: String },
@@ -71,10 +49,7 @@ userSchema.pre('save', function (next) {
 });
 
 
-const cartModel = model('Cart', cartSchema)
-const orderModel = model('Order', orderSchema)
-const chatModel = model('Chat', chatSchema);
-const productModel = model('Products', productschema)
+const noteModel = model('Notes', notesSchema)
 const userModel = model('User', userSchema)
 
-module.exports = { orderModel, cartModel, chatModel, productModel, userModel }
+module.exports = { noteModel, userModel }
