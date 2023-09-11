@@ -39,10 +39,11 @@ const Notes = () => {
           <div className="app__notes-write">
 
             <input type="text" placeholder="Titulo" className="app__notes-write_title" />
-            <textarea type="textarea" row={10} placeholder="Aclaración" className="app__notes-write_note" />
+            <textarea type="textarea" rows={5}  placeholder="Aclaración" className="app__notes-write_note" />
             <button type="button" className="custom__button">Agregar nota</button>
 
           </div>
+          
         </div>
       ) : (
         <div>
