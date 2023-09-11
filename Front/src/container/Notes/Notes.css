@@ -39,12 +39,6 @@
     font-size: 0.75rem;
 }
 
-.app__notes-note .delete__button:hover {
-    transition: all ease-in-out 300ms;
-    color: white;
-    transform: scale(1.02);
-}
-
 .app__notes-write {
     background-color: var(--color-black);
     margin-top: 25px;
@@ -86,4 +80,3 @@
 input[type=text]:focus {
     border: 3px solid #555;
 }
-

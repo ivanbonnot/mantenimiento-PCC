@@ -80,6 +80,12 @@
   cursor: pointer;
 }
 
+.custom__button:hover {
+  transition: all ease-in-out 300ms;
+  color: white;
+  transform: scale(1.02);
+}
+
 .delete__button {
   background-color: red;
   color: var(--color-black);
@@ -94,6 +100,12 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.delete__button:hover {
+  transition: all ease-in-out 300ms;
+  color: white;
+  transform: scale(1.02);
 }
 
 @keyframes App-logo-spin {
