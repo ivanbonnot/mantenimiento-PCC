@@ -32,16 +32,20 @@ const Notes = () => {
                 <p className="note p__opensans">Aclaración:  {nota}</p>
                 <p className="author p__opensans">Fecha:  {fecha}</p>
                 <p className="date p__opensans">Autor:  {creador}</p>
+                <button type="button" className="delete__button">Eliminar Nota</button>
               </div>
             )}
           </div>
 
           <div className="app__notes-write">
-
+            <h2 className="p__cormorant">Agregar una nota</h2>
             <input type="text" placeholder="Titulo" className="app__notes-write_title" />
+<<<<<<< HEAD
             <textarea type="textarea" rows={5}  placeholder="Aclaración" className="app__notes-write_note" />
+=======
+            <textarea type="textarea" rows={7} placeholder="Aclaración" className="app__notes-write_note" />
+>>>>>>> 09351eab1cfd168d3817c321b79da536a6fbc188
             <button type="button" className="custom__button">Agregar nota</button>
-
           </div>
           
         </div>
