@@ -13,15 +13,17 @@ const Notes = () => {
 
   useEffect(() => {
     axios
-      .get("/notes")
+      .get("http://localhost:8080/notes")
       .then((res) => {
         const note = res.data.filter((item) => item.estacion === id);
         setNoteData(note);
+        console.log(note)
       })
       .catch((err) => console.log(err));
   }, [id]);
 
   const handleAddNote = () => {
+    console.log('ejecutada handleaddnote')
     const newNote = {
       idnota: uuid(),
       title,
@@ -31,22 +33,22 @@ const Notes = () => {
       estacion: id,
     };
 
+    console.log(newNote)
+
     axios
-      .post("/notes")
+      .post("http://localhost:8080/notes", newNote)
       .then((res) => {
         console.log(res)
       })
       .catch((err) => console.log(err));
-    // Obtener las notas existentes del almacenamiento local (si las hay)
-    const existingNotes = JSON.parse(localStorage.getItem("notes")) || [];
 
-    // Agregar la nueva nota a las notas existentes
-    existingNotes.push(newNote);
 
-    // Guardar las notas actualizadas en el almacenamiento local
-    localStorage.setItem("notes", JSON.stringify(existingNotes));
+    // const existingNotes = JSON.parse(localStorage.getItem("notes")) || [];
 
-    // Limpiar los campos del formulario después de agregar la nota
+    // existingNotes.push(newNote);
+
+    // localStorage.setItem("notes", JSON.stringify(existingNotes));
+
     setTitle("");
     setNote("");
   };
@@ -103,7 +105,7 @@ const Notes = () => {
             <button
               type="button"
               className="custom__button"
-              onClick={() => handleAddNote}
+              onClick={() => handleAddNote()}
             >
               Agregar nota
             </button>
