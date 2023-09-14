@@ -4,13 +4,12 @@ const { Schema, model } = mongoose
 
 
 const notesSchema = new Schema({
-    timestamp: { type: Number, require: true },
+    idnota: { type: String },
     title: { type: String },
-    thumbnail: { type: String },
-    description: { type: String },
-    stock: { type: Number },
-    code: { type: String },
-    price: { type: Number }
+    note: { type: String },
+    fecha: { type: String },
+    creador: { type: String },
+    estacion: { type: String },
 });
 
 

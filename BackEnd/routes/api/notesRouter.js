@@ -12,9 +12,9 @@ const { passport, isDeletedJWT } = require('../../middleware/auth')
 const logger = require('../../log/log4js')
 
 const adm = true;
+// isDeletedJWT, passport.authenticate('jwt', { session: false }), recortado de las rutas
 
-
-notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+notesRouter.get("/notes", async (req, res) => {
 
   try {
     const notes = await getAllNotesController();
@@ -27,7 +27,7 @@ notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: 
 });
 
 
-notesRouter.get("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+notesRouter.get("/notes/:id", async (req, res) => {
   const { method, url } = req
   const { id } = req.params;
 
@@ -48,7 +48,7 @@ notesRouter.get("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { sessi
 });
 
 
-notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+notesRouter.post("/notes", async (req, res) => {
   const { method, url } = req
 
   try {
@@ -74,7 +74,7 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
 });
 
 
-notesRouter.put("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+notesRouter.put("/notes/:id", async (req, res) => {
   const { method, url } = req
 
   try {
@@ -112,7 +112,7 @@ notesRouter.put("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { sessi
 });
 
 
-notesRouter.delete("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+notesRouter.delete("/notes/:id", async (req, res) => {
   const { method, url } = req
 
   try {
