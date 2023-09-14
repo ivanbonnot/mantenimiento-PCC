@@ -32,7 +32,7 @@ const Notes = () => {
     };
 
     axios
-      .post("/notes")
+      .post("localhost:8080/notes")
       .then((res) => {
         console.log(res)
       })
