@@ -5,6 +5,7 @@ const logger = require('../log/log4js')
 const expressSession = require('express-session')
 const mongoStore = require('connect-mongo')
 const { engine } = require('express-handlebars');
+const cors = require('cors');
 const path = require('path');
 
 
@@ -55,6 +56,8 @@ const baseProcces = () => {
     app.use(morgan('dev'))
     app.use(express.urlencoded({ extended: true }))
     app.use(express.json())
+    // Habilita CORS para todas las rutas y orígenes (en desarrollo puedes ajustarlo según tus necesidades)
+    app.use(cors());
     //app.use(express.static(staticFiles))
     //app.use(express.static('./public'))
 

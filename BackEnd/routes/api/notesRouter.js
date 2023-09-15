@@ -37,7 +37,7 @@ notesRouter.get("/notes/:id", async (req, res) => {
     if (noteById) {
       res.json(noteById);
     } else {
-      logger.error(`Ruta: ${url}, método: ${method}. No existe el nota:${id}`);
+      logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
       return res.status(403).json({ result: "error" });
     }
 
@@ -97,7 +97,7 @@ notesRouter.put("/notes/:id", async (req, res) => {
         await updateNoteController(id, noteUpdate);
         res.json(noteUpdate);
       } else {
-        logger.error(`Ruta: ${url}, método: ${method}. No existe el nota:${id}`);
+        logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
         return res.status(403).json({ result: "error" });
       }
     } else {
@@ -106,7 +106,7 @@ notesRouter.put("/notes/:id", async (req, res) => {
     }
 
   } catch (error) {
-    logger.error(`Error al actualizar el nota: ${error}`);
+    logger.error(`Error al actualizar la nota: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });
@@ -114,26 +114,22 @@ notesRouter.put("/notes/:id", async (req, res) => {
 
 notesRouter.delete("/notes/:id", async (req, res) => {
   const { method, url } = req
+  const { id } = req.params;
 
   try {
-    if (adm) {
-      const { id } = req.params;
       const noteById = await getNoteByIdController(id);
 
       if (noteById) {
         await deleteNoteController(id);
         res.status(200).json({ deleted: true });
       } else {
-        logger.error(`Ruta: ${url}, método: ${method}. No existe el nota:${id}`);
+        logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
         return res.status(403).json({ result: "error" });
       }
-    } else {
-      logger.error(`Ruta: ${url}, método: ${method}. Usuario no autorizado`);
-      return res.status(403).json({ result: "error" });
-    }
+    
 
   } catch (error) {
-    logger.error(`Error al borrar el nota: ${error}`);
+    logger.error(`Error al borrar la nota: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });

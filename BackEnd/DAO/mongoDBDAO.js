@@ -59,7 +59,7 @@ class mongoDBDAO {
 
     getNotes = async () => await noteModel.find({});
 
-    getNoteById = async (id) => await NModel.findOne({ _id: id });
+    getNoteById = async (id) => await noteModel.findOne({ _id: id });
 
     deleteNote = async (id) => await noteModel.deleteOne({ _id: id });
 

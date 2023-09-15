@@ -1468,3 +1468,5 @@
 [2023-09-14T16:52:02.886] [ERROR] default - Error al crear producto: ReferenceError: uuid is not defined
 [2023-09-14T17:01:24.830] [ERROR] default - Error al crear nota: ReferenceError: idnota is not defined
 [2023-09-14T17:02:03.501] [ERROR] default - Error al crear nota: ReferenceError: id is not defined
+[2023-09-15T13:22:52.651] [ERROR] default - Error al borrar la nota: ReferenceError: NModel is not defined
+[2023-09-15T13:23:26.051] [ERROR] default - Nota: 650366d16e18e1146729a0b1

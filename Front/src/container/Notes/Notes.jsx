@@ -52,10 +52,9 @@ const Notes = () => {
     setNote("");
   };
 
-  const handelDeleteNote = (idDelete) => {
+  const handleDeleteNote = (idDelete) => {
     axios
-      .delete(`/notes/${id}/${idDelete}`)
-
+      .delete(`http://localhost:8080/notes/${idDelete}`)
       .then((res) => {
         console.log(idDelete)
         console.log(`Borrada ${idDelete}, ${res}`);
@@ -83,7 +82,7 @@ const Notes = () => {
                 <button
                   type="button"
                   className="delete__button"
-                  onClick={() => handelDeleteNote(_id)}
+                  onClick={() => handleDeleteNote(_id)}
                 >
                   Eliminar Nota
                 </button>
