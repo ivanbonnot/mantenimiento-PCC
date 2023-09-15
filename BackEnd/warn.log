@@ -1465,3 +1465,6 @@
 [2023-05-31T16:56:58.019] [WARN] default - JWT dejo de ser valido, token: undefined
 [2023-05-31T16:57:31.585] [WARN] default - JWT dejo de ser valido, token: undefined
 [2023-05-31T17:02:59.804] [WARN] default - JWT dejo de ser valido, token: undefined
+[2023-09-14T16:52:02.886] [ERROR] default - Error al crear producto: ReferenceError: uuid is not defined
+[2023-09-14T17:01:24.830] [ERROR] default - Error al crear nota: ReferenceError: idnota is not defined
+[2023-09-14T17:02:03.501] [ERROR] default - Error al crear nota: ReferenceError: id is not defined
