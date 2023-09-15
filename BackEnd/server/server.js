@@ -12,7 +12,7 @@ const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
 const { config, mongodbSecretPin, userSessionTime, mongodbUri } = require('../config/enviroment')
 
-require('dotenv').config()
+//require('dotenv').config()
 
 const advancedOptions = {
     useNewUrlParser: true,

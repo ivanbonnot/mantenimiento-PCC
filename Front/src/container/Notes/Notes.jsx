@@ -12,9 +12,9 @@ const Notes = () => {
   const [note, setNote] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/notes")
+    axios.get("http://localhost:8080/notes")
       .then((res) => {
+        console.log(res)
         const note = res.data.filter((item) => item.estacion === id);
         setNoteData(note);
         console.log(note)
