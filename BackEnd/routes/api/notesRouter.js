@@ -37,12 +37,12 @@ notesRouter.get("/notes/:id", async (req, res) => {
     if (noteById) {
       res.json(noteById);
     } else {
-      logger.error(`Ruta: ${url}, método: ${method}. No existe el producto:${id}`);
+      logger.error(`Ruta: ${url}, método: ${method}. No existe el nota:${id}`);
       return res.status(403).json({ result: "error" });
     }
 
   } catch (error) {
-    logger.error(`Error en la solicitud de producto por id: ${error}`);
+    logger.error(`Error en la solicitud de nota por id: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });
@@ -53,22 +53,22 @@ notesRouter.post("/notes", async (req, res) => {
 
   try {
 
-    const { title, note } = req.body;
+    const { idnota, title, note, fecha, estacion } = req.body;
 
     const notePost = {
-      idnota: uuid(),
+      idnota,
       title,
       note,
-      fecha: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      fecha,
       creador: "",
-      estacion: id,
+      estacion,
     };
 
     await addNewNoteController(notePost);
     res.json(notePost);
 
   } catch (error) {
-    logger.error(`Error al crear producto: ${error}`);
+    logger.error(`Error al crear nota: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });
@@ -97,7 +97,7 @@ notesRouter.put("/notes/:id", async (req, res) => {
         await updateNoteController(id, noteUpdate);
         res.json(noteUpdate);
       } else {
-        logger.error(`Ruta: ${url}, método: ${method}. No existe el producto:${id}`);
+        logger.error(`Ruta: ${url}, método: ${method}. No existe el nota:${id}`);
         return res.status(403).json({ result: "error" });
       }
     } else {
@@ -106,7 +106,7 @@ notesRouter.put("/notes/:id", async (req, res) => {
     }
 
   } catch (error) {
-    logger.error(`Error al actualizar el producto: ${error}`);
+    logger.error(`Error al actualizar el nota: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });
@@ -124,7 +124,7 @@ notesRouter.delete("/notes/:id", async (req, res) => {
         await deleteNoteController(id);
         res.status(200).json({ deleted: true });
       } else {
-        logger.error(`Ruta: ${url}, método: ${method}. No existe el producto:${id}`);
+        logger.error(`Ruta: ${url}, método: ${method}. No existe el nota:${id}`);
         return res.status(403).json({ result: "error" });
       }
     } else {
@@ -133,7 +133,7 @@ notesRouter.delete("/notes/:id", async (req, res) => {
     }
 
   } catch (error) {
-    logger.error(`Error al borrar el producto: ${error}`);
+    logger.error(`Error al borrar el nota: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });

@@ -12,10 +12,10 @@ const Notes = () => {
   const [note, setNote] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/notes")
+    axios.get("http://localhost:8080/notes")
       .then((res) => {
-        const note = res.data.filter((item) => item.estacion === id);
+        console.log(res)
+        const note = res.data.notes.filter((item) => item.estacion === id);
         setNoteData(note);
         console.log(note)
       })
@@ -35,8 +35,7 @@ const Notes = () => {
 
     console.log(newNote)
 
-    axios
-      .post("http://localhost:8080/notes", newNote)
+    axios.post("http://localhost:8080/notes", newNote)
       .then((res) => {
         console.log(res)
       })
@@ -56,10 +55,15 @@ const Notes = () => {
   const handelDeleteNote = (idDelete) => {
     axios
       .delete(`/notes/${id}/${idDelete}`)
+
       .then((res) => {
+        console.log(idDelete)
         console.log(`Borrada ${idDelete}, ${res}`);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(idDelete)
+        console.log(err)
+      })
 
     //Implementar ruta delete
   };
@@ -70,16 +74,16 @@ const Notes = () => {
         <div className="app__notes-wrapper">
           <div className="app__notes-read">
             <h1 className="p__cormorant">Notas ET {id}</h1>
-            {noteData.map(({ idnota, title, nota, fecha, creador }) => (
+            {noteData.map(({ _id, idnota, title, note, fecha, creador }) => (
               <div className="app__notes-note" key={idnota}>
                 <p className="title p__opensans">Título: {title}</p>
-                <p className="note p__opensans">Aclaración: {nota}</p>
+                <p className="note p__opensans">Aclaración: {note}</p>
                 <p className="author p__opensans">Fecha: {fecha}</p>
                 <p className="date p__opensans">Autor: {creador}</p>
                 <button
                   type="button"
                   className="delete__button"
-                  onClick={() => handelDeleteNote(idnota)}
+                  onClick={() => handelDeleteNote(_id)}
                 >
                   Eliminar Nota
                 </button>
