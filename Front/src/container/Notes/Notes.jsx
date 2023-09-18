@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import moment from "moment";
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Importa los estilos
 import "./Notes.css";
 
 const Notes = () => {
@@ -11,16 +13,21 @@ const Notes = () => {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
 
-  useEffect(() => {
-    axios.get("http://localhost:8080/notes")
+
+  const loadNotes = useCallback(() => {
+    axios
+      .get("http://localhost:8080/notes")
       .then((res) => {
-        console.log(res)
         const note = res.data.notes.filter((item) => item.estacion === id);
         setNoteData(note);
-        console.log(note)
       })
       .catch((err) => console.log(err));
-  }, [id]);
+  }, [id]); // Incluye 'id' como dependencia en useCallback
+
+  useEffect(() => {
+    loadNotes()
+  }, [id, loadNotes]);
+
 
   const handleAddNote = () => {
     console.log('ejecutada handleaddnote')
@@ -38,6 +45,7 @@ const Notes = () => {
     axios.post("http://localhost:8080/notes", newNote)
       .then((res) => {
         console.log(res)
+        loadNotes()
       })
       .catch((err) => console.log(err));
 
@@ -53,19 +61,36 @@ const Notes = () => {
   };
 
   const handleDeleteNote = (idDelete) => {
-    axios
-      .delete(`http://localhost:8080/notes/${idDelete}`)
-      .then((res) => {
-        console.log(idDelete)
-        console.log(`Borrada ${idDelete}, ${res}`);
-      })
-      .catch((err) => {
-        console.log(idDelete)
-        console.log(err)
-      })
 
-    //Implementar ruta delete
-  };
+    // Mostrar un cuadro de diálogo de confirmación
+    confirmAlert({
+      title: 'Confirmar eliminación',
+      message: '¿Estás seguro de que deseas eliminar esta nota?',
+      buttons: [
+        {
+          label: 'Sí',
+          onClick: () => {
+            axios
+              .delete(`http://localhost:8080/notes/${idDelete}`)
+              .then((res) => {
+                console.log(idDelete)
+                console.log(`Borrada ${idDelete}, ${res}`);
+                loadNotes()
+              })
+              .catch((err) => {
+                console.log(idDelete)
+                console.log(err)
+              })
+          },
+        },
+        {
+          label: 'No',
+          onClick: () => {
+          },
+        },
+      ]
+    });
+  }
 
   return (
     <div className="app__bg app__notes-container">
@@ -79,13 +104,14 @@ const Notes = () => {
                 <p className="note p__opensans">Aclaración: {note}</p>
                 <p className="author p__opensans">Fecha: {fecha}</p>
                 <p className="date p__opensans">Autor: {creador}</p>
-                <button
+                <div><button
                   type="button"
                   className="delete__button"
                   onClick={() => handleDeleteNote(_id)}
                 >
                   Eliminar Nota
-                </button>
+                </button></div>
+
               </div>
             ))}
           </div>
@@ -96,6 +122,7 @@ const Notes = () => {
               type="text"
               placeholder="Titulo"
               className="app__notes-write_title"
+              value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <textarea
@@ -103,6 +130,7 @@ const Notes = () => {
               rows={7}
               placeholder="Aclaración"
               className="app__notes-write_note"
+              value={note}
               onChange={(e) => setNote(e.target.value)}
             />
             <button

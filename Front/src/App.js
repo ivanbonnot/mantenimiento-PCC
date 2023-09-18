@@ -9,9 +9,9 @@ import Login from "./container/Login/Login";
 function App() {
   return (
     <BrowserRouter>
-    <NavBar />
+      <NavBar />
       <Routes>
-      <Route exact path="/login" element={<Login />} />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<Header />} />
         <Route exact path="/notes/:id" element={<Notes />} />
       </Routes>
