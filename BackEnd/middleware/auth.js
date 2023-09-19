@@ -4,8 +4,8 @@ const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const logger = require('../log/log4js')
 
-const cookieParser = require('cookie-parser')
-const expressSession = require('express-session')
+//const cookieParser = require('cookie-parser')
+//const expressSession = require('express-session')
 const jwt = require('jsonwebtoken')
 const { jwtSecret, jwtExpires } = require('../config/enviroment')
 const { checkUserController, getUserController } = require("../controllers/usersControler");
@@ -77,7 +77,7 @@ const generateJwtToken = (username, res) => {
     expiresIn: jwtExpires
   }
   const token = jwt.sign(payload, jwtSecret, options)
-  res.cookie('jwtToken', token, { httpOnly: true });
+  //res.cookie('jwtToken', token, { httpOnly: true });
   return token
 }
 

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -10,17 +10,18 @@ import AuthGuard from './components/Authentication/Authentication'
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route
           path="/"
           element={
-            <AuthGuard>
-              <Route index element={<Header />} />
-              <Route path="/notes/:id" element={<Notes />} />
+            <AuthGuard children={Header}>
+              <Header />
             </AuthGuard>
           }
         />
+        <Route path="/notes/:id" element={<Notes />} />
       </Routes>
     </BrowserRouter>
   );

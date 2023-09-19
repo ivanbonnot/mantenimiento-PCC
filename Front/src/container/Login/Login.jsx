@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css'
-import { redirect } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -30,7 +31,8 @@ const LoginForm = () => {
         const token = res.data.token;
         console.log(token)
         localStorage.setItem('token', token);
-        return redirect('/');
+        
+      navigate('/');
       })
       .catch((error) => {
         console.error('Error en la petición:', error);
