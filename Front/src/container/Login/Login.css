@@ -35,10 +35,12 @@
 
 
 .app__login-email label {
+    color: white;
     margin-bottom: 1rem;
 }
 
 .app__login-password label {
+    color: white;
     margin-bottom: 1rem;
 }
 

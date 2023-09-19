@@ -1470,3 +1470,22 @@
 [2023-09-14T17:02:03.501] [ERROR] default - Error al crear nota: ReferenceError: id is not defined
 [2023-09-15T13:22:52.651] [ERROR] default - Error al borrar la nota: ReferenceError: NModel is not defined
 [2023-09-15T13:23:26.051] [ERROR] default - Nota: 650366d16e18e1146729a0b1
+[2023-09-18T19:46:37.409] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:34:46
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-18T20:02:36.017] [ERROR] default - ReferenceError: res is not defined
+    at generateJwtToken (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\middleware\auth.js:80:3)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:37:62
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-09-18T20:04:23.879] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'cookie')
+    at generateJwtToken (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\middleware\auth.js:80:7)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:37:62
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

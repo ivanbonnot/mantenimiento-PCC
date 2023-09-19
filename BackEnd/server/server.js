@@ -7,11 +7,12 @@ const mongoStore = require('connect-mongo')
 const { engine } = require('express-handlebars');
 const cors = require('cors');
 const path = require('path');
+const cookieParser = require('cookie-parser')
 
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
-const { config, mongodbSecretPin, userSessionTime, mongodbUri } = require('../config/enviroment')
+const { config, mongodbSecretPin, userSessionTime, mongodbUri, jwtSecret } = require('../config/enviroment')
 
 //require('dotenv').config()
 
@@ -81,6 +82,16 @@ const baseProcces = () => {
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
         next();
     });
+
+    app.use(cookieParser());
+    app.use(
+        expressSession({
+            secret: jwtSecret,
+            resave: false,
+            saveUninitialized: true,
+            // Configuración adicional de express-session según tus necesidades
+        })
+    );
 
 
     const PORT = 8080

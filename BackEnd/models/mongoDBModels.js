@@ -14,11 +14,9 @@ const notesSchema = new Schema({
 
 
 const userSchema = new Schema({
-    timestamp: { type: Number, require: true },
+    timestamp: { type: Number },
     username: { type: String, required: true },
     password: { type: String, required: true },
-    address: { type: String, required: true },
-    phone: { type: String, required: true }
 });
 
 

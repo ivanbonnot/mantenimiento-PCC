@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Login.css'
+import { redirect } from "react-router-dom"
+import axios from 'axios';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    email: '',
+    username: '',
     password: '',
   });
 
@@ -17,21 +19,37 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para manejar la autenticación del usuario
-    console.log('Datos de inicio de sesión:', formData);
+    const data = JSON.stringify(formData);
+
+    axios.post("http://localhost:8080/login", data, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((res) => {
+        const token = res.data.token;
+        console.log(token)
+        localStorage.setItem('token', token);
+        return redirect('/');
+      })
+      .catch((error) => {
+        console.error('Error en la petición:', error);
+      });
+
+    console.log('Datos de inicio de sesión:', data);
   };
 
   return (
     <div className="app__bg app__login-container">
       <div className='app__login-wrapper'>
         <h2>Iniciar sesión</h2>
-        <form onSubmit={handleSubmit} className='app__login-form p__cormorant'>
+        <form onSubmit={handleSubmit} className='app__login-form'>
           <div className="form-group app__login-email">
-            <label htmlFor="email">Correo Electrónico</label>
+            <label htmlFor="username">Correo Electrónico</label>
             <input
               type="email"
               id="email"
-              name="email"
+              name="username"
               placeholder="Tu correo electrónico"
               value={formData.email}
               onChange={handleChange}

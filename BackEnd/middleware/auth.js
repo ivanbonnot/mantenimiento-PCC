@@ -2,24 +2,24 @@ const passport = require('passport');
 const { Strategy: LocalStrategy } = require('passport-local');
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
-const  logger  = require('../log/log4js')
+const logger = require('../log/log4js')
 
+const cookieParser = require('cookie-parser')
+const expressSession = require('express-session')
 const jwt = require('jsonwebtoken')
 const { jwtSecret, jwtExpires } = require('../config/enviroment')
 const { checkUserController, getUserController } = require("../controllers/usersControler");
 
-
-
 passport.use(
   'login',
   new LocalStrategy(
-    async function( username, password, done ) {
-      const checkUser = await checkUserController (username, password)
-      if ( checkUser.result ) {     
-        return done( null, { username: username } )
+    async function (username, password, done) {
+      const checkUser = await checkUserController(username, password)
+      if (checkUser.result) {
+        return done(null, { username: username })
       } else {
         logger.info(`Usuario o contrasena incorrectos.`)
-        return done( null, false, { message: 'Nombre de usuario o contraseña incorrectos' } )
+        return done(null, false, { message: 'Nombre de usuario o contraseña incorrectos' })
       }
     }
   )
@@ -29,26 +29,26 @@ passport.use(
 passport.use(
   'register',
   new LocalStrategy(
-    async ( username, password, done ) => {
-      const checkUser = await checkUserController( username, password )
+    async (username, password, done) => {
+      const checkUser = await checkUserController(username, password)
 
       if (checkUser.result === true) {
         logger.info(`Se intento registrar un usuario ya existente`)
-        return done( null, false, { message: 'El email ya existe' } )
-        
+        return done(null, false, { message: 'El email ya existe' })
+
       } else {
-        return done( null, { username: username } )
+        return done(null, { username: username })
       }
     }
   )
 )
 
 
-passport.serializeUser( function(user, done) {
+passport.serializeUser(function (user, done) {
   done(null, user.username)
 })
 
-passport.deserializeUser( function(username, done) {
+passport.deserializeUser(function (username, done) {
   done(null, { username: username })
 })
 
@@ -69,14 +69,16 @@ passport.use('jwt', new JwtStrategy({ jwtFromRequest: ExtractJwt.fromUrlQueryPar
 )
 
 
-const generateJwtToken = (username) => {
+const generateJwtToken = (username, res) => {
   const payload = {
     username: username
   }
   const options = {
     expiresIn: jwtExpires
   }
-  return jwt.sign(payload, jwtSecret, options)
+  const token = jwt.sign(payload, jwtSecret, options)
+  res.cookie('jwtToken', token, { httpOnly: true });
+  return token
 }
 
 
@@ -94,4 +96,4 @@ const isDeletedJWT = (req, res, next) => {
 }
 
 
-module.exports =   {passport, generateJwtToken, destroyJWT,isDeletedJWT}
+module.exports = { passport, generateJwtToken, destroyJWT, isDeletedJWT }

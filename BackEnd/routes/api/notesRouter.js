@@ -14,7 +14,7 @@ const logger = require('../../log/log4js')
 const adm = true;
 // isDeletedJWT, passport.authenticate('jwt', { session: false }), recortado de las rutas
 
-notesRouter.get("/notes", async (req, res) => {
+notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
 
   try {
     const notes = await getAllNotesController();
@@ -27,7 +27,7 @@ notesRouter.get("/notes", async (req, res) => {
 });
 
 
-notesRouter.get("/notes/:id", async (req, res) => {
+notesRouter.get("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   const { method, url } = req
   const { id } = req.params;
 
@@ -48,7 +48,7 @@ notesRouter.get("/notes/:id", async (req, res) => {
 });
 
 
-notesRouter.post("/notes", async (req, res) => {
+notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   const { method, url } = req
 
   try {
@@ -74,7 +74,7 @@ notesRouter.post("/notes", async (req, res) => {
 });
 
 
-notesRouter.put("/notes/:id", async (req, res) => {
+notesRouter.put("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   const { method, url } = req
 
   try {
@@ -112,21 +112,21 @@ notesRouter.put("/notes/:id", async (req, res) => {
 });
 
 
-notesRouter.delete("/notes/:id", async (req, res) => {
+notesRouter.delete("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   const { method, url } = req
   const { id } = req.params;
 
   try {
-      const noteById = await getNoteByIdController(id);
+    const noteById = await getNoteByIdController(id);
 
-      if (noteById) {
-        await deleteNoteController(id);
-        res.status(200).json({ deleted: true });
-      } else {
-        logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
-        return res.status(403).json({ result: "error" });
-      }
-    
+    if (noteById) {
+      await deleteNoteController(id);
+      res.status(200).json({ deleted: true });
+    } else {
+      logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
+      return res.status(403).json({ result: "error" });
+    }
+
 
   } catch (error) {
     logger.error(`Error al borrar la nota: ${error}`);

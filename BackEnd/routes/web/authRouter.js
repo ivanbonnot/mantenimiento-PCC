@@ -4,7 +4,7 @@ const path = require('path');
 const passport = require('passport');
 const logger = require("../../log/log4js")
 
-const {  newUserController, getUserController } = require('../../controllers/usersControler')
+const { newUserController, getUserController } = require('../../controllers/usersControler')
 require('../../middleware/auth');
 const { generateJwtToken, destroyJWT } = require('../../middleware/auth')
 
@@ -20,9 +20,9 @@ authWebRouter.get('/login', (req, res) => {
         if (userEmail) {
             res.redirect('/')
         } else {
-            res.render(path.join(process.cwd(), './public/views/login.ejs'), { message: req.flash('error') })
+
         }
-    } catch(error) {
+    } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
     }
@@ -32,11 +32,13 @@ authWebRouter.get('/login', (req, res) => {
 authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
     try {
         req.session.passport.user = req.user.username
+        console.log(`passport: ${req.session.passport.user}`)
         let userData = await getUserController(req.session.passport.user)
-        userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user) })
+        userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user, res) })
         res.status(200).json(userData)
+        console.log(`passport: ${req.session.passport.user}, user: ${userData}`)
         //res.redirect('/')
-    } catch(error) {
+    } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
     }
@@ -53,7 +55,7 @@ authWebRouter.get('/register', (req, res) => {
         } else {
             res.render(path.join(process.cwd(), './public/views/register.ejs'), { message: req.flash('error') })
         }
-    } catch(error) {
+    } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
     }
@@ -79,7 +81,7 @@ authWebRouter.post('/register', passport.authenticate('register', { failureRedir
                 phone
             }
             await newUserController(newUser)
-            
+
         } else {
             logger.info("La contraseña no coincide")
             req.flash('error', 'La contraseña no coincide');
@@ -87,7 +89,7 @@ authWebRouter.post('/register', passport.authenticate('register', { failureRedir
         }
 
         res.redirect('/login');
-    } catch(error) {
+    } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
     }
@@ -105,7 +107,7 @@ authWebRouter.get('/logout', (req, res) => {
             console.log(req.headers)
             req.session.destroy(err => {
                 if (!err) {
-                    res.render(path.join(process.cwd(), './public/views/logout.ejs'), { nombre })
+
                 } else {
                     res.redirect('/')
                 }
@@ -113,7 +115,7 @@ authWebRouter.get('/logout', (req, res) => {
         } else {
             res.redirect('/login')
         }
-    } catch(error) {
+    } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
     }
