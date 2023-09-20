@@ -99,12 +99,12 @@ authWebRouter.post('/register', passport.authenticate('register', { failureRedir
 
 //__LOGOUT__//
 
-authWebRouter.get('/logout', (req, res) => {
+authWebRouter.get('/logout', passport.authenticate('jwt', { session: false }), (req, res) => {
     try {
-        const nombre = req.session.passport.user
+        const nombre = req.user.username
+        //console.log(nombre)
         if (nombre) {
             destroyJWT(req.headers.authorization)
-            console.log(req.headers)
             req.session.destroy(err => {
                 if (!err) {
 

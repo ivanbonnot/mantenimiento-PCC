@@ -1,9 +1,26 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 
 const NavBar = () => {
+
     const [nav, setNav] = useState(false);
+
+
+    const handleLogout = async () => {
+        try {
+            await axios.get("http://localhost:8080/logout", {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+
+        } catch (error) {
+            console.error("Error al cerrar sesión:", error);
+        }
+    }
 
     const links = [
         {
@@ -24,9 +41,11 @@ const NavBar = () => {
         },
         {
             id: 5,
-            link: "Listas",
+            link: "logout",
+            onClick: handleLogout
         },
     ];
+
 
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
@@ -37,12 +56,12 @@ const NavBar = () => {
             </div>
 
             <ul className=" hidden md:flex">
-                {links.map(({ id, link }) => (
+                {links.map(({ id, link, onClick }) => (
                     <li
                         key={id}
                         className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200"
                     >
-                        <Link to={link}>
+                        <Link to={link} onClick={onClick}>
                             {link}
                         </Link>
                     </li>

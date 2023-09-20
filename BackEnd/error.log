@@ -621,3 +621,168 @@
     at generateJwtToken (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\middleware\auth.js:80:7)
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:37:62
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-09-18T23:26:36.945] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\homeRouter.js:12:47
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:47:12)
+[2023-09-19T16:49:15.771] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T16:50:19.456] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T16:51:26.636] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:33
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T16:51:41.603] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:33
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T17:05:59.797] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:33
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T17:07:48.645] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:33
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T17:08:09.786] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:33
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T17:19:41.254] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T17:40:00.563] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T18:00:31.347] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T18:00:40.947] [ERROR] default - ReferenceError: nombre is not defined
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:107:9
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T18:37:39.622] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T19:45:59.681] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\connect-flash\lib\flash.js:21:5
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+[2023-09-19T20:11:57.562] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'user')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:104:45
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at complete (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at req.login.req.logIn (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\http\request.js:44:13)
+    at strategy.success (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:256:13)

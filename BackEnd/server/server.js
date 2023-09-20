@@ -2,12 +2,17 @@ const morgan = require('morgan');
 const express = require('express');
 const compression = require('compression')
 const logger = require('../log/log4js')
-const expressSession = require('express-session')
-const mongoStore = require('connect-mongo')
+//const expressSession = require('express-session')
+//const mongoStore = require('connect-mongo')
+
 const { engine } = require('express-handlebars');
 const cors = require('cors');
 const path = require('path');
-const cookieParser = require('cookie-parser')
+
+const expressSession = require('express-session')
+const passport = require('passport');
+const mongoStore = require('connect-mongo')
+
 
 
 const cluster = require('cluster')
@@ -62,7 +67,6 @@ const baseProcces = () => {
     //app.use(express.static(staticFiles))
     //app.use(express.static('./public'))
 
-
     app.use(expressSession({
         store: mongoStore.create({
             mongoUrl: mongodbUri,
@@ -75,6 +79,11 @@ const baseProcces = () => {
             maxAge: Number(userSessionTime)
         }
     }))
+
+
+    app.use(passport.initialize());
+    app.use(passport.session());
+
     // Configura el encabezado CORS para permitir solicitudes desde 'http://localhost:3000'
     app.use((req, res, next) => {
         res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -82,17 +91,6 @@ const baseProcces = () => {
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
         next();
     });
-
-    app.use(cookieParser());
-    app.use(
-        expressSession({
-            secret: jwtSecret,
-            resave: false,
-            saveUninitialized: true,
-            // Configuración adicional de express-session según tus necesidades
-        })
-    );
-
 
     const PORT = 8080
     const server = httpServer.listen(PORT, () => {

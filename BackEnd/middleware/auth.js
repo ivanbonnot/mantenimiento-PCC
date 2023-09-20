@@ -55,8 +55,7 @@ passport.deserializeUser(function (username, done) {
 
 
 //_____Autenticacion JWT_____//
-
-passport.use('jwt', new JwtStrategy({ jwtFromRequest: ExtractJwt.fromUrlQueryParameter('token'), secretOrKey: jwtSecret },
+passport.use('jwt', new JwtStrategy({ jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), secretOrKey: jwtSecret },
   async (payload, done) => {
     try {
       const user = await getUserController(payload.username)
@@ -77,7 +76,6 @@ const generateJwtToken = (username, res) => {
     expiresIn: jwtExpires
   }
   const token = jwt.sign(payload, jwtSecret, options)
-  //res.cookie('jwtToken', token, { httpOnly: true });
   return token
 }
 

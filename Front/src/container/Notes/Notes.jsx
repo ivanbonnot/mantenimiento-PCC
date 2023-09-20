@@ -14,9 +14,17 @@ const Notes = () => {
   const [note, setNote] = useState("");
 
 
+
   const loadNotes = useCallback(() => {
+
+    //const token = localStorage.getItem('token', token);
+    //console.log(`token Get notes: ${token}`)
     axios
-      .get("http://localhost:8080/notes")
+      .get("http://localhost:8080/notes", {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      })
       .then((res) => {
         const note = res.data.notes.filter((item) => item.estacion === id);
         setNoteData(note);
@@ -30,7 +38,6 @@ const Notes = () => {
 
 
   const handleAddNote = () => {
-    console.log('ejecutada handleaddnote')
     const newNote = {
       idnota: uuid(),
       title,
@@ -42,7 +49,12 @@ const Notes = () => {
 
     console.log(newNote)
 
-    axios.post("http://localhost:8080/notes", newNote)
+
+    axios.post("http://localhost:8080/notes", newNote, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
       .then((res) => {
         console.log(res)
         loadNotes()

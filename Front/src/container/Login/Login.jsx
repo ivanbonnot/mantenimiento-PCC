@@ -29,10 +29,9 @@ const LoginForm = () => {
     })
       .then((res) => {
         const token = res.data.token;
-        console.log(token)
         localStorage.setItem('token', token);
-        
-      navigate('/');
+
+        navigate('/');
       })
       .catch((error) => {
         console.error('Error en la petición:', error);
