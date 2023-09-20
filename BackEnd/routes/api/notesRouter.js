@@ -53,14 +53,14 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
 
   try {
 
-    const { idnota, title, note, fecha, estacion } = req.body;
+    const { idnota, title, note, fecha, creador, estacion } = req.body;
 
     const notePost = {
       idnota,
       title,
       note,
       fecha,
-      creador: "",
+      creador,
       estacion,
     };
 

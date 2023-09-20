@@ -30,7 +30,7 @@ const LoginForm = () => {
       .then((res) => {
         const token = res.data.token;
         localStorage.setItem('token', token);
-
+        localStorage.setItem('user', res.data.username);
         navigate('/');
       })
       .catch((error) => {
@@ -38,6 +38,7 @@ const LoginForm = () => {
       });
 
     console.log('Datos de inicio de sesión:', data);
+    
   };
 
   return (

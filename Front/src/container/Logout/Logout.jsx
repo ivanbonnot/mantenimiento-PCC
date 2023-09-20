@@ -7,6 +7,7 @@ const Logout = () => {
   const navigate = useNavigate();
 
   localStorage.removeItem("token");
+  localStorage.removeItem('user');
   setTimeout(() => {
     navigate("/login");
   }, 3000);

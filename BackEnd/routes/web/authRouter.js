@@ -102,7 +102,7 @@ authWebRouter.post('/register', passport.authenticate('register', { failureRedir
 authWebRouter.get('/logout', passport.authenticate('jwt', { session: false }), (req, res) => {
     try {
         const nombre = req.user.username
-        //console.log(nombre)
+
         if (nombre) {
             destroyJWT(req.headers.authorization)
             req.session.destroy(err => {
@@ -115,6 +115,16 @@ authWebRouter.get('/logout', passport.authenticate('jwt', { session: false }), (
         } else {
             res.redirect('/login')
         }
+    } catch (error) {
+        logger.error(error);
+        res.status(500).json('Error interno del servidor');
+    }
+})
+
+
+authWebRouter.get('/verify', passport.authenticate('jwt', { session: false }), (req, res) => {
+    try {
+        res.status(200).json('Token valido');
     } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');

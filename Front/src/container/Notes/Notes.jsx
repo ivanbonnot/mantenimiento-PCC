@@ -3,8 +3,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import moment from "moment";
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Importa los estilos
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css"; // Importa los estilos
 import "./Notes.css";
 
 const Notes = () => {
@@ -13,29 +13,24 @@ const Notes = () => {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
 
-
-
   const loadNotes = useCallback(() => {
 
-    //const token = localStorage.getItem('token', token);
-    //console.log(`token Get notes: ${token}`)
     axios
       .get("http://localhost:8080/notes", {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       })
       .then((res) => {
-        const note = res.data.notes.filter((item) => item.estacion === id);
-        setNoteData(note);
+          const note = res.data.notes.filter((item) => item.estacion === id);
+          setNoteData(note);
       })
       .catch((err) => console.log(err));
-  }, [id]); // Incluye 'id' como dependencia en useCallback
+  }, [id]); 
 
   useEffect(() => {
-    loadNotes()
+    loadNotes();
   }, [id, loadNotes]);
-
 
   const handleAddNote = () => {
     const newNote = {
@@ -43,66 +38,67 @@ const Notes = () => {
       title,
       note,
       fecha: moment().format("MMMM Do YYYY, h:mm:ss a"),
-      creador: "",
+      creador: localStorage.getItem("user"),
       estacion: id,
     };
 
-    console.log(newNote)
+    console.log(newNote);
 
-
-    axios.post("http://localhost:8080/notes", newNote, {
-      headers: {
-        'Authorization': `Bearer ${localStorage.getItem('token')}`
-      }
-    })
+    axios
+      .post("http://localhost:8080/notes", newNote, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
       .then((res) => {
-        console.log(res)
-        loadNotes()
+        console.log(res);
+
+        setTitle("");
+        setNote("");
+        loadNotes();
       })
       .catch((err) => console.log(err));
-
 
     // const existingNotes = JSON.parse(localStorage.getItem("notes")) || [];
 
     // existingNotes.push(newNote);
 
     // localStorage.setItem("notes", JSON.stringify(existingNotes));
-
-    setTitle("");
-    setNote("");
   };
 
   const handleDeleteNote = (idDelete) => {
-
     // Mostrar un cuadro de diálogo de confirmación
     confirmAlert({
-      title: 'Confirmar eliminación',
-      message: '¿Estás seguro de que deseas eliminar esta nota?',
+      title: "Confirmar eliminación",
+      message: "¿Estás seguro de que deseas eliminar esta nota?",
       buttons: [
         {
-          label: 'Sí',
+          label: "Sí",
           onClick: () => {
             axios
-              .delete(`http://localhost:8080/notes/${idDelete}`)
+              .delete(`http://localhost:8080/notes/${idDelete}`,{
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`
+                },
+              })
               .then((res) => {
-                console.log(idDelete)
+                console.log(idDelete);
                 console.log(`Borrada ${idDelete}, ${res}`);
-                loadNotes()
+                loadNotes();
               })
               .catch((err) => {
-                console.log(idDelete)
-                console.log(err)
-              })
+                console.log(idDelete);
+                console.log(err);
+              });
           },
         },
         {
-          label: 'No',
-          onClick: () => {
-          },
+          label: "No",
+          onClick: () => {},
         },
-      ]
+      ],
     });
-  }
+  };
 
   return (
     <div className="app__bg app__notes-container">
@@ -116,14 +112,15 @@ const Notes = () => {
                 <p className="note p__opensans">Aclaración: {note}</p>
                 <p className="author p__opensans">Fecha: {fecha}</p>
                 <p className="date p__opensans">Autor: {creador}</p>
-                <div><button
-                  type="button"
-                  className="delete__button"
-                  onClick={() => handleDeleteNote(_id)}
-                >
-                  Eliminar Nota
-                </button></div>
-
+                <div>
+                  <button
+                    type="button"
+                    className="delete__button"
+                    onClick={() => handleDeleteNote(_id)}
+                  >
+                    Eliminar Nota
+                  </button>
+                </div>
               </div>
             ))}
           </div>

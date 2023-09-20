@@ -76,6 +76,7 @@ const generateJwtToken = (username, res) => {
     expiresIn: jwtExpires
   }
   const token = jwt.sign(payload, jwtSecret, options)
+  console.log(`token: ${token}`)
   return token
 }
 
