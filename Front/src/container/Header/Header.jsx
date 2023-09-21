@@ -4,8 +4,12 @@ import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
 
 import "./Header.css";
+import NavBar from "../../components/NavBar/NavBar";
+
+<NavBar />
 
 const Header = () => (
+
   <div className="app__header-wrapper app__bg">
     <div className="app__header-et et" id="et">
       <div className="app__header-et">
