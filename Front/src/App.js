@@ -7,13 +7,13 @@ import Notes from "./container/Notes/Notes";
 import Login from "./container/Login/Login";
 import Logout from "./container/Logout/Logout";
 import AuthGuard from './components/Authentication/Authentication'
+import { NavBarContextProvider } from "./context/NavBarContext";
 
 function App() {
 
-
-
   return (
     <BrowserRouter>
+    <NavBarContextProvider >
       <NavBar />
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -21,6 +21,7 @@ function App() {
         <Route path="/notes/:id" element={<AuthGuard children={Notes}><Notes /> </AuthGuard>} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
+      </NavBarContextProvider>
     </BrowserRouter>
   );
 }

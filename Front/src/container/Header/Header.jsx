@@ -2,17 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
+import { useNavBarContext } from "../../context/NavBarContext";
 
 import "./Header.css";
-import NavBar from "../../components/NavBar/NavBar";
 
-<NavBar />
 
-const Header = () => (
+const Header = () => {
 
+const { setShouldRenderNavBar, shouldRenderNavBar } = useNavBarContext();  
+const  renderNavBar = () =>   {    
+  console.log(`Render header ${shouldRenderNavBar}`)
+  setShouldRenderNavBar(true)
+}
+renderNavBar()
+
+return(
   <div className="app__header-wrapper app__bg">
     <div className="app__header-et et" id="et">
       <div className="app__header-et">
+        
         {et.map(({ title, id }) => (
           <div key={id}>
             <p className="p__opensans">
@@ -42,6 +50,6 @@ const Header = () => (
     </div>
 
   </div>
-);
+)};
 
 export default Header;

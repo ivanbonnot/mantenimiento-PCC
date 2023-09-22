@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useNavBarContext } from "../../context/NavBarContext";
 import axios from "axios";
 
 
 const NavBar = () => {
-
+    const { shouldRenderNavBar } = useNavBarContext();
     const [nav, setNav] = useState(false);
-    const [isAuthorized, setIsAuthorized] = useState(false)
-
+    const [isAuthorized, setIsAuthorized] = useState(localStorage.getItem('token'))
 
     const handleLogout = async () => {
         try {
@@ -18,15 +18,16 @@ const NavBar = () => {
                 }
             })
 
-
         } catch (error) {
             console.error("Error al cerrar sesión:", error);
         }
     }
 
+
     useEffect(() => {
         setIsAuthorized(localStorage.getItem('token'));
     }, []);
+
 
     const links = [
         {
@@ -45,7 +46,7 @@ const NavBar = () => {
             id: 4,
             link: "Cambios",
         },
-        {
+         {
             id: 5,
             link: "logout",
             onClick: handleLogout
@@ -53,7 +54,7 @@ const NavBar = () => {
     ];
 
 
-    return isAuthorized ? (
+    return shouldRenderNavBar || isAuthorized ? (
         <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
             <div className="text-4xl font-signature ml-2">
                 <Link to={'/'} >
