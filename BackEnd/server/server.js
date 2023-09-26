@@ -39,7 +39,6 @@ const baseProcces = () => {
     const infoRouter = require('../routes/api/infoRouter')
     const notesRouter = require("../routes/api/notesRouter");
     const authWebRouter = require('../routes/web/authRouter')
-    const homeWebRouter = require('../routes/web/homeRouter')
 
 
     const connectToDb = require("../config/connectToDB");
@@ -105,7 +104,6 @@ const baseProcces = () => {
     app.use("/", notesRouter)
     //__ WebServ Routes __//
     app.use("/", authWebRouter)
-    app.use("/", homeWebRouter)
 
 }
 

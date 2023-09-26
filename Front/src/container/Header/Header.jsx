@@ -10,9 +10,8 @@ import "./Header.css";
 
 const Header = () => {
   const isAdmin = localStorage.getItem('admin')
-  const { setShouldRenderNavBar, shouldRenderNavBar } = useNavBarContext();
+  const { setShouldRenderNavBar } = useNavBarContext();
   const renderNavBar = () => {
-    console.log(`Render header ${shouldRenderNavBar}`)
     setShouldRenderNavBar(true)
   }
 

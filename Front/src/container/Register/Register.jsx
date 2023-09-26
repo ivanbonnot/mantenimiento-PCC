@@ -3,7 +3,6 @@ import './Register.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { confirmAlert } from "react-confirm-alert";
-import Warning from '../../components/Warning/Warning';
 
 const RegisterForm = () => {
   const navigate = useNavigate();
@@ -47,7 +46,7 @@ const RegisterForm = () => {
         if (error.response.status === 302) {
           alert('El usuario ya existe', '¿Agregar otro usuario?')
         } else {
-          <Warning />
+          navigate("/warning");
         }
       });
 

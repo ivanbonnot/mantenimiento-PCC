@@ -6,19 +6,14 @@ import { useEffect } from 'react';
 
 const Logout = () => {
   const navigate = useNavigate();
-  const { shouldRenderNavBar, setShouldRenderNavBar } = useNavBarContext();  
-
-
+  const { setShouldRenderNavBar } = useNavBarContext();  
 
 const  renderNavBar = () =>   {  
-  
-    console.log(`Render logout ${shouldRenderNavBar}`)
     setShouldRenderNavBar(false)
   }
 
   localStorage.removeItem("token");
   localStorage.removeItem('user');
- 
 
   setTimeout(() => {
     navigate("/login");

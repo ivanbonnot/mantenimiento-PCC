@@ -7,6 +7,7 @@ const logger = require("../../log/log4js")
 const { newUserController, getUserController } = require('../../controllers/usersControler')
 require('../../middleware/auth');
 const { generateJwtToken, destroyJWT } = require('../../middleware/auth')
+const { isAdmin } = require('../../middleware/isAdmin')
 
 const authWebRouter = Router()
 authWebRouter.use(flash())
@@ -62,11 +63,11 @@ authWebRouter.get('/register', (req, res) => {
 })
 
 
-authWebRouter.post('/register', passport.authenticate('register', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
+authWebRouter.post('/register', passport.authenticate('register', { failureRedirect: '/login', failureFlash: true }), isAdmin, async (req, res) => {
     try {
         req.session.passport.user = req.user.username
         const username = req.user.username;
-        console.log(req.user)
+        //console.log(req.user)
         const user = await getUserController(username)
 
         if (user) {

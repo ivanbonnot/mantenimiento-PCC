@@ -6,12 +6,10 @@ import axios from 'axios';
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const { shouldRenderNavBar, setShouldRenderNavBar } = useNavBarContext();  
+  const { setShouldRenderNavBar } = useNavBarContext();  
 
   
 const  renderNavBar = () =>   {    
-  
-  console.log(`Render header ${shouldRenderNavBar}`)
   setShouldRenderNavBar(false)
 }
 

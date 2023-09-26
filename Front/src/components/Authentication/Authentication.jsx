@@ -16,8 +16,8 @@ const AuthGuard = ({ children }) => {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   })
-  .then((response) => {
-   return
+  .then(() => {
+   
   })
   .catch((err) => {
     console.log(err)
@@ -32,7 +32,6 @@ const AuthGuard = ({ children }) => {
 
 
      if (isAuthenticated) {
-
       return children;
      } else {
       navigate('/login');
