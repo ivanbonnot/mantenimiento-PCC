@@ -6,12 +6,14 @@ import moment from "moment";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css"; // Importa los estilos
 import "./Notes.css";
+import Spinner from '../../components/Spinner/Spinner';
 
 const Notes = () => {
   const { id } = useParams();
   const [noteData, setNoteData] = useState([]);
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const loadNotes = useCallback(() => {
 
@@ -22,11 +24,12 @@ const Notes = () => {
         },
       })
       .then((res) => {
-          const note = res.data.notes.filter((item) => item.estacion === id);
-          setNoteData(note);
+        const note = res.data.notes.filter((item) => item.estacion === id);
+        setNoteData(note);
       })
-      .catch((err) => console.log(err));
-  }, [id]); 
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false))
+  }, [id]);
 
   useEffect(() => {
     loadNotes();
@@ -76,7 +79,7 @@ const Notes = () => {
           label: "Sí",
           onClick: () => {
             axios
-              .delete(`http://localhost:8080/notes/${idDelete}`,{
+              .delete(`http://localhost:8080/notes/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`
                 },
@@ -94,7 +97,7 @@ const Notes = () => {
         },
         {
           label: "No",
-          onClick: () => {},
+          onClick: () => { },
         },
       ],
     });
@@ -102,62 +105,62 @@ const Notes = () => {
 
   return (
     <div className="app__bg app__notes-container">
-      {noteData ? (
-        <div className="app__notes-wrapper">
-          <div className="app__notes-read">
+      <div className="app__notes-wrapper">
+        <div className="app__notes-read">
+          {noteData && !loading ? (
             <h1 className="p__cormorant">Notas ET {id}</h1>
-            {noteData.map(({ _id, idnota, title, note, fecha, creador }) => (
-              <div className="app__notes-note" key={idnota}>
-                <p className="title p__opensans">Título: {title}</p>
-                <p className="note p__opensans">Aclaración: {note}</p>
-                <p className="author p__opensans">Fecha: {fecha}</p>
-                <p className="date p__opensans">Autor: {creador}</p>
-                <div>
-                  <button
-                    type="button"
-                    className="delete__button"
-                    onClick={() => handleDeleteNote(_id)}
-                  >
-                    Eliminar Nota
-                  </button>
-                </div>
+          ) : (
+            <div className='spinner'>
+              <Spinner />
+            </div>
+          )}
+          {noteData.map(({ _id, idnota, title, note, fecha, creador }) => (
+            <div className="app__notes-note" key={idnota}>
+              <p className="title p__opensans">Título: {title}</p>
+              <p className="note p__opensans">Aclaración: {note}</p>
+              <p className="author p__opensans">Fecha: {fecha}</p>
+              <p className="date p__opensans">Autor: {creador}</p>
+              <div>
+                <button
+                  type="button"
+                  className="delete__button"
+                  onClick={() => handleDeleteNote(_id)}
+                >
+                  Eliminar Nota
+                </button>
               </div>
-            ))}
-          </div>
-
-          <div className="app__notes-write">
-            <h2 className="p__cormorant">Agregar una nota</h2>
-            <input
-              type="text"
-              placeholder="Titulo"
-              className="app__notes-write_title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <textarea
-              type="textarea"
-              rows={7}
-              placeholder="Aclaración"
-              className="app__notes-write_note"
-              value={note}
-              onChange={(e) => setNote(e.target.value)}
-            />
-            <button
-              type="button"
-              className="custom__button"
-              onClick={() => handleAddNote()}
-            >
-              Agregar nota
-            </button>
-          </div>
+            </div>
+          ))}
         </div>
-      ) : (
-        <div>
-          <h2>Note not found</h2>
+        <div className="app__notes-write">
+          <h2 className="p__cormorant">Agregar una nota</h2>
+          <input
+            type="text"
+            placeholder="Titulo"
+            className="app__notes-write_title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <textarea
+            type="textarea"
+            rows={7}
+            placeholder="Aclaración"
+            className="app__notes-write_note"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+          />
+          <button
+            type="button"
+            className="custom__button"
+            onClick={() => handleAddNote()}
+          >
+            Agregar nota
+          </button>
         </div>
-      )}
+      </div>
     </div>
-  );
+  )
 };
+
 
 export default Notes;

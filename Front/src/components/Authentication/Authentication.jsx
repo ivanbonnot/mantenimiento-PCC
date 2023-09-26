@@ -31,9 +31,13 @@ const AuthGuard = ({ children }) => {
      });
 
 
+     if (isAuthenticated) {
 
+      return children;
+     } else {
+      navigate('/login');
+     }
 
-  return;
 };
 
 

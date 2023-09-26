@@ -1,0 +1,49 @@
+.app__register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app__register-wrapper {
+    margin: 6rem 0 3rem 0;
+    min-height: 50%;
+    min-width: 50%;
+    background-color: var(--color-black);
+}
+
+.app__register-wrapper h2 {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 1rem 0 1rem 0;
+}
+
+.app__register-wrapper input {
+    width: 80%
+}
+
+.app__register-email,
+.app__register-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
+}
+
+
+.app__register-email label {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.app__register-password label {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.app__register-form button {
+    margin-bottom: 2rem;
+}

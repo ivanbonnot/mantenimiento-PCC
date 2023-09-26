@@ -49,8 +49,6 @@ notesRouter.get("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { sessi
 
 
 notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
-  const { method, url } = req
-
   try {
 
     const { idnota, title, note, fecha, creador, estacion } = req.body;

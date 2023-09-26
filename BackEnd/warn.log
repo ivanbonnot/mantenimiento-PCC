@@ -1670,3 +1670,14 @@
 [2023-09-19T20:30:04.642] [WARN] default - JWT dejo de ser valido, token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAaG90bWFpbC5jb20iLCJpYXQiOjE2OTUxNjU4NzEsImV4cCI6MTcwNTE2NTg3MX0.MBnLmXjp-AbI9Bg_ArpgNcMc40x_MsEEYaBrW_GVmBE
 [2023-09-19T20:34:32.038] [WARN] default - JWT dejo de ser valido, token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAaG90bWFpbC5jb20iLCJpYXQiOjE2OTUxNjY0MzMsImV4cCI6MTcwNTE2NjQzM30.oNVfY6SvHWmMQQaNC9dUnDMx2Dcz1X7PXNgCVMNfZkQ
 [2023-09-19T20:40:09.650] [WARN] default - JWT dejo de ser valido, token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW5ib25ub3RAaG90bWFpbC5jb20iLCJpYXQiOjE2OTUxNjY0ODQsImV4cCI6MTcwNTE2NjQ4NH0.GsD-_3Iw0DiBT7KaJZWH71-MSQzUgv9QCtxLp1uWLrQ
+[2023-09-24T12:50:08.539] [ERROR] default - ReferenceError: username is not defined
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:70:46
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at complete (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\http\request.js:41:7
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\sessionmanager.js:51:9

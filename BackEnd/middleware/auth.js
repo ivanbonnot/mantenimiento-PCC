@@ -34,7 +34,7 @@ passport.use(
 
       if (checkUser.result === true) {
         logger.info(`Se intento registrar un usuario ya existente`)
-        return done(null, false, { message: 'El email ya existe' })
+        return done(null, false, { status: 302, message: 'El usuario ya existe' })
 
       } else {
         return done(null, { username: username })
