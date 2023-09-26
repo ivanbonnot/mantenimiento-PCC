@@ -65,30 +65,25 @@ authWebRouter.get('/register', (req, res) => {
 authWebRouter.post('/register', passport.authenticate('register', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
     try {
         req.session.passport.user = req.user.username
-        req.session.username = req.user.username;
-        const { username, password, password_verification, address, phone } = req.body;
-
+        const username = req.user.username;
+        console.log(req.user)
         const user = await getUserController(username)
 
         if (user) {
             logger.info("Usuario existente ")
-        } else if (password === password_verification) {
-            const newUser = {
-                timestamp: Date.now(),
-                username,
-                password,
-                address,
-                phone
-            }
-            await newUserController(newUser)
-
+            res.status(302).json({ message: 'El usuario ya existe' });
         } else {
-            logger.info("La contraseña no coincide")
-            req.flash('error', 'La contraseña no coincide');
-            return res.redirect('/register');
-        }
 
-        res.redirect('/login');
+            const { username, password } = req.body;
+
+            const newUser = {
+                username,
+                password
+            };
+            console.log(newUser)
+            await newUserController(newUser)
+            res.status(200).json({ message: 'Usuario registrado con éxito' });
+        }
     } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');

@@ -6,14 +6,16 @@ import { useNavBarContext } from '../../context/NavBarContext';
 const Logout = () => {
   const navigate = useNavigate();
 
-  
-const { ShouldRenderNavBar, setShouldRenderNavBar } = useNavBarContext();  
-const  renderNavBar = () =>   {  
-  console.log(`Render logout ${ShouldRenderNavBar}`)
-    setShouldRenderNavBar(false)}
+
+  const { ShouldRenderNavBar, setShouldRenderNavBar } = useNavBarContext();
+  const renderNavBar = () => {
+    console.log(`Render logout ${ShouldRenderNavBar}`)
+    setShouldRenderNavBar(false)
+  }
 
   localStorage.removeItem("token");
   localStorage.removeItem('user');
+  localStorage.removeItem('admin');
   renderNavBar()
   setTimeout(() => {
     navigate("/login");
