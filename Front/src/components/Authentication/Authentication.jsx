@@ -17,7 +17,7 @@ const AuthGuard = ({ children }) => {
     },
   })
   .then((response) => {
-   
+   return
   })
   .catch((err) => {
     console.log(err)
@@ -33,7 +33,7 @@ const AuthGuard = ({ children }) => {
 
 
 
-  return children;
+  return;
 };
 
 

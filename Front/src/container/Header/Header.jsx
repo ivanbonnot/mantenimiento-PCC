@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
@@ -8,13 +8,18 @@ import "./Header.css";
 
 
 const Header = () => {
+  const { shouldRenderNavBar, setShouldRenderNavBar } = useNavBarContext();  
 
-const { setShouldRenderNavBar, shouldRenderNavBar } = useNavBarContext();  
 const  renderNavBar = () =>   {    
+  
   console.log(`Render header ${shouldRenderNavBar}`)
   setShouldRenderNavBar(true)
 }
+
+useEffect(( ()=>
 renderNavBar()
+))
+
 
 return(
   <div className="app__header-wrapper app__bg">

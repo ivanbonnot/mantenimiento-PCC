@@ -1,10 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Login.css'
 import { useNavigate } from 'react-router-dom';
+import { useNavBarContext } from '../../context/NavBarContext';
 import axios from 'axios';
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const { shouldRenderNavBar, setShouldRenderNavBar } = useNavBarContext();  
+
+  
+const  renderNavBar = () =>   {    
+  
+  console.log(`Render header ${shouldRenderNavBar}`)
+  setShouldRenderNavBar(false)
+}
+
+useEffect(( ()=>
+renderNavBar()
+))
+
   const [formData, setFormData] = useState({
     username: '',
     password: '',
