@@ -63,7 +63,7 @@ authWebRouter.get('/register', (req, res) => {
 })
 
 
-authWebRouter.post('/register', passport.authenticate('register', { failureRedirect: '/login', failureFlash: true }), isAdmin, async (req, res) => {
+authWebRouter.post('/register', passport.authenticate('jwt', { session: false }), isAdmin, async (req, res) => {
     try {
         req.session.passport.user = req.user.username
         const username = req.user.username;

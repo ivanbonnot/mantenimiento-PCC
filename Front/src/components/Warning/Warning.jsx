@@ -11,8 +11,8 @@ const Warning = () => {
     }, 3000);
 
     return (
-        <div className="app__bg app__login-container">
-            <div className='app__logout-wrapper'>
+        <div className="app__bg app__warning-container">
+            <div className='app__warning-wrapper'>
                 <h2>Ruta no autorizada</h2>
                 <p className='p__opensans'>Redirigiendo al home</p>
             </div>
