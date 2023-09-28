@@ -24,7 +24,7 @@ const RegisterForm = () => {
     const data = JSON.stringify(formData);
 
     axios
-      .post("http://localhost:8080/register", data, {
+      .post("http://localhost:8080/admin/register", data, {
         headers: {
           'Content-Type': 'application/json'
         }

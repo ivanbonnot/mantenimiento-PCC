@@ -6,23 +6,24 @@ import { useEffect } from 'react';
 
 const Logout = () => {
   const navigate = useNavigate();
-  const { setShouldRenderNavBar } = useNavBarContext();  
+  const { setShouldRenderNavBar } = useNavBarContext();
 
-const  renderNavBar = () =>   {  
+  const renderNavBar = () => {
     setShouldRenderNavBar(false)
   }
 
   localStorage.removeItem("token");
   localStorage.removeItem('user');
+  localStorage.removeItem('admin');
 
   setTimeout(() => {
     navigate("/login");
   }, 3000);
 
   useEffect((() =>
-  renderNavBar() 
+    renderNavBar()
   ))
-  
+
 
   return (
     <div className="app__bg app__login-container">

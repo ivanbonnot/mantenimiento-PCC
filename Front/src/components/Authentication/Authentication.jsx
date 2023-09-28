@@ -8,34 +8,35 @@ const AuthGuard = ({ children }) => {
   console.log(isAuthenticated)
   const navigate = useNavigate();
 
- 
   useEffect(() => {
-  axios
-  .get("http://localhost:8080/verify", {
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("token")}`,
-    },
-  })
-  .then(() => {
-   
-  })
-  .catch((err) => {
-    console.log(err)
-   
-      localStorage.removeItem("token");
-      
-        if (err.response.status === 401 || !isAuthenticated || isAuthenticated === null || isAuthenticated === 'null') {}
+    axios
+      .get("http://localhost:8080/verify", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then(() => {
+
+      })
+      .catch((err) => {
+        console.log(err)
+
+
+        if (err.response.status === 401 || !isAuthenticated || isAuthenticated === null || isAuthenticated === 'null') {
+          //localStorage.removeItem("token");
           navigate('/login');
-        
+        }
+
+
       }, [isAuthenticated, navigate]);
-     });
+  });
 
 
-     if (isAuthenticated) {
-      return children;
-     } else {
-      navigate('/login');
-     }
+  if (isAuthenticated) {
+    return children;
+  } else {
+    navigate('/login');
+  }
 
 };
 

@@ -4,14 +4,15 @@ const path = require('path');
 const passport = require('passport');
 const logger = require("../../log/log4js")
 
-const { newUserController, getUserController } = require('../../controllers/usersControler')
+const { newUserController, getUserController, checkUserController } = require('../../controllers/usersControler')
 require('../../middleware/auth');
-const { generateJwtToken, destroyJWT } = require('../../middleware/auth')
+const { generateJwtToken, destroyJWT, isDeletedJWT } = require('../../middleware/auth')
 const { isAdmin } = require('../../middleware/isAdmin')
 
 const authWebRouter = Router()
 authWebRouter.use(flash())
 
+let userSave = {}
 
 //__LOGIN__//
 
@@ -33,11 +34,10 @@ authWebRouter.get('/login', (req, res) => {
 authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
     try {
         req.session.passport.user = req.user.username
-        console.log(`passport: ${req.session.passport.user}`)
         let userData = await getUserController(req.session.passport.user)
-        userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user, res) })
+        userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user) })
+        userSave = userData.admin
         res.status(200).json(userData)
-        console.log(`passport: ${req.session.passport.user}, user: ${userData}`)
         //res.redirect('/')
     } catch (error) {
         logger.error(error);
@@ -47,51 +47,33 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
 
 
 //__REGISTER__//
-
-authWebRouter.get('/register', (req, res) => {
+authWebRouter.post('/admin/register', async (req, res) => {
     try {
-        const nombre = req.session.user
-        if (nombre) {
-            res.redirect('/')
-        } else {
-            res.render(path.join(process.cwd(), './public/views/register.ejs'), { message: req.flash('error') })
+        //req.session.passport.user = req.user.username
+        console.log(userSave)
+        console.log(req.user)
+
+        const { username, password } = req.body
+        const newUser = {
+            username,
+            password
         }
-    } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
-    }
-})
-
-
-authWebRouter.post('/register', passport.authenticate('jwt', { session: false }), isAdmin, async (req, res) => {
-    try {
-        req.session.passport.user = req.user.username
-        const username = req.user.username;
-        //console.log(req.user)
-        const user = await getUserController(username)
-
-        if (user) {
-            logger.info("Usuario existente ")
-            res.status(302).json({ message: 'El usuario ya existe' });
-        } else {
-
-            const { username, password } = req.body;
-
-            const newUser = {
-                username,
-                password
-            };
-            console.log(newUser)
+        const checkUser = await checkUserController(username, password)
+        console.log(checkUser)
+        // Aquí verifica si el usuario autenticado es un administrador
+        if (userSave && !checkUser) {
             await newUserController(newUser)
             res.status(200).json({ message: 'Usuario registrado con éxito' });
+            return
+        } else {
+            return res.status(403).json({ message: 'Acceso prohibido para usuarios no administradores' });
         }
+
     } catch (error) {
-        logger.error(error);
+        console.error(error);
         res.status(500).json('Error interno del servidor');
     }
 });
-
-
 
 //__LOGOUT__//
 
@@ -100,6 +82,7 @@ authWebRouter.get('/logout', passport.authenticate('jwt', { session: false }), (
         const nombre = req.user.username
 
         if (nombre) {
+            userSave = {}
             destroyJWT(req.headers.authorization)
             req.session.destroy(err => {
                 if (!err) {

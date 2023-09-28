@@ -1681,3 +1681,4 @@
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\http\request.js:41:7
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\sessionmanager.js:51:9
+[2023-09-27T22:32:30.608] [ERROR] default - Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms al intentar recuperar el usuario id:ivanbonnot@hotmail.com de la base de datos

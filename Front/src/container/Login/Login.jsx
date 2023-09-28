@@ -6,16 +6,16 @@ import axios from 'axios';
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const { setShouldRenderNavBar } = useNavBarContext();  
+  const { setShouldRenderNavBar } = useNavBarContext();
 
-  
-const  renderNavBar = () =>   {    
-  setShouldRenderNavBar(false)
-}
 
-useEffect(( ()=>
-renderNavBar()
-))
+  const renderNavBar = () => {
+    setShouldRenderNavBar(false)
+  }
+
+  useEffect((() =>
+    renderNavBar()
+  ))
 
   const [formData, setFormData] = useState({
     username: '',
@@ -30,6 +30,7 @@ renderNavBar()
     });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = JSON.stringify(formData);
@@ -40,9 +41,9 @@ renderNavBar()
       }
     })
       .then((res) => {
-        const token = res.data.token;
-        localStorage.setItem('token', token);
+        localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', res.data.username);
+        localStorage.setItem('admin', res.data.admin);
         navigate('/');
       })
       .catch((error) => {
@@ -50,7 +51,7 @@ renderNavBar()
       });
 
     console.log('Datos de inicio de sesión:', data);
-    
+
   };
 
   return (
