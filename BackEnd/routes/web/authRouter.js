@@ -30,7 +30,7 @@ authWebRouter.get('/login', (req, res) => {
 })
 
 
-authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
+authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), isAdmin, async (req, res) => {
     try {
         req.session.passport.user = req.user.username
         console.log(`passport: ${req.session.passport.user}`)
@@ -46,28 +46,14 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
 });
 
 
+
 //__REGISTER__//
 
-authWebRouter.get('/register', (req, res) => {
-    try {
-        const nombre = req.session.user
-        if (nombre) {
-            res.redirect('/')
-        } else {
-            res.render(path.join(process.cwd(), './public/views/register.ejs'), { message: req.flash('error') })
-        }
-    } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
-    }
-})
-
-
-authWebRouter.post('/register', passport.authenticate('jwt', { session: false }), isAdmin, async (req, res) => {
+authWebRouter.post('/register', isAdmin, passport.authenticate('jwt', { session: false }), async (req, res) => {
     try {
         req.session.passport.user = req.user.username
         const username = req.user.username;
-        //console.log(req.user)
+        console.log(req.session.user)
         const user = await getUserController(username)
 
         if (user) {

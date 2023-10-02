@@ -1681,3 +1681,11 @@
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\http\request.js:41:7
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\sessionmanager.js:51:9
+[2023-09-27T09:24:32.257] [ERROR] default - Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.xvejx.gcp.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17) {
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.xvejx.gcp.mongodb.net'
+}
+[2023-10-02T09:45:46.426] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'ivanbonnot@hotmail.com' }" (type Object) at path "username" for model "User" al intentar recuperar el usuario id:[object Object] de la base de datos
