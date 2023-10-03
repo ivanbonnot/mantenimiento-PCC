@@ -1,22 +1,25 @@
 const passport = require('passport');
 const { getUserController } = require("../controllers/usersControler");
+let user = []
 
 const isAdmin = async (req, res, next) => {
-  //const user = await getUserController(req.user)
-  console.log(req.user)
-  console.log(req.session)
+  try {
+    user = await getUserController(req.user.username)
+    console.log(user)
+    console.log(user.admin, user.administrator)
 
-  if (!req.isAuthenticated()) {
-    return res.status(401).json({ message: 'No autorizado' });
+    if (user && user.administrator === true) {
+      // El usuario es un administrador
+      next();
+    } else {
+      // El usuario no es un administrador
+      return res.status(403).json({ message: 'Acceso prohibido para usuarios no administradores' });
+    }
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: 'Error interno del servidor' });
   }
 
-  // Verificar si el usuario es administrador
-  if (!req.user || !req.user.admin) {
-    return res.status(403).json({ message: 'Acceso prohibido para usuarios no administradores' });
-  }
-
-  // Si el usuario es administrador, permitir el acceso a la ruta
-  next();
 };
 
 module.exports = { isAdmin }

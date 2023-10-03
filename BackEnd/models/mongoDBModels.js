@@ -13,6 +13,15 @@ const notesSchema = new Schema({
 });
 
 
+const notesResolvedSchema = new Schema({
+    idnota: { type: String },
+    title: { type: String },
+    fecha: { type: String },
+    creador: { type: String },
+    estacion: { type: String },
+});
+
+
 const userSchema = new Schema({
     timestamp: { type: Number },
     username: { type: String, required: true },
@@ -48,5 +57,7 @@ userSchema.pre('save', function (next) {
 
 const noteModel = model('Notes', notesSchema)
 const userModel = model('User', userSchema)
+const noteResolvedModel = model('NotesResolved', notesResolvedSchema)
 
-module.exports = { noteModel, userModel }
+
+module.exports = { noteModel, noteResolvedModel, userModel }

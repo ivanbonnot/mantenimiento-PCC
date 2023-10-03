@@ -2,6 +2,8 @@ const { Router } = require("express");
 const {
   addNewNoteController,
   getAllNotesController,
+  addResolvedNoteController,
+  getResolvedNotesController,
   getNoteByIdController,
   deleteNoteController,
   updateNoteController,
@@ -67,6 +69,36 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
 
   } catch (error) {
     logger.error(`Error al crear nota: ${error}`);
+    return res.status(500).json({ result: "error" });
+  }
+});
+
+
+notesRouter.get("/notes/resolved", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+
+  try {
+    const notesResolved = await getResolvedNotesController();
+    res.json({ notesResolved });
+
+  } catch (error) {
+    logger.error(`Error en la solicitud de notes: ${error}`);
+    return res.status(500).json({ result: "error" });
+  }
+});
+
+notesRouter.post("/notes/resolved/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const noteById = await getNoteByIdController(id);
+    const { id, title, fecha, creador, estacion } = noteById
+
+
+    await addResolvedNoteController(noteById);
+    res.json(noteById);
+
+  } catch (error) {
+    logger.error(`Error al mover la nota: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });

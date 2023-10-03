@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const flash = require('connect-flash');
-const path = require('path');
 const passport = require('passport');
 const logger = require("../../log/log4js")
 
@@ -46,31 +45,33 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
 });
 
 
-//__REGISTER__//
-authWebRouter.post('/admin/register', async (req, res) => {
-    try {
-        //req.session.passport.user = req.user.username
-        console.log(userSave)
-        console.log(req.user)
 
-        const { username, password } = req.body
-        const newUser = {
-            username,
-            password
-        }
-        const checkUser = await checkUserController(username, password)
-        console.log(checkUser)
-        // Aquí verifica si el usuario autenticado es un administrador
-        if (userSave && !checkUser) {
+//__REGISTER__//
+
+authWebRouter.post('/admin/register', isAdmin, passport.authenticate('jwt', { session: false }), async (req, res) => {
+    try {
+        req.session.passport.user = req.user.username
+        const username = req.user.username;
+        console.log('post register user:' + req.session.user)
+        const user = await getUserController(username)
+
+        if (user) {
+            logger.info("Usuario existente ")
+            res.status(302).json({ message: 'El usuario ya existe' });
+        } else {
+
+            const { username, password } = req.body;
+
+            const newUser = {
+                username,
+                password
+            };
+            console.log(newUser)
             await newUserController(newUser)
             res.status(200).json({ message: 'Usuario registrado con éxito' });
-            return
-        } else {
-            return res.status(403).json({ message: 'Acceso prohibido para usuarios no administradores' });
         }
-
     } catch (error) {
-        console.error(error);
+        logger.error(error);
         res.status(500).json('Error interno del servidor');
     }
 });

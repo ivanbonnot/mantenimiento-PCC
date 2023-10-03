@@ -11,12 +11,13 @@ import Spinner from '../../components/Spinner/Spinner';
 const Notes = () => {
   const { id } = useParams();
   const [noteData, setNoteData] = useState([]);
+  const [noteResolvedData, setNoteResolvedData] = useState([]);
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const loadNotes = useCallback(() => {
 
+  const loadNotes = useCallback(() => {
     axios
       .get("http://localhost:8080/notes", {
         headers: {
@@ -31,9 +32,27 @@ const Notes = () => {
       .finally(() => setLoading(false))
   }, [id]);
 
+
+  const loadResolvedNotes = useCallback(() => {
+    axios
+      .get("http://localhost:8080/notes/resolved", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        const noteResolved = res.data.notes.filter((item) => item.estacion === id);
+        setNoteResolvedData(noteResolved);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false))
+  }, [id]);
+
+
   useEffect(() => {
     loadNotes();
-  }, [id, loadNotes]);
+    loadResolvedNotes();
+  }, [id, loadNotes, loadResolvedNotes]);
 
   const handleAddNote = () => {
     const newNote = {
@@ -79,7 +98,7 @@ const Notes = () => {
           label: "Sí",
           onClick: () => {
             axios
-              .delete(`http://localhost:8080/notes/${idDelete}`, {
+              .post(`http://localhost:8080/notes/resolved/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`
                 },
@@ -88,6 +107,7 @@ const Notes = () => {
                 console.log(idDelete);
                 console.log(`Borrada ${idDelete}, ${res}`);
                 loadNotes();
+                loadResolvedNotes();
               })
               .catch((err) => {
                 console.log(idDelete);
@@ -132,6 +152,7 @@ const Notes = () => {
             </div>
           ))}
         </div>
+
         <div className="app__notes-write">
           <h2 className="p__cormorant">Agregar una nota</h2>
           <input
@@ -156,6 +177,32 @@ const Notes = () => {
           >
             Agregar nota
           </button>
+        </div>
+
+        <div className="app__notes-read">
+          {noteResolvedData && !loading ? (
+            <h1 className="p__cormorant">Notas Eliminadas ET {id}</h1>
+          ) : (
+            <div className='spinner'>
+              <Spinner />
+            </div>
+          )}
+          {noteResolvedData.map(({ _id, idnota, title, fecha, creador }) => (
+            <div className="app__notes-note" key={idnota}>
+              <p className="title p__opensans">Título: {title}</p>
+              <p className="author p__opensans">Fecha: {fecha}</p>
+              <p className="date p__opensans">Autor: {creador}</p>
+              <div>
+                <button
+                  type="button"
+                  className="delete__button"
+                  onClick={() => handleDeleteNote(_id)}
+                >
+                  Eliminar Nota
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

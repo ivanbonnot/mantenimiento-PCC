@@ -1,4 +1,4 @@
-const { noteModel, userModel } = require("../models/mongoDBModels")
+const { noteModel, noteResolvedModel, userModel } = require("../models/mongoDBModels")
 const logger = require('../log/log4js')
 const bcrypt = require('bcrypt')
 
@@ -58,6 +58,14 @@ class mongoDBDAO {
     };
 
     getNotes = async () => await noteModel.find({});
+
+    saveResolvedNote = async (noteToAdd) => {
+        const note = new noteResolvedModel(noteToAdd);
+        await note.save();
+        console.log("guardado", note)
+    };
+
+    getResolvedNotes = async () => await noteResolvedModel.find({});
 
     getNoteById = async (id) => await noteModel.findOne({ _id: id });
 

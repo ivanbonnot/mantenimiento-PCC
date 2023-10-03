@@ -1681,4 +1681,28 @@
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\http\request.js:41:7
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\passport\lib\sessionmanager.js:51:9
+<<<<<<< HEAD
 [2023-09-27T22:32:30.608] [ERROR] default - Error: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms al intentar recuperar el usuario id:ivanbonnot@hotmail.com de la base de datos
+=======
+[2023-09-27T09:24:32.257] [ERROR] default - Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.xvejx.gcp.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17) {
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.xvejx.gcp.mongodb.net'
+}
+[2023-10-02T09:45:46.426] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'ivanbonnot@hotmail.com' }" (type Object) at path "username" for model "User" al intentar recuperar el usuario id:[object Object] de la base de datos
+>>>>>>> d8005a7ca9a3e042cfcfbb922e0c92e7ffba8b62
+[2023-10-03T19:23:56.191] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:24:46.079] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:25:11.668] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:25:19.145] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:25:31.407] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:27:35.337] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:27:42.607] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:27:44.986] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:29:33.539] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:31:42.713] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:32:57.500] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:40:01.084] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-03T19:44:50.840] [ERROR] default - Error al mover la nota: ReferenceError: Cannot access 'id' before initialization
