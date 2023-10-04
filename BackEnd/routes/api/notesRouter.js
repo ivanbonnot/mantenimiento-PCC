@@ -65,6 +65,7 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
     };
 
     await addNewNoteController(notePost);
+    console.log(notePost)
     res.json(notePost);
 
   } catch (error) {
@@ -87,11 +88,16 @@ notesRouter.get("/notes/resolved", isDeletedJWT, passport.authenticate('jwt', { 
 });
 
 notesRouter.post("/notes/resolved/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
-  const { id } = req.params;
+
+  const { method, url } = req
+  const { id } = req.params
+  console.log(id)
 
   try {
-    const noteById = await getNoteByIdController(id);
-    const { id, title, fecha, creador, estacion } = noteById
+    let noteById = await getNoteByIdController(id);
+   // const { title, fecha, creador, estacion } = noteById
+    console.log(noteById)
+    
 
 
     await addResolvedNoteController(noteById);
