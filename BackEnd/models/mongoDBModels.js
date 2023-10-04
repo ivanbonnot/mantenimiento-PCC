@@ -60,4 +60,4 @@ const userModel = model('User', userSchema)
 const noteResolvedModel = model('NotesResolved', notesResolvedSchema)
 
 
-module.exports = { noteModel, noteResolvedModel, userModel }
+module.exports = { noteModel, userModel, noteResolvedModel }

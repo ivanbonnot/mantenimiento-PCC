@@ -11,7 +11,8 @@ const {
 
 const notesRouter = Router();
 const { passport, isDeletedJWT } = require('../../middleware/auth')
-const logger = require('../../log/log4js')
+const logger = require('../../log/log4js');
+const e = require("express");
 
 const adm = true;
 // isDeletedJWT, passport.authenticate('jwt', { session: false }), recortado de las rutas
@@ -24,27 +25,6 @@ notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: 
 
   } catch (error) {
     logger.error(`Error en la solicitud de notes: ${error}`);
-    return res.status(500).json({ result: "error" });
-  }
-});
-
-
-notesRouter.get("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
-  const { method, url } = req
-  const { id } = req.params;
-
-  try {
-    const noteById = await getNoteByIdController(id);
-
-    if (noteById) {
-      res.json(noteById);
-    } else {
-      logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
-      return res.status(403).json({ result: "error" });
-    }
-
-  } catch (error) {
-    logger.error(`Error en la solicitud de nota por id: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });
@@ -65,7 +45,6 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
     };
 
     await addNewNoteController(notePost);
-    console.log(notePost)
     res.json(notePost);
 
   } catch (error) {
@@ -87,21 +66,24 @@ notesRouter.get("/notes/resolved", isDeletedJWT, passport.authenticate('jwt', { 
   }
 });
 
-notesRouter.post("/notes/resolved/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
 
-  const { method, url } = req
-  const { id } = req.params
+notesRouter.post("/notes/resolved/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+  const { id } = req.params;
   console.log(id)
 
   try {
-    let noteById = await getNoteByIdController(id);
-   // const { title, fecha, creador, estacion } = noteById
-    console.log(noteById)
-    
+    const noteById = await getNoteByIdController(id);
+    const { title, fecha, creador, estacion } = noteById
 
-
-    await addResolvedNoteController(noteById);
-    res.json(noteById);
+    const noteResolved = {
+      title: title,
+      fecha: fecha,
+      creador: creador,
+      estacion: estacion,
+    };
+    console.log(noteResolved)
+    await addResolvedNoteController(noteResolved);
+    res.json(noteResolved);
 
   } catch (error) {
     logger.error(`Error al mover la nota: ${error}`);

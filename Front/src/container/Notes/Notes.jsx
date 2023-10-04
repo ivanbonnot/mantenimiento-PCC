@@ -41,7 +41,7 @@ const Notes = () => {
         },
       })
       .then((res) => {
-        const noteResolved = res.data.notes.filter((item) => item.estacion === id);
+        const noteResolved = res.data.notesResolved.filter((item) => item.estacion === id);
         setNoteResolvedData(noteResolved);
       })
       .catch((err) => console.log(err))
@@ -96,23 +96,30 @@ const Notes = () => {
       buttons: [
         {
           label: "Sí",
-          onClick: () => {
-            axios
-              .post(`http://localhost:8080/notes/resolved/${idDelete}`, {
+          onClick: async () => {
+            try {
+              const postResponse = await axios.post(`http://localhost:8080/notes/resolved/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`
                 },
               })
-              .then((res) => {
-                console.log(idDelete);
-                console.log(`Borrada ${idDelete}, ${res}`);
-                loadNotes();
-                loadResolvedNotes();
-              })
-              .catch((err) => {
-                console.log(idDelete);
-                console.log(err);
+
+              console.log(`Nota movida: ${postResponse.data}`);
+
+              const deleteResponse = await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
               });
+
+              console.log(`Nota borrada: ${deleteResponse.data}`);
+              loadNotes();
+              loadResolvedNotes();
+
+            } catch (err) {
+              console.log(idDelete);
+              console.log(err);
+            }
           },
         },
         {

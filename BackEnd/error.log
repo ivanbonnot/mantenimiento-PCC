@@ -843,3 +843,21 @@
 [2023-10-04T10:19:44.319] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("6508ae2204ba58ea82948403") }" on model "NotesResolved"
 [2023-10-04T10:31:27.312] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651c7898088547f899cd23e9") }" on model "NotesResolved"
 [2023-10-04T10:32:37.906] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T19:57:48.598] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("6508ae2204ba58ea82948403") }" on model "NotesResolved"
+[2023-10-04T19:57:59.709] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T20:00:27.045] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("6508ae2204ba58ea82948403") }" on model "NotesResolved"
+[2023-10-04T20:03:14.702] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T20:04:27.440] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T20:08:34.615] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("6508ae2204ba58ea82948403") }" on model "NotesResolved"
+[2023-10-04T20:09:01.503] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T20:11:50.015] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T20:12:12.939] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-04T20:20:37.424] [ERROR] default - Error al mover la nota: ReferenceError: Cannot access 'id' before initialization
+[2023-10-04T20:21:32.877] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("6508ae2204ba58ea82948403") }" on model "NotesResolved"
+[2023-10-04T20:29:57.835] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651d69818d5810967d6e264f") }" on model "NotesResolved"
+[2023-10-04T20:31:10.490] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651d69818d5810967d6e264f") }" on model "NotesResolved"
+[2023-10-04T20:35:32.057] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651d69818d5810967d6e264f") }" on model "NotesResolved"
+[2023-10-04T20:36:27.098] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651d69818d5810967d6e264f") }" on model "NotesResolved"
+[2023-10-04T20:39:12.623] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651d69818d5810967d6e264f") }" on model "NotesResolved"
+[2023-10-04T20:43:02.733] [ERROR] default - Error al mover la nota: ReferenceError: uuid is not defined
+[2023-10-04T20:43:50.792] [ERROR] default - Error al mover la nota: ReferenceError: moment is not defined
