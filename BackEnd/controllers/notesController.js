@@ -1,4 +1,4 @@
-const { getAllNotesDTO, getNoteByIdDTO, addResolvedNoteDTO, getResolvedNotesDTO, deleteNoteDTO, addNewNoteDTO, updateNoteDTO } = require('../DTO/notesDTO')
+const { getAllNotesDTO, getNoteByIdDTO, getNoteResolvedByIdDTO, addResolvedNoteDTO, getResolvedNotesDTO, deleteNoteDTO, deleteNoteResolvedDTO, addNewNoteDTO, updateNoteDTO } = require('../DTO/notesDTO')
 
 
 const addNewNoteController = (NoteToAdd) => addNewNoteDTO(NoteToAdd)
@@ -11,9 +11,13 @@ const getResolvedNotesController = () => getResolvedNotesDTO()
 
 const getNoteByIdController = (id) => getNoteByIdDTO(id)
 
+const getNoteResolvedByIdController = (id) => getNoteResolvedByIdDTO(id)
+
 const updateNoteController = (id, NoteToUpdate) => updateNoteDTO(id, NoteToUpdate)
 
 const deleteNoteController = (id) => deleteNoteDTO(id)
 
+const deleteNoteResolvedController = (id) => deleteNoteResolvedDTO(id)
 
-module.exports = { addNewNoteController, getAllNotesController, addResolvedNoteController, getResolvedNotesController, getNoteByIdController, deleteNoteController, updateNoteController }
+
+module.exports = { addNewNoteController, getAllNotesController, addResolvedNoteController, getResolvedNotesController, getNoteByIdController,getNoteResolvedByIdController, deleteNoteController, updateNoteController, deleteNoteResolvedController }

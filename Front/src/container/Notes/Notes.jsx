@@ -35,7 +35,7 @@ const Notes = () => {
 
   const loadResolvedNotes = useCallback(() => {
     axios
-      .get("http://localhost:8080/notes/resolved", {
+      .get("http://localhost:8080/notesresolved", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -46,7 +46,7 @@ const Notes = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
-  }, [id]);
+  }, []);
 
 
   useEffect(() => {
@@ -91,28 +91,33 @@ const Notes = () => {
   const handleDeleteNote = (idDelete) => {
     // Mostrar un cuadro de diálogo de confirmación
     confirmAlert({
-      title: "Confirmar eliminación",
+      title: "Confirmar ",
       message: "¿Estás seguro de que deseas eliminar esta nota?",
       buttons: [
         {
           label: "Sí",
           onClick: async () => {
             try {
-              const postResponse = await axios.post(`http://localhost:8080/notes/resolved/${idDelete}`, {
-                headers: {
-                  Authorization: `Bearer ${localStorage.getItem("token")}`
-                },
-              })
-
-              console.log(`Nota movida: ${postResponse.data}`);
-
-              const deleteResponse = await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
+               await axios.get(`http://localhost:8080/notes/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
-              });
+              })
 
-              console.log(`Nota borrada: ${deleteResponse.data}`);
+
+                await axios.post(`http://localhost:8080/notesresolved/`, getNoteById.data, {
+                 headers: {
+                   Authorization: `Bearer ${localStorage.getItem("token")}`,
+                 },
+               })
+
+
+                await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
+                 headers: {
+                   Authorization: `Bearer ${localStorage.getItem("token")}`,
+                 },
+               });
+
               loadNotes();
               loadResolvedNotes();
 
@@ -129,6 +134,41 @@ const Notes = () => {
       ],
     });
   };
+
+  
+  const handleDeleteNoteResolved = (idDelete) => {
+    // Mostrar un cuadro de diálogo de confirmación
+    confirmAlert({
+      title: "Confirmar eliminación",
+      message: "¿Estás seguro de que deseas eliminar esta nota?",
+      buttons: [
+        {
+          label: "Sí",
+          onClick: async () => {
+            try {
+
+                await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
+                 headers: {
+                   Authorization: `Bearer ${localStorage.getItem("token")}`,
+                 },
+               });
+
+              loadResolvedNotes();
+
+            } catch (err) {
+              console.log(idDelete);
+              console.log(err);
+            }
+          },
+        },
+        {
+          label: "No",
+          onClick: () => { },
+        },
+      ],
+    });
+  };
+
 
   return (
     <div className="app__bg app__notes-container">
@@ -203,7 +243,7 @@ const Notes = () => {
                 <button
                   type="button"
                   className="delete__button"
-                  onClick={() => handleDeleteNote(_id)}
+                  onClick={() => handleDeleteNoteResolved(_id)}
                 >
                   Eliminar Nota
                 </button>

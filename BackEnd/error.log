@@ -861,3 +861,18 @@
 [2023-10-04T20:39:12.623] [ERROR] default - Error al mover la nota: DocumentNotFoundError: No document found for query "{ _id: new ObjectId("651d69818d5810967d6e264f") }" on model "NotesResolved"
 [2023-10-04T20:43:02.733] [ERROR] default - Error al mover la nota: ReferenceError: uuid is not defined
 [2023-10-04T20:43:50.792] [ERROR] default - Error al mover la nota: ReferenceError: moment is not defined
+[2023-10-05T06:48:04.628] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T06:49:46.205] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T07:01:53.582] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T07:01:58.725] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T07:02:12.416] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:31:02.592] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:31:15.645] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:36:10.826] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:36:21.220] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:38:08.096] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:38:52.436] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:40:12.152] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T11:42:25.450] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
+[2023-10-05T12:52:46.376] [ERROR] default - Error al borrar la nota: ReferenceError: getNoteResolvedByIdController is not defined
+[2023-10-05T12:55:56.853] [ERROR] default - Error al borrar la nota: ReferenceError: getNoteResolvedByIdController is not defined

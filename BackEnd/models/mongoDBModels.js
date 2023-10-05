@@ -13,13 +13,12 @@ const notesSchema = new Schema({
 });
 
 
-const notesResolvedSchema = new Schema({
-    idnota: { type: String },
-    title: { type: String },
-    fecha: { type: String },
-    creador: { type: String },
-    estacion: { type: String },
-});
+ const notesResolvedSchema = new Schema({
+     title: { type: String },
+     fecha: { type: String },
+     creador: { type: String },
+     estacion: { type: String },
+ });
 
 
 const userSchema = new Schema({

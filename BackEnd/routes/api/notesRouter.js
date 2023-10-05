@@ -5,7 +5,9 @@ const {
   addResolvedNoteController,
   getResolvedNotesController,
   getNoteByIdController,
+  getNoteResolvedByIdController,
   deleteNoteController,
+  deleteNoteResolvedController,
   updateNoteController,
 } = require("../../controllers/notesController");
 
@@ -25,6 +27,27 @@ notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: 
 
   } catch (error) {
     logger.error(`Error en la solicitud de notes: ${error}`);
+    return res.status(500).json({ result: "error" });
+  }
+});
+
+
+notesRouter.get("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+  const { method, url } = req
+  const { id } = req.params;
+
+  try {
+    const noteById = await getNoteByIdController(id);
+    console.log(noteById)
+    if (noteById) {
+      res.json(noteById);
+    } else {
+      logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
+      return res.status(403).json({ result: "error" });
+    }
+
+  } catch (error) {
+    logger.error(`Error en la solicitud de nota por id: ${error}`);
     return res.status(500).json({ result: "error" });
   }
 });
@@ -54,7 +77,7 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
 });
 
 
-notesRouter.get("/notes/resolved", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+notesRouter.get("/notesresolved", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
 
   try {
     const notesResolved = await getResolvedNotesController();
@@ -67,13 +90,10 @@ notesRouter.get("/notes/resolved", isDeletedJWT, passport.authenticate('jwt', { 
 });
 
 
-notesRouter.post("/notes/resolved/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
-  const { id } = req.params;
-  console.log(id)
+notesRouter.post("/notesresolved", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
 
   try {
-    const noteById = await getNoteByIdController(id);
-    const { title, fecha, creador, estacion } = noteById
+    const {  title, fecha, creador, estacion } = req.body;
 
     const noteResolved = {
       title: title,
@@ -81,6 +101,7 @@ notesRouter.post("/notes/resolved/:id", isDeletedJWT, passport.authenticate('jwt
       creador: creador,
       estacion: estacion,
     };
+
     console.log(noteResolved)
     await addResolvedNoteController(noteResolved);
     res.json(noteResolved);
@@ -152,5 +173,27 @@ notesRouter.delete("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { se
   }
 });
 
+
+notesRouter.delete("/notesresolved/:id", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
+  const { method, url } = req
+  const { id } = req.params;
+
+  try {
+    const noteById = await getNoteResolvedByIdController(id);
+
+    if (noteById) {
+      await deleteNoteResolvedController(id);
+      res.status(200).json({ deleted: true });
+    } else {
+      logger.error(`Ruta: ${url}, método: ${method}. No existe la nota:${id}`);
+      return res.status(403).json({ result: "error" });
+    }
+
+
+  } catch (error) {
+    logger.error(`Error al borrar la nota: ${error}`);
+    return res.status(500).json({ result: "error" });
+  }
+});
 
 module.exports = notesRouter;
