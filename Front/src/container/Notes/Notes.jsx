@@ -46,7 +46,7 @@ const Notes = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
-  }, []);
+  }, [id]);
 
 
   useEffect(() => {
@@ -98,25 +98,25 @@ const Notes = () => {
           label: "Sí",
           onClick: async () => {
             try {
-               await axios.get(`http://localhost:8080/notes/${idDelete}`, {
+              const getNoteById = await axios.get(`http://localhost:8080/notes/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
               })
 
 
-                await axios.post(`http://localhost:8080/notesresolved/`, getNoteById.data, {
-                 headers: {
-                   Authorization: `Bearer ${localStorage.getItem("token")}`,
-                 },
-               })
+              await axios.post(`http://localhost:8080/notesresolved/`, getNoteById.data, {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              })
 
 
-                await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
-                 headers: {
-                   Authorization: `Bearer ${localStorage.getItem("token")}`,
-                 },
-               });
+              await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              });
 
               loadNotes();
               loadResolvedNotes();
@@ -135,7 +135,18 @@ const Notes = () => {
     });
   };
 
-  
+  //Eliminar notas resulestas cada una semana, dejar un maximo de 200 notas
+  const deleteNoteResolved = () => {
+    const idDelete = 1
+    setTimeout(async () => {
+      await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+    }, 604800000); //Una semana = 604800000, por dia 86400000 
+  }
+
   const handleDeleteNoteResolved = (idDelete) => {
     // Mostrar un cuadro de diálogo de confirmación
     confirmAlert({
@@ -147,11 +158,11 @@ const Notes = () => {
           onClick: async () => {
             try {
 
-                await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
-                 headers: {
-                   Authorization: `Bearer ${localStorage.getItem("token")}`,
-                 },
-               });
+              await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              });
 
               loadResolvedNotes();
 
