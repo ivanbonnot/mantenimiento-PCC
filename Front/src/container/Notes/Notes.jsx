@@ -140,7 +140,7 @@ const Notes = () => {
       <div className="app__notes-wrapper">
         <div className="app__notes-read">
           {noteData && !loading ? (
-            <h1 className="p__cormorant">Notas ET {id}</h1>
+            <h1 className="p__cormorant">Notas {id}</h1>
           ) : (
             <div className='spinner'>
               <Spinner />

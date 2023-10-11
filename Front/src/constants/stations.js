@@ -1,178 +1,178 @@
 export const et = [
   {
     title: "Basso",
-    id: "basso",
+    id: "et basso",
   },
   {
     title: "Chajarí",
-    id: "chajarí",
+    id: "et chajarí",
   },
   {
     title: "Colón",
-    id: "colón",
+    id: "et colón",
   },
   {
     title: "Colonia Elia",
-    id: "colonia elia",
+    id: "et colonia elia",
   },
   {
     title: "Concordia",
-    id: "concordia",
+    id: "et concordia",
   },
   {
     title: "Gualeguaychú",
-    id: "gualeguaychú",
+    id: "et gualeguaychú",
   },
   {
     title: "Masisa",
-    id: "masisa",
+    id: "et masisa",
   },
   {
     title: "San José",
-    id: "san josé",
+    id: "et san josé",
   },
   {
     title: "Uruguay Norte",
-    id: "uruguay norte",
+    id: "et uruguay norte",
   },
   {
     title: "Uruguay Sur",
-    id: "uruguay sur",
+    id: "et uruguay sur",
   },
   {
     title: "San Salvador",
-    id: "san salvador",
+    id: "et san salvador",
   },
   {
     title: "Villa Elisa",
-    id: "villa elisa",
+    id: "et villa elisa",
   },
 ];
 
 export const set = [
   {
     title: "Baylina",
-    id: "baylina",
+    id: "set baylina",
   },
   {
     title: "Bonn",
-    id: "bonn",
+    id: "set bonn",
   },
   {
     title: "Caseros",
-    id: "caseros",
+    id: "set caseros",
   },
   {
     title: "Ceibas",
-    id: "ceibas",
+    id: "set ceibas",
   },
   {
     title: "Colón",
-    id: "colón",
+    id: "set colón",
   },
   {
     title: "Colonia Oficial",
-    id: "colonia oficial",
+    id: "set colonia oficial",
   },
   {
     title: "Colonia Roca",
-    id: "colonia roca",
+    id: "set colonia roca",
   },
   {
     title: "El Puente",
-    id: "el puente",
+    id: "set el puente",
   },
   {
     title: "Federación",
-    id: "federación",
+    id: "set federación",
   },
   {
     title: "General Campos",
-    id: "general campos",
+    id: "set general campos",
   },
   {
     title: "Humaitá",
-    id: "humaitá",
+    id: "set humaitá",
   },
   {
     title: "Ibicuicito",
-    id: "ibicuicito",
+    id: "set ibicuicito",
   },
   {
     title: "Ibicuy",
-    id: "ibicuy",
+    id: "set ibicuy",
   },
   {
     title: "Juan Jorge",
-    id: "juan jorge",
+    id: "set juan jorge",
   },
   {
     title: "Jubileo",
-    id: "jubileo",
+    id: "set jubileo",
   },
   {
     title: "Larroque",
-    id: "larroque",
+    id: "set larroque",
   },
   {
     title: "Mabragaña",
-    id: "mabragaña",
+    id: "set mabragaña",
   },
   {
     title: "Móvil 5MVA",
-    id: "móvil 5mva",
+    id: "set móvil 5mva",
   },
   {
     title: "Nueva Escocia",
-    id: "nueva escocia",
+    id: "set nueva escocia",
   },
   {
     title: "Paranacito",
-    id: "paranacito",
+    id: "set paranacito",
   },
   {
     title: "Pronunciamiento",
-    id: "pronunciamiento",
+    id: "set pronunciamiento",
   },
   {
     title: "Puente Quebracho",
-    id: "puente quebracho",
+    id: "set puente quebracho",
   },
   {
     title: "Redomón",
-    id: "redomón",
+    id: "set redomón",
   },
   {
     title: "Rocamora",
-    id: "rocamora",
+    id: "set rocamora",
   },
   {
     title: "Rosario del Tala",
-    id: "rosario del tala",
+    id: "set rosario del tala",
   },
   {
     title: "San Marcial",
-    id: "san marcial",
+    id: "set san marcial",
   },
   {
     title: "San Vicente",
-    id: "san vicente",
+    id: "set san vicente",
   },
   {
     title: "Santa Anita",
-    id: "santa anita",
+    id: "set santa anita",
   },
   {
     title: "Urdinarrain",
-    id: "urdinarrain",
+    id: "set urdinarrain",
   },
   {
     title: "Villa Elisa",
-    id: "villa elisa",
+    id: "set villa elisa",
   },
   {
     title: "Zenón Roca",
-    id: "zenón roca",
+    id: "set zenón roca",
   },
 ];
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
@@ -10,12 +10,32 @@ import "./Header.css";
 
 
 const Header = () => {
+  const [noteData, setNoteData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const isAdmin = localStorage.getItem('admin')
   const { setShouldRenderNavBar } = useNavBarContext();
   const renderNavBar = () => {
     setShouldRenderNavBar(true)
   }
 
+
+  const loadNotes = useCallback(() => {
+    axios
+      .get("http://localhost:8080/notes", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        const note = res.data.notes
+        setNoteData(note);
+        console.log(note, note.length)
+        console.log(noteData.filter((item) => item.estacion === 'colón').length)
+      })
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false))
+  }, []);
 
   //Eliminar notas resulestas cada una semana, dejar un maximo de 200 notas
   const deleteNoteResolved = () => {
@@ -55,10 +75,11 @@ const Header = () => {
 
 
 
-  useEffect((() => {
+  useEffect(() => {
     renderNavBar()
-    deleteNoteResolved();
-  }))
+    loadNotes()
+    //deleteNoteResolved();
+  }, [loadNotes])
 
 
   return (
@@ -72,7 +93,11 @@ const Header = () => {
                 <p className="p__opensans">
                   <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
                   <button>
-                    <Link to={`notes/${id}`}> {title} </Link>
+                    <Link to={`notes/${id}`}> {title} (
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
+                        {noteData.filter((item) => item.estacion === id).length}
+                      </span>
+                      ) </Link>
                   </button>
                 </p>
               </div>
@@ -88,7 +113,11 @@ const Header = () => {
                 <p className="p__opensans">
                   <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
                   <button>
-                    <Link to={`notes/${id}`}> {title} </Link>
+                    <Link to={`notes/${id}`}> {title} (
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
+                        {noteData.filter((item) => item.estacion === id).length}
+                      </span>
+                      ) </Link>
                   </button>
                 </p>
               </div>
