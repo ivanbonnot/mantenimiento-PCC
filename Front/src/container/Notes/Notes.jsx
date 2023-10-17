@@ -194,7 +194,7 @@ const Notes = () => {
 
         <div className="app__notes-delete">
           {noteResolvedData && !loading ? (
-            <h1 className="p__cormorant">Notas Eliminadas ET {id}</h1>
+            <h1 className="p__cormorant">Notas Eliminadas {id}</h1>
           ) : (
             <div className='spinner'>
               <Spinner />
