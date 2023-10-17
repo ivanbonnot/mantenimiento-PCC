@@ -13,18 +13,19 @@ const notesSchema = new Schema({
 });
 
 
- const notesResolvedSchema = new Schema({
-     title: { type: String },
-     fecha: { type: String },
-     creador: { type: String },
-     estacion: { type: String },
- });
+const notesResolvedSchema = new Schema({
+    title: { type: String },
+    fecha: { type: String },
+    creador: { type: String },
+    estacion: { type: String },
+});
 
 
 const userSchema = new Schema({
     timestamp: { type: Number },
     username: { type: String, required: true },
     password: { type: String, required: true },
+    admin: { type: Boolean },
 });
 
 

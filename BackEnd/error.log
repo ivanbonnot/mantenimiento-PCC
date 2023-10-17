@@ -877,3 +877,9 @@
 [2023-10-05T12:52:46.376] [ERROR] default - Error al borrar la nota: ReferenceError: getNoteResolvedByIdController is not defined
 [2023-10-05T12:55:56.853] [ERROR] default - Error al borrar la nota: ReferenceError: getNoteResolvedByIdController is not defined
 [2023-10-05T12:57:01.185] [ERROR] default - Error al borrar la nota: TypeError: notes.deleteNoteResolved is not a function
+[2023-10-17T19:29:41.240] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'username')
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:53:46
+    at Layer.handle [as handle_request] (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at isAdmin (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\middleware\isAdmin.js:20:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

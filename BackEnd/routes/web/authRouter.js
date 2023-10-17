@@ -48,19 +48,16 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
 
 //__REGISTER__//
 
-authWebRouter.post('/admin/register', isAdmin, passport.authenticate('jwt', { session: false }), async (req, res) => {
+authWebRouter.post('/admin/register', isAdmin, async (req, res) => {
     try {
-        req.session.passport.user = req.user.username
-        const username = req.user.username;
-        console.log('post register user:' + req.session.user)
+        const { username, password } = req.body;
+
         const user = await getUserController(username)
 
         if (user) {
             logger.info("Usuario existente ")
             res.status(302).json({ message: 'El usuario ya existe' });
         } else {
-
-            const { username, password } = req.body;
 
             const newUser = {
                 username,

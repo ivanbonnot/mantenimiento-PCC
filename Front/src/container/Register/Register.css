@@ -10,7 +10,7 @@
     margin: 6rem 0 3rem 0;
     min-height: 50%;
     min-width: 50%;
-    background-color: var(--color-black);
+    background-color: var(--color-back);
 }
 
 .app__register-wrapper h2 {

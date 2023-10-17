@@ -9,6 +9,8 @@ const RegisterForm = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
+    admusername: localStorage.getItem('user'),
+    admpassword: ''
   });
 
   const handleChange = (e) => {
@@ -35,6 +37,8 @@ const RegisterForm = () => {
         if (res.status === 200) {
           alert(`Usuario añadido con éxito: ${user.username}, ${user.password}`, '¿Agregar otro usuario?')
           setFormData({
+            admusername: '',
+            admpassword: '',
             username: '',
             password: '',
           });
@@ -77,6 +81,26 @@ const RegisterForm = () => {
         <h2>Registrar un usuario</h2>
         <form onSubmit={handleSubmit} className='app__register-form'>
           <div className="form-group app__register-email">
+            <label htmlFor="username">Usuario administrador</label>
+            <input
+              type="email"
+              id="admemail"
+              name="admusername"
+              placeholder="Usuario administrador"
+              value={localStorage.getItem('user')}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="username">Contraseña adm</label>
+            <input
+              type="password"
+              id="admpassword"
+              name="admpassword"
+              placeholder="Contraseña adm"
+              value={formData.admpassword}
+              onChange={handleChange}
+              required
+            />
             <label htmlFor="username">Nombre de usuario</label>
             <input
               type="email"
