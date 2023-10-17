@@ -1760,3 +1760,4 @@
 [2023-10-05T11:42:25.450] [ERROR] default - Error en la solicitud de nota por id: CastError: Cast to ObjectId failed for value "resolved" (type string) at path "_id" for model "Notes"
 [2023-10-05T12:52:46.376] [ERROR] default - Error al borrar la nota: ReferenceError: getNoteResolvedByIdController is not defined
 [2023-10-05T12:55:56.853] [ERROR] default - Error al borrar la nota: ReferenceError: getNoteResolvedByIdController is not defined
+[2023-10-05T12:57:01.185] [ERROR] default - Error al borrar la nota: TypeError: notes.deleteNoteResolved is not a function
