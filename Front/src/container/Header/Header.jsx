@@ -12,6 +12,7 @@ import "./Header.css";
 const Header = () => {
   const [noteData, setNoteData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [deleteResolvedNoteshasExecutedOnce, setDeleteResolvedNoteshasExecutedOnce] = useState(false);
 
   const isAdmin = localStorage.getItem('admin')
   const { setShouldRenderNavBar } = useNavBarContext();
@@ -30,47 +31,44 @@ const Header = () => {
       .then((res) => {
         const note = res.data.notes
         setNoteData(note);
-        console.log(note, note.length)
-        console.log(noteData.filter((item) => item.estacion === 'colón').length)
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
   }, []);
 
   //Eliminar notas resulestas cada una semana, dejar un maximo de 200 notas
-  const deleteNoteResolved = () => {
+  const deleteNoteResolved = async () => {
     //const idDelete = 1
-    let notesAmount = 0
+    let notesAmount
+    setDeleteResolvedNoteshasExecutedOnce(false)
+    await axios
+      .get("http://localhost:8080/notesresolved", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        notesAmount = res.data.notesResolved
+      })
 
-    setTimeout(async () => {
-      await axios
-        .get("http://localhost:8080/notesresolved", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        })
-        .then((res) => {
-          notesAmount = res.data.notesResolved
+    if (notesAmount.length >= 2) {
 
-        })
-      if (notesAmount.length >= 2) {
-        notesAmount.sort((a, b) => {
-          console.log(a)
-          const dateA = (a.fecha)
-          const dateB = (b.fecha);
-          console.log(dateA)
-          return dateA - dateB;
-        });
-        for (let i = 0; i < notesAmount.length; i++) {
+      notesAmount.sort((a, b) => {
+        console.log(a)
+        const dateA = (a.fecha)
+        const dateB = (b.fecha);
+        console.log(dateA)
+        return dateA - dateB;
+      });
+      for (let i = 0; i < notesAmount.length; i++) {
 
-        }
-        // await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
-        //   headers: {
-        //     Authorization: `Bearer ${localStorage.getItem("token")}`,
-        //   },
-        // });
       }
-    }, 604800000); //Una semana = 604800000, por dia 86400000 
+      // await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
+      //   headers: {
+      //     Authorization: `Bearer ${localStorage.getItem("token")}`,
+      //   },
+      // });
+    }
   }
 
 
@@ -78,7 +76,16 @@ const Header = () => {
   useEffect(() => {
     renderNavBar()
     loadNotes()
-    //deleteNoteResolved();
+    console.log(deleteResolvedNoteshasExecutedOnce)
+    if (!deleteResolvedNoteshasExecutedOnce) {
+      deleteNoteResolved();
+      setDeleteResolvedNoteshasExecutedOnce(true);
+      //Una semana = 604800000, por dia 86400000 
+      const oneWeekInMillis = 5000;
+      setTimeout(() => {
+        deleteNoteResolved();
+      }, oneWeekInMillis);
+    }
   }, [loadNotes])
 
 
