@@ -12,7 +12,9 @@
   --color-gray: #282A3A;
   --color-cooper: #735F32;
   --color-golden: #C69749;
-  --color-white: #FFF
+  --color-white: #FFF;
+  --color-blue: #0a4a70;
+  --color-back: #072f4a;
 }
 
 * {

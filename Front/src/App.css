@@ -2,8 +2,8 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(55, 55, 55, 1) 0%, rgba(0, 93, 116, 1) 100%);
+  background: rgb(52,191,252);
+background: linear-gradient(180deg, rgba(52,191,252,1) 0%, rgba(223,242,255,1) 50%, rgba(0,111,171,1) 100%);
 }
 
 .app__wrapper {
@@ -49,7 +49,7 @@
 .p__cormorant {
   font-family: var(--font-base);
   color: var(--color-white);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.04em;
   font-feature-settings: 'tnum' on, 'lnum' on;
   line-height: 29.9px;
@@ -59,7 +59,16 @@
 .p__opensans {
   font-family: var(--font-alt);
   color: var(--color-white);
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.p__header {
+  font-family: var(--font-alt);
+  color: var(--color-blue);
+  font-weight: 600;
   letter-spacing: 0.04em;
   line-height: 28px;
   font-size: 16px;

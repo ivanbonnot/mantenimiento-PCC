@@ -90,11 +90,11 @@ const Header = () => {
 
             {et.map(({ title, id }) => (
               <div key={id}>
-                <p className="p__opensans">
-                  <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
+                <p className="p__header">
+                <img class="" src="./img/electricity.png" alt="" width="30" height="30" style={{ margin: "6px 4px 0 0" }} />
                   <button>
                     <Link to={`notes/${id}`}> {title} (
-                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "black" }}>
                         {noteData.filter((item) => item.estacion === id).length}
                       </span>
                       ) </Link>
@@ -110,11 +110,11 @@ const Header = () => {
             {set.map(({ title, id }) => (
               <div key={id}>
 
-                <p className="p__opensans">
-                  <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
+                <p className="p__header">
+                <img class="" src="./img/electricity.png" alt="" width="30" height="30" style={{ margin: "6px 4px 0 0" }} />
                   <button>
                     <Link to={`notes/${id}`}> {title} (
-                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "black" }}>
                         {noteData.filter((item) => item.estacion === id).length}
                       </span>
                       ) </Link>

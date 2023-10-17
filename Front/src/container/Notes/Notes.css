@@ -13,7 +13,7 @@
 }
 
 .app__notes-read {
-    background-color: var(--color-black);
+    background-color: var(--color-back);
     border-radius: 10px;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .app__notes-write {
-    background-color: var(--color-black);
+    background-color: var(--color-back);
     margin-top: 25px;
     display: flex;
     justify-content: center;
@@ -79,7 +79,7 @@
 
 
 .app__notes-delete {
-    background-color: var(--color-black);
+    background-color: var(--color-back);
     margin-top: 25px;
     display: flex;
     flex-direction: column;
