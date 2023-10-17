@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
@@ -9,16 +10,77 @@ import "./Header.css";
 
 
 const Header = () => {
+  const [noteData, setNoteData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const isAdmin = localStorage.getItem('admin')
   const { setShouldRenderNavBar } = useNavBarContext();
   const renderNavBar = () => {
     setShouldRenderNavBar(true)
   }
 
-  useEffect((() =>{
+
+  const loadNotes = useCallback(() => {
+    axios
+      .get("http://localhost:8080/notes", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        const note = res.data.notes
+        setNoteData(note);
+        console.log(note, note.length)
+        console.log(noteData.filter((item) => item.estacion === 'colón').length)
+      })
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false))
+  }, []);
+
+  //Eliminar notas resulestas cada una semana, dejar un maximo de 200 notas
+  const deleteNoteResolved = () => {
+    //const idDelete = 1
+    let notesAmount = 0
+
+    setTimeout(async () => {
+      await axios
+        .get("http://localhost:8080/notesresolved", {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+        .then((res) => {
+          notesAmount = res.data.notesResolved
+
+        })
+      if (notesAmount.length >= 2) {
+        notesAmount.sort((a, b) => {
+          console.log(a)
+          const dateA = (a.fecha)
+          const dateB = (b.fecha);
+          console.log(dateA)
+          return dateA - dateB;
+        });
+        for (let i = 0; i < notesAmount.length; i++) {
+
+        }
+        // await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
+        //   headers: {
+        //     Authorization: `Bearer ${localStorage.getItem("token")}`,
+        //   },
+        // });
+      }
+    }, 604800000); //Una semana = 604800000, por dia 86400000 
+  }
+
+
+
+  useEffect(() => {
     renderNavBar()
-  } ))
- 
+    loadNotes()
+    //deleteNoteResolved();
+  }, [loadNotes])
+
 
   return (
     <div>
@@ -31,7 +93,11 @@ const Header = () => {
                 <p className="p__opensans">
                   <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
                   <button>
-                    <Link to={`notes/${id}`}> {title} </Link>
+                    <Link to={`notes/${id}`}> {title} (
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
+                        {noteData.filter((item) => item.estacion === id).length}
+                      </span>
+                      ) </Link>
                   </button>
                 </p>
               </div>
@@ -43,10 +109,15 @@ const Header = () => {
           <div className="app__header-set set">
             {set.map(({ title, id }) => (
               <div key={id}>
+
                 <p className="p__opensans">
                   <AiFillCaretRight style={{ margin: "6px 2px 0 0" }} />
                   <button>
-                    <Link to={`notes/${id}`}> {title} </Link>
+                    <Link to={`notes/${id}`}> {title} (
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
+                        {noteData.filter((item) => item.estacion === id).length}
+                      </span>
+                      ) </Link>
                   </button>
                 </p>
               </div>

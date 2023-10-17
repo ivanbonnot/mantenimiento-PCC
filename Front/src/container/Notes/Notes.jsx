@@ -46,13 +46,14 @@ const Notes = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
-  }, []);
+  }, [id]);
 
 
   useEffect(() => {
     loadNotes();
     loadResolvedNotes();
   }, [id, loadNotes, loadResolvedNotes]);
+
 
   const handleAddNote = () => {
     const newNote = {
@@ -88,8 +89,8 @@ const Notes = () => {
     // localStorage.setItem("notes", JSON.stringify(existingNotes));
   };
 
+
   const handleDeleteNote = (idDelete) => {
-    // Mostrar un cuadro de diálogo de confirmación
     confirmAlert({
       title: "Confirmar ",
       message: "¿Estás seguro de que deseas eliminar esta nota?",
@@ -98,61 +99,25 @@ const Notes = () => {
           label: "Sí",
           onClick: async () => {
             try {
-               await axios.get(`http://localhost:8080/notes/${idDelete}`, {
+              const getNoteById = await axios.get(`http://localhost:8080/notes/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
               })
 
+              await axios.post(`http://localhost:8080/notesresolved/`, getNoteById.data, {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              })
 
-                await axios.post(`http://localhost:8080/notesresolved/`, getNoteById.data, {
-                 headers: {
-                   Authorization: `Bearer ${localStorage.getItem("token")}`,
-                 },
-               })
-
-
-                await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
-                 headers: {
-                   Authorization: `Bearer ${localStorage.getItem("token")}`,
-                 },
-               });
+              await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              });
 
               loadNotes();
-              loadResolvedNotes();
-
-            } catch (err) {
-              console.log(idDelete);
-              console.log(err);
-            }
-          },
-        },
-        {
-          label: "No",
-          onClick: () => { },
-        },
-      ],
-    });
-  };
-
-  
-  const handleDeleteNoteResolved = (idDelete) => {
-    // Mostrar un cuadro de diálogo de confirmación
-    confirmAlert({
-      title: "Confirmar eliminación",
-      message: "¿Estás seguro de que deseas eliminar esta nota?",
-      buttons: [
-        {
-          label: "Sí",
-          onClick: async () => {
-            try {
-
-                await axios.delete(`http://localhost:8080/notesresolved/${idDelete}`, {
-                 headers: {
-                   Authorization: `Bearer ${localStorage.getItem("token")}`,
-                 },
-               });
-
               loadResolvedNotes();
 
             } catch (err) {
@@ -175,7 +140,7 @@ const Notes = () => {
       <div className="app__notes-wrapper">
         <div className="app__notes-read">
           {noteData && !loading ? (
-            <h1 className="p__cormorant">Notas ET {id}</h1>
+            <h1 className="p__cormorant">Notas {id}</h1>
           ) : (
             <div className='spinner'>
               <Spinner />
@@ -226,7 +191,8 @@ const Notes = () => {
           </button>
         </div>
 
-        <div className="app__notes-read">
+
+        <div className="app__notes-delete">
           {noteResolvedData && !loading ? (
             <h1 className="p__cormorant">Notas Eliminadas ET {id}</h1>
           ) : (
@@ -234,23 +200,28 @@ const Notes = () => {
               <Spinner />
             </div>
           )}
-          {noteResolvedData.map(({ _id, idnota, title, fecha, creador }) => (
-            <div className="app__notes-note" key={idnota}>
-              <p className="title p__opensans">Título: {title}</p>
-              <p className="author p__opensans">Fecha: {fecha}</p>
-              <p className="date p__opensans">Autor: {creador}</p>
-              <div>
-                <button
-                  type="button"
-                  className="delete__button"
-                  onClick={() => handleDeleteNoteResolved(_id)}
-                >
-                  Eliminar Nota
-                </button>
-              </div>
-            </div>
-          ))}
+          <table className="app__notes-delete_table">
+            <thead>
+              <tr>
+                <th className="p__opensans">Nota</th>
+                <th className="title p__opensans">Título</th>
+                <th className="author p__opensans">Fecha</th>
+                <th className="date p__opensans">Autor</th>
+              </tr>
+            </thead>
+            <tbody>
+              {noteResolvedData.map(({ idnota, title, fecha, creador }, index) => (
+                <tr key={idnota}>
+                  <td className="p__opensans">{index + 1}</td>
+                  <td className="p__opensans">{title}</td>
+                  <td className="p__opensans">{fecha}</td>
+                  <td className="p__opensans">{creador}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+
       </div>
     </div>
   )
