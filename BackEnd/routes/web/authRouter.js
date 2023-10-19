@@ -3,7 +3,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const logger = require("../../log/log4js")
 
-const { newUserController, getUserController, checkUserController } = require('../../controllers/usersControler')
+const { newUserController, getUserController, checkUserController, updateUserController } = require('../../controllers/usersControler')
 require('../../middleware/auth');
 const { generateJwtToken, destroyJWT, isDeletedJWT } = require('../../middleware/auth')
 const { isAdmin } = require('../../middleware/isAdmin')
@@ -27,6 +27,26 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
         res.status(500).json('Error interno del servidor');
     }
 });
+
+authWebRouter.put('/changepassword', passport.authenticate('jwt', { session: false }), async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { password } = req.body;
+        
+        const userUpdate = {
+            password
+        };
+
+       // let userData = await getUserController(req.session.passport.user)
+        let user = await updateUserController(id, userUpdate);
+        res.status(200).json(user)
+        //res.redirect('/')
+    } catch (error) {
+        logger.error(error);
+        res.status(500).json('Error interno del servidor');
+    }
+});
+
 
 
 //__REGISTER__//

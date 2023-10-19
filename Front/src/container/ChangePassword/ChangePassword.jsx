@@ -9,34 +9,56 @@ const ChangeUserPassword = () => {
   const [formData, setFormData] = useState({
     username: localStorage.getItem('user'),
     password: '',
-    newPassword: ''
+    verificationPassword: ''
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
     setFormData({
       ...formData,
       [name]: value,
     });
+    
+    if(formData.password =! formData.verificationPassword ) {
+      console.log('Las contraseñas no coinciden')
+    } else {
+      console.log('las contraseña coinciden')
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = JSON.stringify(formData);
 
-    axios
-      .post("http://localhost:8080/changepassword", data, {
+    const alert = (title, message, label, onClick ) => {
+      confirmAlert({
+        title: title,
+        message: message,
+        buttons: [
+          {
+            label:label,
+            onClick: onClick,
+            },
+        ],
+      })
+    };
+
+    if(formData.password === formData.verificationPassword  ) {
+      axios
+      .put("http://localhost:8080/changepassword", data, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${localStorage.getItem("token")}`
         }
       })
       .then((res) => {
         if (res.status === 200) {
-          alert(`Contraseña modificada con éxito`, 'Redirigiendo a home')
+          alert(`Contraseña modificada con éxito`, 'Redirigiendo a home', 'Ok', ()=>{ navigate('/')})
           setFormData({
             username: '',
             password: '',
-            newPassword: ''
+            verificationPassword: ''
           });
         }
       })
@@ -44,31 +66,17 @@ const ChangeUserPassword = () => {
       .catch((error) => {
         console.error('Error en la petición:', error);
         if (error.response.status === 302) {
-          alert('Error en el cambio de contraseña', '¿Intentar de nuevo?')
+          alert(`Error en la peticion`, 'Redirigiendo a home', 'Ok', ()=>{ navigate('/')})
         } else {
           navigate("/warning");
         }
       });
 
-    const alert = (title, message) => {
-      confirmAlert({
-        title: title,
-        message: message,
-        buttons: [
-          {
-            label: "Si",
-            onClick: () => {
-            },
-          },
-          {
-            label: "No, volver a home",
-            onClick: () => {
-              navigate('/');
-            },
-          },
-        ],
-      })
-    };
+    
+    } else {
+      alert(`Error`, 'Las contraseñas no coinciden', 'Ok', ()=>{})
+    }
+
   };
 
   return (
@@ -100,19 +108,23 @@ const ChangeUserPassword = () => {
               required
             />
 
-            <label htmlFor="username">Contraseña administrador</label>
+             {formData.password.length >0 && formData.password.length<4 && (
+            <div className="password-validation">*La contraseña debe ser mayor de 4 caracteres</div>
+          )}
+
+            <label htmlFor="password">Ingrese nuevamente la contraseñar</label>
             <input
               type="password"
-              id="admpassword"
-              name="admpassword"
-              placeholder="Contraseña adm"
-              value={formData.admpassword}
+              id="verificationPassword"
+              name="verificationPassword"
+              placeholder="Verificar contraseña"
+              value={formData.verificationPassword}
               onChange={handleChange}
               required
             />
           </div>
 
-          <button className='custom__button' type="submit">Agregar usuario</button>
+          <button className='custom__button' type="submit" disabled={formData.password.length < 4 && formData.verificationPassword.length < 4} >Cambiar contraseña</button>
         </form>
       </div>
     </div>

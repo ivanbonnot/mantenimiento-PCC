@@ -883,3 +883,14 @@
     at next (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\node_modules\express\lib\router\route.js:144:13)
     at isAdmin (C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\middleware\isAdmin.js:20:7)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-10-19T12:48:19.694] [ERROR] default - TypeError: Cannot set properties of undefined (setting 'user')
+    at C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\routes\web\authRouter.js:33:35
+    at Layer.handle [as handle_request] (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\express\lib\router\route.js:144:13)
+    at complete (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at req.login.req.logIn (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\http\request.js:44:13)
+    at strategy.success (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:256:13)

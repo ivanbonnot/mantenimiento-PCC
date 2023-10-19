@@ -55,10 +55,10 @@ const Header = () => {
     if (notesAmount.length >= 2) {
 
       notesAmount.sort((a, b) => {
-        console.log(a)
+        //console.log(a)
         const dateA = (a.fecha)
         const dateB = (b.fecha);
-        console.log(dateA)
+        //console.log(dateA)
         return dateA - dateB;
       });
       for (let i = 0; i < notesAmount.length; i++) {
