@@ -2,9 +2,10 @@ import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
-import { AiFillCaretRight } from "react-icons/ai";
+//import { AiFillCaretRight } from "react-icons/ai";
 import { useNavBarContext } from "../../context/NavBarContext";
-import FooterAdm from '../../components/FooterAdm/FooterAdm'
+import FooterAdm from '../../components/Footer/FooterAdm'
+import FooterUser from '../../components/Footer/FooterUser'
 
 import "./Header.css";
 
@@ -98,7 +99,7 @@ const Header = () => {
             {et.map(({ title, id }) => (
               <div key={id}>
                 <p className="p__header">
-                <img class="" src="./img/electricity.png" alt="" width="30" height="30" style={{ margin: "6px 4px 0 0" }} />
+                  <img class="" src="./img/electricity.png" alt="" width="30" height="30" style={{ margin: "6px 4px 0 0" }} />
                   <button>
                     <Link to={`notes/${id}`}> {title} (
                       <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "black" }}>
@@ -118,7 +119,7 @@ const Header = () => {
               <div key={id}>
 
                 <p className="p__header">
-                <img class="" src="./img/electricity.png" alt="" width="30" height="30" style={{ margin: "6px 4px 0 0" }} />
+                  <img class="" src="./img/electricity.png" alt="" width="30" height="30" style={{ margin: "6px 4px 0 0" }} />
                   <button>
                     <Link to={`notes/${id}`}> {title} (
                       <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "black" }}>
@@ -133,7 +134,7 @@ const Header = () => {
         </div>
 
       </div>
-      {isAdmin && < FooterAdm />}
+      {isAdmin ? < FooterAdm /> : < FooterUser />}
     </div>
   )
 };

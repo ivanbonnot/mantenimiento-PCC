@@ -7,8 +7,8 @@ const NavBar = () => {
     const links = [
         {
             id: 1,
-            link: "register",
-            name: "Agregar usuario"
+            link: "changePassword",
+            name: "Cambiar contraseña"
         },
     ];
 

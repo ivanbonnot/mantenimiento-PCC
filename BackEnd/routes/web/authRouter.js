@@ -11,23 +11,8 @@ const { isAdmin } = require('../../middleware/isAdmin')
 const authWebRouter = Router()
 authWebRouter.use(flash())
 
-let userSave = {}
 
 //__LOGIN__//
-
-authWebRouter.get('/login', (req, res) => {
-    try {
-        const userEmail = req.session.user
-        if (userEmail) {
-            res.redirect('/')
-        } else {
-
-        }
-    } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
-    }
-})
 
 
 authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
@@ -35,7 +20,6 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
         req.session.passport.user = req.user.username
         let userData = await getUserController(req.session.passport.user)
         userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user) })
-        userSave = userData.admin
         res.status(200).json(userData)
         //res.redirect('/')
     } catch (error) {
@@ -43,7 +27,6 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
         res.status(500).json('Error interno del servidor');
     }
 });
-
 
 
 //__REGISTER__//

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import './Register.css'
+import './ChangePassword.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { confirmAlert } from "react-confirm-alert";
 
-const RegisterForm = () => {
+const ChangeUserPassword = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    username: '',
+    username: localStorage.getItem('user'),
     password: '',
-    admusername: localStorage.getItem('user'),
-    admpassword: ''
+    newPassword: ''
   });
 
   const handleChange = (e) => {
@@ -26,21 +25,18 @@ const RegisterForm = () => {
     const data = JSON.stringify(formData);
 
     axios
-      .post("http://localhost:8080/admin/register", data, {
+      .post("http://localhost:8080/changepassword", data, {
         headers: {
           'Content-Type': 'application/json'
         }
       })
       .then((res) => {
-        console.log(res)
-        const user = JSON.parse(data)
         if (res.status === 200) {
-          alert(`Usuario añadido con éxito: ${user.username}, ${user.password}`, '¿Agregar otro usuario?')
+          alert(`Contraseña modificada con éxito`, 'Redirigiendo a home')
           setFormData({
-            admusername: '',
-            admpassword: '',
             username: '',
             password: '',
+            newPassword: ''
           });
         }
       })
@@ -48,7 +44,7 @@ const RegisterForm = () => {
       .catch((error) => {
         console.error('Error en la petición:', error);
         if (error.response.status === 302) {
-          alert('El usuario ya existe', '¿Agregar otro usuario?')
+          alert('Error en el cambio de contraseña', '¿Intentar de nuevo?')
         } else {
           navigate("/warning");
         }
@@ -78,16 +74,28 @@ const RegisterForm = () => {
   return (
     <div className="app__bg app__register-container">
       <div className='app__register-wrapper'>
-        <h2>Registrar un usuario</h2>
+        <h2>Cambiar contraseña</h2>
         <form onSubmit={handleSubmit} className='app__register-form'>
-          <div className="form-group app__register-admemail">
-            <label htmlFor="username">Usuario administrador</label>
+
+          <div className="form-group app__register-email">
+            <label htmlFor="username">Usuario</label>
             <input
               type="email"
-              id="admemail"
-              name="admusername"
-              placeholder="Usuario administrador"
+              id="email"
+              name="username"
+              placeholder="Usuario"
               value={localStorage.getItem('user')}
+              onChange={handleChange}
+              required
+            />
+
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Tu contraseña"
+              value={formData.password}
               onChange={handleChange}
               required
             />
@@ -104,30 +112,6 @@ const RegisterForm = () => {
             />
           </div>
 
-          <div className="form-group app__register-email">
-            <label htmlFor="username">Nombre de usuario</label>
-            <input
-              type="email"
-              id="email"
-              name="username"
-              placeholder="Nombre de usuario"
-              value={formData.username}
-              onChange={handleChange}
-              required
-            />
-
-            <label htmlFor="password">Contraseña</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Tu contraseña"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
           <button className='custom__button' type="submit">Agregar usuario</button>
         </form>
       </div>
@@ -135,4 +119,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default ChangeUserPassword;

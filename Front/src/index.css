@@ -9,12 +9,14 @@
   --font-alt: 'Open Sans', sans-serif;
 
   --color-black: #000000;
+  --color-nightmode: #18181b;
   --color-gray: #282A3A;
   --color-cooper: #735F32;
   --color-golden: #C69749;
   --color-white: #FFF;
   --color-blue: #0a4a70;
   --color-back: #072f4a;
+  --color-enersa-orginal: #006eab;
 }
 
 * {
