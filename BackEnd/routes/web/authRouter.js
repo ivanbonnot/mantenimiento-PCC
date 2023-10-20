@@ -30,15 +30,18 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
 
 authWebRouter.put('/changepassword', passport.authenticate('jwt', { session: false }), async (req, res) => {
     try {
-        const { id } = req.params;
-        const { password } = req.body;
-        
+
+        const { username, password } = req.body;
         const userUpdate = {
             password
         };
 
-       // let userData = await getUserController(req.session.passport.user)
+        let userData = await getUserController(username)
+        const id = userData.id
+
         let user = await updateUserController(id, userUpdate);
+        console.log(userUpdate)
+        console.log(id)
         res.status(200).json(user)
         //res.redirect('/')
     } catch (error) {
