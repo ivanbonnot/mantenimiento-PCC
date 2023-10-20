@@ -51,6 +51,7 @@ const Header = () => {
       .then((res) => {
         notesAmount = res.data.notesResolved
       })
+      .catch((err) => console.log(err))
 
     if (notesAmount.length >= 2) {
 

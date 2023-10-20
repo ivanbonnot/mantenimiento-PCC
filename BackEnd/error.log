@@ -894,3 +894,6 @@
     at C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:275:22
     at req.login.req.logIn (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\http\request.js:44:13)
     at strategy.success (C:\Users\ibonnot\Desktop\Proyecto ENERSA\mant-pcc\backend\node_modules\passport\lib\middleware\authenticate.js:256:13)
+[2023-10-19T16:24:36.199] [ERROR] default - ReferenceError: id is not defined
+    at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:41:47
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
