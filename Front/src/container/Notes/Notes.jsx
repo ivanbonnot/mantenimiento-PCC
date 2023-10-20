@@ -183,7 +183,6 @@ const Notes = () => {
             onChange={(e) => setNote(e.target.value)}
           />
           <button
-            type="button"
             className="custom__button"
             onClick={() => handleAddNote()}
           >

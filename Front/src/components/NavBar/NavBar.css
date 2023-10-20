@@ -1,5 +1,5 @@
 .bg-navbar {
-    background-color: #072f4a;
+    background-color: var(--color-dark-nav-footer);
 }
 
 .links-color {

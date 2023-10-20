@@ -6,19 +6,37 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
+
+  /*Night/Dark Mode*/
+  
+  --color-dark-background: #18181b;
+  --color-dark-border: #006fab;
+  --color-blue: #0a4a70;
+  --color-dark-nav-footer: #072f4a;
+  --color-dark-textwhite: #dff2ff;
+  --color-dark-textwhitehover: #b9e6fe;
+  /*Button*/
+  --color-dark-button-inside: #18181b;
+  --color-dark-button-border: #7bd4fe;
+  --color-dark-button-text: #7bd4fe;
+  --color-dark-buttonhover-inside: #055a87;
+  --color-dark-buttonhover-border: #7bd4fe;
+  --color-dark-buttonhover-text: #7bd4fe;
+  --color-dark-btndisabled: #055a87;
+  --color-dark-btndisabledtext: #282A3A;
+  /*Button*/
+  --color-enersa-orginal: #006eab;
+  /*Night/Dark Mode*/
+
+
   --font-base: 'Roboto', serif;
   --font-alt: 'Open Sans', sans-serif;
-  --color-btndisabled: #055a87;
-  --color-btndisabledtext: #282A3A;
-  --color-black: #000000;
-  --color-nightmode: #18181b;
+
   --color-gray: #282A3A;
   --color-cooper: #735F32;
   --color-golden: #C69749;
   --color-white: #FFF;
-  --color-blue: #0a4a70;
-  --color-back: #072f4a;
-  --color-enersa-orginal: #006eab;
+
 }
 
 * {

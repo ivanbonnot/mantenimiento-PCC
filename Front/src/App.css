@@ -2,9 +2,9 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background: rgb(52, 191, 252);
-  background: linear-gradient(180deg, rgba(52, 191, 252, 1) 0%, rgb(82, 186, 255) 50%, rgba(0, 111, 171, 1) 100%);
+  background-color: var(--color-dark-background);
 }
+
 
 .app__wrapper {
   display: flex;
@@ -61,51 +61,58 @@
   color: var(--color-white);
   font-weight: 600;
   letter-spacing: 0.04em;
-  line-height: 28px;
+  line-height: 26px;
   font-size: 16px;
 }
 
 .p__header {
-  font-family: var(--font-alt);
-  color: var(--color-blue);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 28px;
+  font-family: var(--font-base);
+  color: var(--color-dark-textwhite);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 30px;
   font-size: 16px;
 }
 
+
+.p__header:hover {
+  transition: all ease-in-out 300ms;
+  color: var(--color-dark-textwhitehover);
+  transform: scale(1.01);
+}
+
+
 .custom__button {
-  background-color: var(--color-golden);
-  color: var(--color-black);
+  background-color: var(--color-dark-button-inside); 
+  color: var(--color-dark-button-text);
+  border: 1.5px solid var(--color-dark-button-border);
+  border-radius: 5px;
   font-family: var(--font-base);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 28px;
   font-size: 16px;
   padding: 0.5rem 1.5rem;
-  border-radius: 1px;
-  border: none;
   outline: none;
   cursor: pointer;
 }
 
 .custom__button:hover {
   transition: all ease-in-out 300ms;
-  color: white;
+  background-color: var(--color-dark-buttonhover-inside);
+  color: var(--color-dark-buttonhover-text);
   transform: scale(1.02);
 }
 
 .custom__button:disabled {
-  background-color: var(--color-btndisabled);
-  color: var(--color-btndisabledtext);
+  background-color: var(--color-dark-btndisabled);
+  color: var(--color-dark-btndisabledtext);
   font-family: var(--font-base);
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 28px;
   font-size: 16px;
   padding: 0.5rem 1.5rem;
-  border-radius: 1px;
-  border: none;
   outline: none;
   cursor: pointer;
 }
@@ -131,6 +138,85 @@
   color: white;
   transform: scale(1.02);
 }
+
+
+/* Fondo con columna */
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.x-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.y-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container {
+  width: 90vmin;
+  height: 70vmin;
+  overflow: hidden;
+  background: linear-gradient(
+    #b3c5cf 21%,
+    #bac2c4 21% 37%,
+    #b5b4b2 37% 47%,
+    #a99fa2 47% 53%,
+    #1d2742 53% 60%,
+    #6477a1 60% 65%,
+    #9b97b0 65% 70%,
+    #6477a1 70% 75%,
+    #9b97b0 75% 78%,
+    #6477a1 78%
+  );
+}
+
+.post {
+  width: 12%;
+  height: 47%;
+  left: 19%;
+  bottom: 30%;
+}
+
+.post_trunk {
+  width: 12%;
+  height: 100%;
+  background: linear-gradient(#615248 30%, #2b1e25 30%);
+}
+
+.post_branch {
+  width: 100%;
+  height: 10%;
+  border: 1vmin solid #615248;
+  border-top: 0;
+}
+
+.post_branch::before,
+.post_branch::after {
+  content: " ";
+  display: block;
+  width: 0.7vmin;
+  height: 5vmin;
+  position: absolute;
+  top: 100%;
+  background-color: #615248;
+}
+
+.post_branch::before {
+  transform: rotate(35deg);
+  right: 26%;
+}
+
+.post_branch::after {
+  transform: rotate(-35deg);
+  left: 26%;
+}
+/*Fondo hasta aca*/
+
 
 @keyframes App-logo-spin {
   from {

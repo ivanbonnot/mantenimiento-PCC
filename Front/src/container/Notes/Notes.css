@@ -13,7 +13,8 @@
 }
 
 .app__notes-read {
-    background-color: var(--color-back);
+    background-color: var(--color-dark-nav-footer);
+    border: 1.5px solid var(--color-dark-border);
     border-radius: 10px;
 }
 
@@ -26,7 +27,8 @@
 .app__notes-note {
     padding: 0.5rem 0 0.5rem 1rem;
     text-align: left;
-    border: 3px solid var(--color-gray);
+    border: 3px solid var(--color-dark-nav-footer);
+    border: 1.5px solid var(--color-dark-border);
 }
 
 .app__notes-note p:first-child {
@@ -36,12 +38,13 @@
     font-size: 1.25rem;
 }
 
-.app__notes-note p:nth-last-child(-n+2) {
+.app__notes-note p:nth-last-child(-n+3) {
     font-size: 0.75rem;
 }
 
 .app__notes-write {
-    background-color: var(--color-back);
+    background-color: var(--color-dark-nav-footer);
+    border: 1.5px solid var(--color-dark-border);
     margin-top: 25px;
     display: flex;
     justify-content: center;
@@ -71,15 +74,9 @@
     margin: 1rem 0 3rem 2rem;
 }
 
-.app__notes-write button:hover {
-    transition: all ease-in-out 300ms;
-    color: white;
-    transform: scale(1.02);
-}
-
-
 .app__notes-delete {
-    background-color: var(--color-back);
+    background-color: var(--color-dark-nav-footer);
+    border: 1.5px solid var(--color-dark-border);
     margin-top: 25px;
     display: flex;
     flex-direction: column;

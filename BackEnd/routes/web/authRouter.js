@@ -31,16 +31,19 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
 authWebRouter.put('/changepassword', passport.authenticate('jwt', { session: false }), async (req, res) => {
     try {
         const { id } = req.params;
-        const { password } = req.body;
+        const { username, password, newPassword } = req.body;
         
-        const userUpdate = {
-            password
-        };
+        const checkUser = await checkUserController(username, password)
 
-       // let userData = await getUserController(req.session.passport.user)
-        let user = await updateUserController(id, userUpdate);
-        res.status(200).json(user)
-        //res.redirect('/')
+        if( checkUser.result ) {
+            const userUpdate = {
+                newPassword
+            };
+
+            const user = await updateUserController(id, userUpdate);
+            res.status(200).json(user)
+        }
+        
     } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');

@@ -9,6 +9,7 @@ const ChangeUserPassword = () => {
   const [formData, setFormData] = useState({
     username: localStorage.getItem('user'),
     password: '',
+    newPassword: '',
     verificationPassword: ''
   });
 
@@ -44,7 +45,7 @@ const ChangeUserPassword = () => {
       })
     };
 
-    if(formData.password === formData.verificationPassword  ) {
+    if(formData.newPassword === formData.verificationPassword  ) {
       axios
       .put("http://localhost:8080/changepassword", data, {
         headers: {
@@ -58,6 +59,7 @@ const ChangeUserPassword = () => {
           setFormData({
             username: '',
             password: '',
+            newPassword: '',
             verificationPassword: ''
           });
         }
@@ -97,7 +99,7 @@ const ChangeUserPassword = () => {
               required
             />
 
-            <label htmlFor="password">Contraseña</label>
+            <label htmlFor="password">Contraseña del usuario</label>
             <input
               type="password"
               id="password"
@@ -108,11 +110,22 @@ const ChangeUserPassword = () => {
               required
             />
 
+            <label htmlFor="password">Nueva contraseña</label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              placeholder="Tu contraseña"
+              value={formData.newPassword}
+              onChange={handleChange}
+              required
+            />
+
              {formData.password.length >0 && formData.password.length<4 && (
             <div className="password-validation">*La contraseña debe ser mayor de 4 caracteres</div>
           )}
 
-            <label htmlFor="password">Ingrese nuevamente la contraseñar</label>
+            <label htmlFor="password">Ingrese nuevamente la nueva contraseña</label>
             <input
               type="password"
               id="verificationPassword"
@@ -124,7 +137,7 @@ const ChangeUserPassword = () => {
             />
           </div>
 
-          <button className='custom__button' type="submit" disabled={formData.password.length < 4 && formData.verificationPassword.length < 4} >Cambiar contraseña</button>
+          <button className='custom__button' disabled={formData.password.length < 4 && formData.verificationPassword.length < 4} >Cambiar contraseña</button>
         </form>
       </div>
     </div>
