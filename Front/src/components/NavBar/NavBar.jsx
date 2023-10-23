@@ -48,7 +48,7 @@ const NavBar = () => {
             id: 4,
             link: "Cambios",
         },
-         {
+        {
             id: 5,
             link: "logout",
             onClick: handleLogout
@@ -57,10 +57,10 @@ const NavBar = () => {
 
 
     return shouldRenderNavBar || isAuthorized ? (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-navbar fixed">
+        <div className="flex justify-between items-center w-full h-20 z-50 px-4 text-white bg-navbar fixed">
             <div className="text-4xl font-signature ml-2">
                 <Link to={'/'} >
-                <img class="" src="img/1111-5.png" alt="" width="125" height="125" />
+                    <img class="" src="img/1111-5.png" alt="" width="125" height="125" />
                 </Link>
             </div>
 

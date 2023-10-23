@@ -8,6 +8,7 @@ import FooterAdm from '../../components/Footer/FooterAdm'
 import FooterUser from '../../components/Footer/FooterUser'
 
 import "./Header.css";
+//import { route } from "../../../../backend/routes/web/authRouter";
 
 
 const Header = () => {
@@ -100,14 +101,16 @@ const Header = () => {
             {et.map(({ title, id }) => (
               <div key={id}>
                 <p className="p__header">
-                  <AiFillCaretRight style={{margin: '3px 5px 0 0'}}/>
-                  <button>
-                    <Link to={`notes/${id}`}> {title} (
-                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
-                        {noteData.filter((item) => item.estacion === id).length}
-                      </span>
-                      ) </Link>
-                  </button>
+                  <div>
+                    <button>
+                      <Link to={`notes/${id}`}> {title}
+                        <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
+                          ({noteData.filter((item) => item.estacion === id).length})
+                        </span>
+                      </Link>
+                    </button>
+                    <AiFillCaretRight style={{ margin: '3px 5px 0 5px' }} />
+                  </div>
                 </p>
               </div>
             ))}
@@ -120,22 +123,24 @@ const Header = () => {
               <div key={id}>
 
                 <p className="p__header">
-                <AiFillCaretRight style={{margin: '3px 5px 0 0'}}/>
-                  <button>
-                    <Link to={`notes/${id}`}> {title} (
-                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "white" }}>
-                        {noteData.filter((item) => item.estacion === id).length}
-                      </span>
-                      ) </Link>
-                  </button>
+                  <div>
+                    <button>
+                      <Link to={`notes/${id}`}> {title}
+                        <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
+                          ({noteData.filter((item) => item.estacion === id).length})
+                        </span>
+                      </Link>
+                    </button>
+                    <AiFillCaretRight style={{ margin: '3px 5px 0 5px' }} />
+                  </div>
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
-      {isAdmin ? < FooterAdm /> : < FooterUser />}
-    </div>
+      </div >
+      {isAdmin ? <FooterAdm /> : < FooterUser />}
+    </div >
   )
 };
 
