@@ -20,7 +20,6 @@ const adm = true;
 // isDeletedJWT, passport.authenticate('jwt', { session: false }), recortado de las rutas
 
 notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
-
   try {
     const notes = await getAllNotesController();
     res.json({ notes });
@@ -93,7 +92,7 @@ notesRouter.get("/notesresolved", isDeletedJWT, passport.authenticate('jwt', { s
 notesRouter.post("/notesresolved", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
 
   try {
-    const {  title, fecha, creador, estacion } = req.body;
+    const { title, fecha, creador, estacion } = req.body;
 
     const noteResolved = {
       title: title,

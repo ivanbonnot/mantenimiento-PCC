@@ -15,12 +15,13 @@ authWebRouter.use(flash())
 //__LOGIN__//
 
 
-authWebRouter.post('/login', passport.authenticate('login', {  failureFlash: true }), async (req, res) => {
+authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
     try {
-        username = req.user.username
-        let userData = await getUserController(username)
-        userData = Object.assign({}, userData._doc, { token: generateJwtToken(username) })
+        req.session.passport.user = req.user.username
+        let userData = await getUserController(req.session.passport.user)
+        userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user) })
         res.status(200).json(userData)
+        //res.redirect('/')
     } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
@@ -29,20 +30,20 @@ authWebRouter.post('/login', passport.authenticate('login', {  failureFlash: tru
 
 authWebRouter.put('/changepassword', passport.authenticate('jwt', { session: false }), async (req, res) => {
     try {
-        const { id } = req.params;
-        const { username, password, newPassword } = req.body;
-        
-        const checkUser = await checkUserController(username, password)
 
-        if( checkUser.result ) {
-            const userUpdate = {
-                newPassword
-            };
+        const { username, password } = req.body;
+        const userUpdate = {
+            password
+        };
 
-            const user = await updateUserController(id, userUpdate);
-            res.status(200).json(user)
-        }
-        
+        let userData = await getUserController(username)
+        const id = userData.id
+
+        let user = await updateUserController(id, userUpdate);
+        console.log(userUpdate)
+        console.log(id)
+        res.status(200).json(user)
+        //res.redirect('/')
     } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');

@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
 
   /*Night/Dark Mode*/
-  
+
   --color-dark-background: #18181b;
   --color-dark-border: #006fab;
   --color-blue: #0a4a70;

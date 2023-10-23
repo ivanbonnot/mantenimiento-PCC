@@ -41,6 +41,7 @@ const Notes = () => {
         },
       })
       .then((res) => {
+        console.log(res.data.notesResolved)
         const noteResolved = res.data.notesResolved.filter((item) => item.estacion === id);
         setNoteResolvedData(noteResolved);
       })

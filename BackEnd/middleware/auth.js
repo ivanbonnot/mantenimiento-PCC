@@ -18,7 +18,7 @@ passport.use(
         return done(null, { username: username })
       } else {
         logger.info(`Usuario o contrasena incorrectos.`)
-        return done(null, false, { status: 401, message: 'Nombre de usuario o contraseña incorrectos' })
+        return done(null, false, { message: 'Nombre de usuario o contraseña incorrectos' })
       }
     }
   )
