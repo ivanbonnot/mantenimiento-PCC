@@ -184,6 +184,7 @@ const Notes = () => {
           />
           <button
             className="custom__button"
+            disabled={title.length < 4 && note.length < 4}
             onClick={() => handleAddNote()}
           >
             Agregar nota

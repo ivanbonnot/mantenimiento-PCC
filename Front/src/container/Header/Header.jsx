@@ -8,7 +8,6 @@ import FooterAdm from '../../components/Footer/FooterAdm'
 import FooterUser from '../../components/Footer/FooterUser'
 
 import "./Header.css";
-//import { route } from "../../../../backend/routes/web/authRouter";
 
 
 const Header = () => {
@@ -39,6 +38,7 @@ const Header = () => {
   }, []);
 
   //Eliminar notas resulestas cada una semana, dejar un maximo de 200 notas
+  /*
   const deleteNoteResolved = async () => {
     //const idDelete = 1
     let notesAmount
@@ -73,7 +73,7 @@ const Header = () => {
       // });
     }
   }
-
+ */
 
 
   useEffect(() => {
@@ -81,12 +81,12 @@ const Header = () => {
     loadNotes()
     console.log(deleteResolvedNoteshasExecutedOnce)
     if (!deleteResolvedNoteshasExecutedOnce) {
-      deleteNoteResolved();
+      //deleteNoteResolved();
       setDeleteResolvedNoteshasExecutedOnce(true);
       //Una semana = 604800000, por dia 86400000 
       const oneWeekInMillis = 5000;
       setTimeout(() => {
-        deleteNoteResolved();
+        //deleteNoteResolved();
       }, oneWeekInMillis);
     }
   }, [loadNotes])
@@ -95,49 +95,48 @@ const Header = () => {
   return (
     <div>
       <div className="app__header-wrapper app__bg ">
-        <div className="app__header-et" id="et">
-          <div className="app__header-et">
 
+        <div className="app__header-et">
+            <h2>ET :</h2>
             {et.map(({ title, id }) => (
               <div key={id}>
-                <p className="p__header">
-                  <div>
-                    <button>
+                <button className="et">
+                    <p>
                       <Link to={`notes/${id}`}> {title}
                         <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
                           ({noteData.filter((item) => item.estacion === id).length})
                         </span>
                       </Link>
-                    </button>
-                    <AiFillCaretRight style={{ margin: '3px 5px 0 5px' }} />
-                  </div>
-                </p>
+                    </p>
+                    <span className="arrow">
+                    <AiFillCaretRight size={25} style={{ marginTop: '4px' }} />
+                    </span>
+                </button>
               </div>
             ))}
-          </div>
         </div>
 
-        <div className="app__header-set" id="set">
-          <div className="app__header-set set">
+        <h2 className="set-title">SET :</h2>
+        <div className="app__header-set">
+        
             {set.map(({ title, id }) => (
               <div key={id}>
-
-                <p className="p__header">
-                  <div>
-                    <button>
-                      <Link to={`notes/${id}`}> {title}
-                        <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
-                          ({noteData.filter((item) => item.estacion === id).length})
-                        </span>
-                      </Link>
-                    </button>
-                    <AiFillCaretRight style={{ margin: '3px 5px 0 5px' }} />
-                  </div>
-                </p>
-              </div>
+              <button className="set">
+                  <p>
+                    <Link to={`notes/${id}`}> {title}
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
+                        ({noteData.filter((item) => item.estacion === id).length})
+                      </span>
+                    </Link>
+                  </p>
+                  <span className="arrow">
+                  <AiFillCaretRight size={25} style={{ marginTop: '4px' }} />
+                  </span>
+              </button>
+            </div>
             ))}
-          </div>
         </div>
+
       </div >
       {isAdmin ? <FooterAdm /> : < FooterUser />}
     </div >

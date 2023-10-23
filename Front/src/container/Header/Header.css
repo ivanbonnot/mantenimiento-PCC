@@ -1,83 +1,120 @@
 .app__header-wrapper {
   padding-top: 120px;
   height: 100%;
-  display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 35% 50% 33%;
-  grid-template-rows: auto auto auto auto auto;
-  gap: 2px 0px;
-  justify-items: center;
-  grid-template-areas:
-    ". . ."
-    "et set set"
-    "et set set"
-    "et set set"
-    "et set set";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-base);
 }
 
 .app__header-wrapper p {
   font-size: 1.5rem;
-
 }
 
-.app__header-et p {
 
-  margin: 10px;
-  padding: 12px 0px 12px 10px;
-  border: 2px solid var(--color-dark-border);
-  border-radius: 15px;
-  box-shadow: 0 10px 15px -10px rgba(255, 255, 255, 0.1);
-  cursor: pointer;
+.app__header-et h2{
+  font-size: 32px;
+  color: var(--color-dark-textwhite);
+}
+
+.app__header-et button, .app__header-set button {
+  width: 50vw;
+  margin: 10px 10px 10px 10px;
+  padding: 12px 30px 12px 30px;
   background-color: var(--color-gray);
-}
-
-.app__header-et span {
-  padding-left: 10px;
-  margin-right: 30px;
-  color: var(--color-dark-textwhite);
-}
-
-.app__header-set {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100vh;
-}
-
-.app__header-set p {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  padding: 10px 15px 10px 15px;
   border: 2px solid var(--color-dark-border);
+  color: var(--color-dark-textwhite);
   border-radius: 15px;
-  box-shadow: 0 10px 15px -10px rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-  background-color: var(--color-gray);
-}
-
-.app__header-set span {
-  padding-left: 10px;
-  color: var(--color-dark-textwhite);
-}
-
-.p__header {
-  font-family: var(--font-base);
-  color: var(--color-dark-textwhite);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 30px;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.app__header-et button:hover {
+  box-shadow: 0 15px 15px 0px rgba(0, 111, 171, 0.2)
+}
+
+.app__header-et .et p {
   transition: padding .4s;
 }
 
-.p__header:hover {
+.app__header-et button:hover p {
   padding-left: 20px;
 }
 
-.p__header div {
+.app__header-et button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0px 20px 0px 0px;
 }
+
+.app__header-et span {
+  padding-left: 10px;
+}
+
+.app__header-et span .arrow{
+  border-radius: 50%;
+  color: var(--color-dark-background);
+  border: 2px solid var(--color-dark-background);
+}
+
+.app__header-et span svg {
+  color: var(--color-dark-textwhite);
+}
+
+.set-title {
+  font-size: 32px;
+  color: var(--color-dark-textwhite);
+  margin-top: 25px;
+}
+
+.app__header-set {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.app__header-set button {
+  width: 35vw;
+}
+
+.app__header-set span {
+  padding-left: 10px;
+}
+
+
+.app__header-set span .arrow{
+  border-radius: 50%;
+  color: var(--color-dark-background);
+  border: 2px solid var(--color-dark-background);
+}
+
+.app__header-set span svg {
+  color: var(--color-dark-textwhite);
+}
+
+.app__header-set button:hover {
+  box-shadow: 0 15px 15px 0px rgba(40, 42, 58, 0.5)
+}
+
+.app__header-set .set p {
+  transition: padding .4s;
+}
+
+.app__header-set button:hover p {
+  padding-left: 20px;
+}
+
+.app__header-set button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+

@@ -128,7 +128,7 @@ const RegisterForm = () => {
             />
           </div>
 
-          <button className='custom__button' type="submit">Agregar usuario</button>
+          <button className='custom__button' disabled={formData.username.length < 4 && formData.password.length < 4} type="submit">Agregar usuario</button>
         </form>
       </div>
     </div>

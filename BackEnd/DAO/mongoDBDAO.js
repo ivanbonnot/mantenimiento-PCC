@@ -21,7 +21,7 @@ class mongoDBDAO {
                     return { msg: 'Usuario y contrasena correctos', result: true }
                 } else {
                     logger.info(`Se ha intentado logear ${username} con una contrasena incorrecta`)
-                    return { msg: 'Contrasena incorrecta', result: false }
+                    return { status:401, msg: 'Contrasena incorrecta', result: false }
                 }
             }
             return { msg: 'No existe usuario', result: false }

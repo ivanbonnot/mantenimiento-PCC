@@ -15,13 +15,12 @@ authWebRouter.use(flash())
 //__LOGIN__//
 
 
-authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
+authWebRouter.post('/login', passport.authenticate('login', {  failureFlash: true }), async (req, res) => {
     try {
-        req.session.passport.user = req.user.username
-        let userData = await getUserController(req.session.passport.user)
-        userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user) })
+        username = req.user.username
+        let userData = await getUserController(username)
+        userData = Object.assign({}, userData._doc, { token: generateJwtToken(username) })
         res.status(200).json(userData)
-        //res.redirect('/')
     } catch (error) {
         logger.error(error);
         res.status(500).json('Error interno del servidor');
