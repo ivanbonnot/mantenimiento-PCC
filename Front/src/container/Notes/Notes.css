@@ -82,7 +82,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     border-radius: 10px;
 }
 
@@ -90,6 +89,11 @@
     border: 1px solid #ccc;
     width: 97%;
     margin-bottom: 20px;
+    overflow-x: auto; /* Para permitir el desplazamiento horizontal en pantallas pequeñas */
+}
+
+.app__notes-delete_table thead {
+    display: table-header-group; /* Establece la fila de encabezado como grupo de tabla para mantenerla visible en pantallas pequeñas */
 }
 
 .app__notes-delete_table tr {
@@ -117,7 +121,6 @@
     margin: 2px 10px 2px 10px;
 }
 
-
 .app__notes-delete_note .author {
     margin-left: 200px;
 }
@@ -136,3 +139,70 @@
     align-items: center;
     background-color: rgba(80, 80, 80, 0.555) !important;
 }
+
+
+    @media screen and (max-width: 768px) {
+        .app__notes-write {
+            align-items: center;
+        }
+        .app__notes-write_title {
+            width: 90%;
+            margin: 1.5rem 0 0.5rem 0rem;
+        }
+        .app__notes-write_note {
+            width: 90%;
+            margin: 0.5rem 0 0rem 0rem;
+        }
+        .app__notes-write h2 {
+            margin: 2rem 0 0rem 0rem;
+            font-size: 1.75rem;
+        }
+        .app__notes-write button {
+            margin: 1.5rem 0 1.5rem 0rem;
+        }
+    }
+    
+    
+    @media screen and (max-width: 650px) {
+    }
+    
+    @media screen and (max-width: 450px) {
+        
+.app__notes-write {
+    background-color: var(--color-dark-nav-footer);
+    border: 1.5px solid var(--color-dark-border);
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.app__notes-write_title {
+    margin: 2rem 0 0.5rem 1rem;
+    width: 60%;
+    resize: none;
+}
+
+.app__notes-write_note {
+    margin: 1rem 0 0.5rem 1rem;
+    width: 70%;
+    resize: none;
+}
+
+.app__notes-write h2 {
+    margin: 2rem 0 0rem 2rem;
+    font-size: 1.75rem;
+}
+
+.app__notes-write button {
+    margin: 1rem 0 3rem 2rem;
+}
+    }
+    
+    @media screen and (max-width: 385px) {
+    }
+    
+    @media screen and (max-width: 330px) {
+    }

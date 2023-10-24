@@ -15,6 +15,7 @@ const Notes = () => {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
   const [loading, setLoading] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
   const loadNotes = useCallback(() => {
@@ -53,6 +54,18 @@ const Notes = () => {
   useEffect(() => {
     loadNotes();
     loadResolvedNotes();
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Limpieza del event listener cuando el componente se desmonta.
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+
   }, [id, loadNotes, loadResolvedNotes]);
 
 
@@ -201,6 +214,7 @@ const Notes = () => {
               <Spinner />
             </div>
           )}
+          {windowWidth < 768 ? (
           <table className="app__notes-delete_table">
             <thead>
               <tr>
@@ -221,6 +235,33 @@ const Notes = () => {
               ))}
             </tbody>
           </table>
+          ) : (
+            <table class="app__notes-delete_table">
+    <tbody>
+            {noteResolvedData.map(({ idnota, title, fecha, creador }, index) => (
+              <tr key={idnota}>
+                <td className="p__opensans">Nota</td>
+                <td className="p__opensans">{index + 1}</td>
+              </tr>
+              <tr key={idnota}>
+                <td className="p__opensans">Título</td>
+                <td className="p__opensans">{title}</td>
+              </tr>
+              <tr key={idnota}>
+                <td className="p__opensans">Fecha</td>
+                <td className="p__opensans">{fecha}</td>
+              </tr>
+              <tr key={idnota}>
+                <td className="p__opensans">Autor</td>
+                <td className="p__opensans">{creador}</td>
+              </tr>
+           ))}
+    </tbody>
+  </table>
+          
+          )
+        }
+          
         </div>
 
       </div>
