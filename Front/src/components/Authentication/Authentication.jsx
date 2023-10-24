@@ -5,7 +5,7 @@ import axios from "axios";
 
 const AuthGuard = ({ children }) => {
   const isAuthenticated = localStorage.getItem('token');
-  console.log(isAuthenticated)
+  //console.log(isAuthenticated)
   const navigate = useNavigate();
 
   useEffect(() => {

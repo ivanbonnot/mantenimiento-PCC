@@ -17,6 +17,7 @@ const Header = () => {
 
   const isAdmin = localStorage.getItem('admin')
   const { setShouldRenderNavBar } = useNavBarContext();
+
   const renderNavBar = () => {
     setShouldRenderNavBar(true)
   }
@@ -75,11 +76,10 @@ const Header = () => {
   }
  */
 
-
   useEffect(() => {
     renderNavBar()
     loadNotes()
-    console.log(deleteResolvedNoteshasExecutedOnce)
+//    console.log(deleteResolvedNoteshasExecutedOnce)
     if (!deleteResolvedNoteshasExecutedOnce) {
       //deleteNoteResolved();
       setDeleteResolvedNoteshasExecutedOnce(true);
@@ -89,7 +89,7 @@ const Header = () => {
         //deleteNoteResolved();
       }, oneWeekInMillis);
     }
-  }, [loadNotes])
+  }, [loadNotes, setShouldRenderNavBar])
 
 
   return (
@@ -100,18 +100,21 @@ const Header = () => {
             <h2>ET :</h2>
             {et.map(({ title, id }) => (
               <div key={id}>
+                <Link to={`notes/${id}`}>
                 <button className="et">
                     <p>
-                      <Link to={`notes/${id}`}> {title}
+                       {title}
                         <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
                           ({noteData.filter((item) => item.estacion === id).length})
                         </span>
-                      </Link>
+                      
                     </p>
                     <span className="arrow">
                     <AiFillCaretRight size={25} style={{ marginTop: '4px' }} />
                     </span>
+                    
                 </button>
+                </Link>
               </div>
             ))}
         </div>
@@ -138,7 +141,7 @@ const Header = () => {
         </div>
 
       </div >
-      {isAdmin ? <FooterAdm /> : < FooterUser />}
+      {isAdmin === true ? <FooterAdm /> : < FooterUser />}
     </div >
   )
 };
