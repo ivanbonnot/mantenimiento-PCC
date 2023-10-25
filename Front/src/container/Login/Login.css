@@ -49,3 +49,37 @@
 .app__login-form button {
     margin-bottom: 2rem;
 }
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .app__login-wrapper {
+        min-width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app__login-wrapper {
+        margin: 0rem 0 3rem 0;
+        min-height: 50%;
+        min-width: 75%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app__login-wrapper {
+        min-height: 50%;
+        min-width: 90%;
+    }
+
+    .app__login-wrapper h2 {
+        font-size: 24px;
+    }
+
+    .app__login-wrapper input {
+        width: 85%
+    }
+}
+
+@media screen and (max-width: 410px) {}

@@ -34,16 +34,16 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const alert = (title, message, label, onClick ) => {
+
+    const alert = (title, message, label, onClick) => {
       confirmAlert({
         title: title,
         message: message,
         buttons: [
           {
-            label:label,
+            label: label,
             onClick: onClick,
-            },
+          },
         ],
       })
     };
@@ -62,12 +62,12 @@ const LoginForm = () => {
         localStorage.setItem('admin', res.data.admin);
         navigate('/');
       })
-      
+
       .catch((error) => {
         console.error('Error en la petición:', error);
-        if (error.response.status === 401) {
-          alert(`Usuario o contraseña incorrecto`, '¿Volver a Login?', 'Ok', ()=>{})
-        } 
+        if (error.response.status === 401 || 404) {
+          alert(`Usuario o contraseña incorrecto`, '¿Volver a Login?', 'Ok', () => { })
+        }
       });
   };
 
