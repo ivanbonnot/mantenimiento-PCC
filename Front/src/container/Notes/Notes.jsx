@@ -42,7 +42,6 @@ const Notes = () => {
         },
       })
       .then((res) => {
-        console.log(res.data.notesResolved)
         const noteResolved = res.data.notesResolved.filter((item) => item.estacion === id);
         setNoteResolvedData(noteResolved);
       })
@@ -78,8 +77,6 @@ const Notes = () => {
       creador: localStorage.getItem("user"),
       estacion: id,
     };
-
-    console.log(newNote);
 
     axios
       .post("http://localhost:8080/notes", newNote, {
@@ -214,56 +211,44 @@ const Notes = () => {
               <Spinner />
             </div>
           )}
-          {windowWidth < 768 ? (
-          <table className="app__notes-delete_table">
-            <thead>
-              <tr>
-                <th className="p__opensans">Nota</th>
-                <th className="title p__opensans">Título</th>
-                <th className="author p__opensans">Fecha</th>
-                <th className="date p__opensans">Autor</th>
-              </tr>
-            </thead>
-            <tbody>
-              {noteResolvedData.map(({ idnota, title, fecha, creador }, index) => (
-                <tr key={idnota}>
-                  <td className="p__opensans">{index + 1}</td>
-                  <td className="p__opensans">{title}</td>
-                  <td className="p__opensans">{fecha}</td>
-                  <td className="p__opensans">{creador}</td>
+          {windowWidth > 768 ? (
+            <table className="app__notes-delete_table">
+              <thead>
+                <tr>
+                  <th className="p__opensans">Nota</th>
+                  <th className="title p__opensans">Título</th>
+                  <th className="author p__opensans">Fecha</th>
+                  <th className="date p__opensans">Autor</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {noteResolvedData.map(({ idnota, title, fecha, creador }, index) => (
+                  <tr key={idnota}>
+                    <td className="p__opensans">{index + 1}</td>
+                    <td className="p__opensans">{title}</td>
+                    <td className="p__opensans">{fecha}</td>
+                    <td className="p__opensans">{creador}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           ) : (
-            <table class="app__notes-delete_table">
-    <tbody>
-            {noteResolvedData.map(({ idnota, title, fecha, creador }, index) => (
-              <tr key={idnota}>
-                <td className="p__opensans">Nota</td>
-                <td className="p__opensans">{index + 1}</td>
-              </tr>
-              <tr key={idnota}>
-                <td className="p__opensans">Título</td>
-                <td className="p__opensans">{title}</td>
-              </tr>
-              <tr key={idnota}>
-                <td className="p__opensans">Fecha</td>
-                <td className="p__opensans">{fecha}</td>
-              </tr>
-              <tr key={idnota}>
-                <td className="p__opensans">Autor</td>
-                <td className="p__opensans">{creador}</td>
-              </tr>
-           ))}
-    </tbody>
-  </table>
-          
+            <div className="app__notes-delete-768">
+              {noteResolvedData.map(({ idnota, title, fecha, creador }) => (
+                <div className="app__notes-delete-note" key={idnota}>
+                  <p className="title p__opensans">Título: {title}</p>
+                  <p className="author p__opensans">Fecha: {fecha}</p>
+                  <p className="date p__opensans">Autor: {creador}</p>
+                  <div>
+                  </div>
+                </div>
+              ))
+              }
+            </div>
           )
-        }
-          
-        </div>
+          }
 
+        </div>
       </div>
     </div>
   )
