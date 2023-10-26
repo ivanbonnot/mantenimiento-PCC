@@ -19,7 +19,7 @@ const updateNoteDTO = async (id, noteToUpdate) => await notes.updateNote(id, not
 
 const deleteNoteDTO = async (id) => await notes.deleteNote(id)
 
-const deleteNoteResolvedDTO = async (id) => await notes.deleteNoteResolved(id)
+const deleteNoteResolvedDTO = async () => await notes.deleteNoteResolved()
 
 const deleteAllNotesDTO = async () => await notes.deleteAllNotes()
 

@@ -17,7 +17,7 @@ const updateNoteController = (id, NoteToUpdate) => updateNoteDTO(id, NoteToUpdat
 
 const deleteNoteController = (id) => deleteNoteDTO(id)
 
-const deleteNoteResolvedController = (id) => deleteNoteResolvedDTO(id)
+const deleteNoteResolvedController = () => deleteNoteResolvedDTO()
 
 
-module.exports = { addNewNoteController, getAllNotesController, addResolvedNoteController, getResolvedNotesController, getNoteByIdController,getNoteResolvedByIdController, deleteNoteController, updateNoteController, deleteNoteResolvedController }
+module.exports = { addNewNoteController, getAllNotesController, addResolvedNoteController, getResolvedNotesController, getNoteByIdController, getNoteResolvedByIdController, deleteNoteController, updateNoteController, deleteNoteResolvedController }
