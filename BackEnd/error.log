@@ -897,3 +897,12 @@
 [2023-10-19T16:24:36.199] [ERROR] default - ReferenceError: id is not defined
     at C:\Users\54344\Desktop\Proyectos portafolio\mantenimiento-pcc\backend\routes\web\authRouter.js:41:47
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-10-26T18:12:42.803] [ERROR] default - Error al borrar la nota: TypeError: notes.deleteNoteResolved is not a function
+[2023-10-26T18:13:49.334] [ERROR] default - Error al borrar la nota: TypeError: noteResolvedModel.find(...).sort(...).limit(...).forEach is not a function
+[2023-10-26T19:35:03.906] [ERROR] default - Error: queryTxt ETIMEOUT cluster0.xvejx.gcp.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17) {
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'queryTxt',
+  hostname: 'cluster0.xvejx.gcp.mongodb.net'
+}

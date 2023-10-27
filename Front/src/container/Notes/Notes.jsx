@@ -146,6 +146,11 @@ const Notes = () => {
   };
 
 
+  const formatDate = (date) => {
+    return moment(date).format("MMMM Do YYYY, h:mm:ss a");
+  };
+
+
   return (
     <div className="app__bg app__notes-container">
       <div className="app__notes-wrapper">
@@ -161,7 +166,7 @@ const Notes = () => {
             <div className="app__notes-note" key={idnota}>
               <p className="title p__opensans">Título: {title}</p>
               <p className="note p__opensans">Aclaración: {note}</p>
-              <p className="author p__opensans">Fecha: {fecha}</p>
+              <p className="author p__opensans">Fecha: {formatDate(fecha)}</p>
               <p className="date p__opensans">Autor: {creador}</p>
               <div>
                 <button
@@ -226,7 +231,7 @@ const Notes = () => {
                   <tr key={idnota}>
                     <td className="p__opensans">{index + 1}</td>
                     <td className="p__opensans">{title}</td>
-                    <td className="p__opensans">{fecha}</td>
+                    <td className="p__opensans">{formatDate(fecha)}</td>
                     <td className="p__opensans">{creador}</td>
                   </tr>
                 ))}
@@ -237,7 +242,7 @@ const Notes = () => {
               {noteResolvedData.map(({ idnota, title, fecha, creador }) => (
                 <div className="app__notes-delete-note" key={idnota}>
                   <p className="title p__opensans">Título: {title}</p>
-                  <p className="author p__opensans">Fecha: {fecha}</p>
+                  <p className="author p__opensans">Fecha: {formatDate(fecha)}</p>
                   <p className="date p__opensans">Autor: {creador}</p>
                   <div>
                   </div>

@@ -13,7 +13,7 @@ const {
 const notesRouter = Router();
 const { passport, isDeletedJWT } = require('../../middleware/auth')
 const logger = require('../../log/log4js');
-
+const moment = require('moment');
 
 notesRouter.get("/notes", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   try {
@@ -53,11 +53,14 @@ notesRouter.post("/notes", isDeletedJWT, passport.authenticate('jwt', { session:
 
     const { idnota, title, note, fecha, creador, estacion } = req.body;
 
+    //const fecha = moment().format("MMMM Do YYYY, h:mm:ss a");
+    const fechaISO8601 = moment(fecha, 'MMMM Do YYYY, h:mm:ss a').format();
+
     const notePost = {
       idnota,
       title,
       note,
-      fecha,
+      fecha: fechaISO8601,
       creador,
       estacion,
     };
@@ -133,7 +136,7 @@ notesRouter.delete("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { se
 
 notesRouter.delete("/notesresolved/", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   try {
-    await deleteNoteResolvedController();
+    await deleteNoteResolvedController(2);
     res.status(200).json({ deleted: true });
 
   } catch (error) {

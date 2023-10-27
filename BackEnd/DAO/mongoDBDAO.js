@@ -73,10 +73,19 @@ class mongoDBDAO {
 
     deleteNote = async (id) => await noteModel.deleteOne({ _id: id });
 
-    deleteResolvedNote = async () => await
-        noteResolvedModel.find().sort({ fecha: 1 }).limit(2).forEach(function (doc) {
-            noteResolvedModel.deleteOne({ _id: doc._id });
-        });
+    deleteNoteResolved = async (limit) => {
+        try {
+            // Busca y selecciona las notas con la fecha más antigua (ascendente) hasta el límite especificado.
+            const oldestNotes = await noteResolvedModel.find().sort({ fecha: 1 }).limit(limit);
+
+            // Elimina las notas seleccionadas.
+            await noteResolvedModel.deleteMany({ _id: { $in: oldestNotes.map(note => note._id) } });
+
+            console.log(`Se eliminaron ${oldestNotes.length} notas más antiguas.`);
+        } catch (error) {
+            console.error('Error al eliminar notas:', error);
+        }
+    };
 
     deleteAllNotes = async () => await noteModel.deleteMany();
 
