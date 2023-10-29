@@ -136,8 +136,14 @@ notesRouter.delete("/notes/:id", isDeletedJWT, passport.authenticate('jwt', { se
 
 notesRouter.delete("/notesresolved/", isDeletedJWT, passport.authenticate('jwt', { session: false }), async (req, res) => {
   try {
-    await deleteNoteResolvedController(2);
-    res.status(200).json({ deleted: true });
+    const notesResolved = await getResolvedNotesController();
+
+    if (notesResolved.length >= 100) {
+      for (let i = 100; i < notesResolved.length; i++) {
+        await deleteNoteResolvedController(1);
+      }
+      res.status(200).json({ deleted: true });
+    }
 
   } catch (error) {
     logger.error(`Error al borrar la nota: ${error}`);

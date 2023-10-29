@@ -1,8 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 
 const NavBar = () => {
+
+
+    const deleteNotes = async () => {
+        try {
+            await axios.delete("http://localhost:8080/notesresolved", {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+        } catch (error) {
+            console.error("Error al cerrar sesión:", error);
+        }
+    }
 
     const links = [
         {
@@ -10,18 +24,24 @@ const NavBar = () => {
             link: "changePassword",
             name: "Cambiar contraseña"
         },
+        {
+            id: 3,
+            link: "",
+            name: "Si hay mas de 100 notas resueltas, borrar",
+            onClick: deleteNotes
+        },
     ];
 
 
     return (
         <div className="flex justify-between items-center w-full h-10 px-4 text-white bg-footer sticky">
             <ul className="flex">
-                {links.map(({ id, link, name }) => (
+                {links.map(({ id, link, name, onClick }) => (
                     <li
                         key={id}
                         className="px-4 cursor-pointer capitalize font-small text-gray-300 hover:scale-105 duration-200"
                     >
-                        <Link to={link}>
+                        <Link to={link} onClick={onClick}>
                             {name}
                         </Link>
                     </li>

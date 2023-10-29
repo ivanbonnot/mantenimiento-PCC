@@ -12,10 +12,6 @@ const NavBar = () => {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
             })
-                .then((res) => {
-                    console.log(res)
-                })
-
         } catch (error) {
             console.error("Error al cerrar sesión:", error);
         }
@@ -35,7 +31,7 @@ const NavBar = () => {
         {
             id: 3,
             link: "",
-            name: "Delete notes",
+            name: "Si hay mas de 100 notas resueltas, borrar",
             onClick: deleteNotes
         },
     ];

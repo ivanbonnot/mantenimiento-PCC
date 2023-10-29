@@ -41,7 +41,7 @@ const Header = () => {
     renderNavBar()
     loadNotes()
 
-  }, [loadNotes, setShouldRenderNavBar, renderNavBar])
+  }, [loadNotes, setShouldRenderNavBar])
 
 
   return (

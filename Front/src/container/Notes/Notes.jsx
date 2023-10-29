@@ -84,9 +84,7 @@ const Notes = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
-      .then((res) => {
-        console.log(res);
-
+      .then(() => {
         setTitle("");
         setNote("");
         loadNotes();
