@@ -3,10 +3,12 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const logger = require("../../log/log4js")
 
-const { newUserController, getUserController, checkUserController, updateUserController } = require('../../controllers/usersControler')
+const { newUserController, getUserController, updateUserController } = require('../../controllers/usersControler')
 require('../../middleware/auth');
 const { generateJwtToken, destroyJWT, isDeletedJWT } = require('../../middleware/auth')
 const { isAdmin } = require('../../middleware/isAdmin')
+const { registrationValidation } = require('../../middleware/userValidation')
+const { validationResult } = require('express-validator');
 
 const authWebRouter = Router()
 authWebRouter.use(flash())
@@ -14,105 +16,100 @@ authWebRouter.use(flash())
 
 //__LOGIN__//
 
-
 authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
     try {
         req.session.passport.user = req.user.username
         let userData = await getUserController(req.session.passport.user)
         userData = Object.assign({}, userData._doc, { token: generateJwtToken(req.session.passport.user) })
         res.status(200).json(userData)
-        //res.redirect('/')
     } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
+        handleServerError(res, error);
     }
 });
 
-authWebRouter.put('/changepassword', passport.authenticate('jwt', { session: false }), async (req, res) => {
+
+authWebRouter.put('/changepassword', validationResult, passport.authenticate('jwt', { session: false }), async (req, res) => {
     try {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
 
         const { username, password } = req.body;
-        const userUpdate = {
-            password
-        };
+        const userUpdate = { password };
 
         let userData = await getUserController(username)
         const id = userData.id
 
         let user = await updateUserController(id, userUpdate);
-        console.log(userUpdate)
-        console.log(id)
         res.status(200).json(user)
-        //res.redirect('/')
+
     } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
+        handleServerError(res, error);
     }
 });
 
 
-
 //__REGISTER__//
-
-authWebRouter.post('/admin/register', isAdmin, async (req, res) => {
+// Ruta para registrar usuarios (admin)
+authWebRouter.post('/admin/register', registrationValidation, isAdmin, async (req, res) => {
     try {
-        const { username, password } = req.body;
 
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { username, password } = req.body;
         const user = await getUserController(username)
 
         if (user) {
-            logger.info("Usuario existente ")
             res.status(302).json({ message: 'El usuario ya existe' });
         } else {
-
             const newUser = {
                 username,
                 password
             };
-            console.log(newUser)
             await newUserController(newUser)
             res.status(200).json({ message: 'Usuario registrado con éxito' });
         }
     } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
+        handleServerError(res, error);
     }
 });
+
 
 //__LOGOUT__//
 
 authWebRouter.get('/logout', passport.authenticate('jwt', { session: false }), (req, res) => {
     try {
-        const nombre = req.user.username
-
-        if (nombre) {
-            userSave = {}
+        const user = req.user.username
+        if (user) {
             destroyJWT(req.headers.authorization)
-            req.session.destroy(err => {
-                if (!err) {
-
-                } else {
-                    res.redirect('/')
-                }
-            })
         } else {
             res.redirect('/login')
         }
     } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
+        handleServerError(res, error);
     }
 })
 
 
-authWebRouter.get('/verify', passport.authenticate('jwt', { session: false }), (req, res) => {
+authWebRouter.get('/verify', isDeletedJWT, passport.authenticate('jwt', { session: false }), (req, res) => {
     try {
         res.status(200).json('Token valido');
     } catch (error) {
-        logger.error(error);
-        res.status(500).json('Error interno del servidor');
+        handleServerError(res, error);
     }
 })
+
+// Función para manejar errores y enviar respuestas de error.
+const handleServerError = (res, error) => {
+    logger.error(error);
+    res.status(500).json('Error interno del servidor');
+}
 
 
 module.exports = authWebRouter 

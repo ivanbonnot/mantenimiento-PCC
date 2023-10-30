@@ -906,3 +906,10 @@
   syscall: 'queryTxt',
   hostname: 'cluster0.xvejx.gcp.mongodb.net'
 }
+[2023-10-30T15:38:39.060] [ERROR] default - Error: queryTxt ETIMEOUT cluster0.xvejx.gcp.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:251:17) {
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'queryTxt',
+  hostname: 'cluster0.xvejx.gcp.mongodb.net'
+}

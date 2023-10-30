@@ -1,13 +1,9 @@
-const passport = require('passport');
 const { checkUserController, getUserController } = require("../controllers/usersControler");
 let user = []
 let useradm = {}
 
 const isAdmin = async (req, res, next) => {
   try {
-    //user = await getUserController(req.user.username)
-    //console.log(req.body)
-    //console.log(res.user)
 
     user = await checkUserController(req.body.admusername, req.body.admpassword) //devuelve result: true
 
