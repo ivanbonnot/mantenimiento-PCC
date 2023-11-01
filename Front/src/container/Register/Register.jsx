@@ -49,7 +49,10 @@ const RegisterForm = () => {
         console.error('Error en la petición:', error);
         if (error.response.status === 302) {
           alert('El usuario ya existe', '¿Agregar otro usuario?')
-        } else {
+        } else if (error.response.status === 400) {
+          alert('La contraseña del nuevo usuario debe tener mas de 4 caracteres', '¿Intentar nuevamente?')
+        }
+        else {
           navigate("/warning");
         }
       });

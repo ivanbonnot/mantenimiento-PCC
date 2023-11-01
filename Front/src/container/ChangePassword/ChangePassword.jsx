@@ -15,68 +15,65 @@ const ChangeUserPassword = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
+
     setFormData({
       ...formData,
       [name]: value,
     });
-    
-    if(formData.password =! formData.verificationPassword ) {
-      console.log('Las contraseñas no coinciden')
-    } else {
-      console.log('las contraseña coinciden')
-    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = JSON.stringify(formData);
 
-    const alert = (title, message, label, onClick ) => {
+    const alert = (title, message, label, onClick) => {
       confirmAlert({
         title: title,
         message: message,
         buttons: [
           {
-            label:label,
+            label: label,
             onClick: onClick,
-            },
+          },
         ],
       })
     };
 
-    if(formData.newPassword === formData.verificationPassword  ) {
+    if (formData.newPassword === formData.verificationPassword) {
       axios
-      .put("http://localhost:8080/changepassword", data, {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${localStorage.getItem("token")}`
-        }
-      })
-      .then((res) => {
-        if (res.status === 200) {
-          alert(`Contraseña modificada con éxito`, 'Redirigiendo a home', 'Ok', ()=>{ navigate('/')})
-          setFormData({
-            username: '',
-            password: '',
-            newPassword: '',
-            verificationPassword: ''
-          });
-        }
-      })
+        .put("http://localhost:8080/changepassword", data, {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+          }
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            alert(`Contraseña modificada con éxito`, 'Redirigiendo a home', 'Ok', () => { navigate('/') })
+            setFormData({
+              username: '',
+              password: '',
+              newPassword: '',
+              verificationPassword: ''
+            });
+          }
+        })
 
-      .catch((error) => {
-        console.error('Error en la petición:', error);
-        if (error.response.status === 302) {
-          alert(`Error en la peticion`, 'Redirigiendo a home', 'Ok', ()=>{ navigate('/')})
-        } else {
-          navigate("/warning");
-        }
-      });
+        .catch((error) => {
+          console.error('Error en la petición:', error);
+          if (error.response.status === 302) {
+            alert(`Error en la peticion`, 'Redirigiendo a home', 'Ok', () => { navigate('/') })
+          } else if (error.response.status === 400) {
+            alert('La contraseña debe tener mas de 4 caracteres', '¿Intentar nuevamente?')
+          }
+          else {
+            navigate("/warning");
+          }
+        });
 
-    
+
     } else {
-      alert(`Error`, 'Las contraseñas no coinciden', 'Ok', ()=>{})
+      alert(`Error`, 'Las contraseñas no coinciden', 'Intentar nuevamente', () => { })
     }
 
   };
@@ -121,9 +118,9 @@ const ChangeUserPassword = () => {
               required
             />
 
-             {formData.password.length >0 && formData.password.length<4 && (
-            <div className="password-validation">*La contraseña debe ser mayor de 4 caracteres</div>
-          )}
+            {formData.newPassword.length > 0 && formData.newPassword.length < 4 && (
+              <div className="password-validation">*La contraseña debe ser mayor de 4 caracteres</div>
+            )}
 
             <label htmlFor="password">Ingrese nuevamente la nueva contraseña</label>
             <input

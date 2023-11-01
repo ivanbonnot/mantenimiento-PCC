@@ -53,7 +53,7 @@ authWebRouter.put('/changepassword', validationResult, passport.authenticate('jw
 
 //__REGISTER__//
 // Ruta para registrar usuarios (admin)
-authWebRouter.post('/admin/register', registrationValidation, isAdmin, async (req, res) => {
+authWebRouter.post('/admin/register', isAdmin, registrationValidation, async (req, res) => {
     try {
 
         const errors = validationResult(req);
@@ -82,7 +82,6 @@ authWebRouter.post('/admin/register', registrationValidation, isAdmin, async (re
 
 
 //__LOGOUT__//
-
 authWebRouter.get('/logout', passport.authenticate('jwt', { session: false }), (req, res) => {
     try {
         const user = req.user.username
