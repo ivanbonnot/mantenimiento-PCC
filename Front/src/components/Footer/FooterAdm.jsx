@@ -12,6 +12,9 @@ const NavBar = () => {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
             })
+                .then((res) => {
+                    console.log(res.request)
+                })
         } catch (error) {
             console.error("Error al cerrar sesión:", error);
         }

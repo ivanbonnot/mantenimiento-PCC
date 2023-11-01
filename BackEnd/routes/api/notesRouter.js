@@ -143,6 +143,8 @@ notesRouter.delete("/notesresolved/", isDeletedJWT, passport.authenticate('jwt',
         await deleteNoteResolvedController(1);
       }
       res.status(200).json({ deleted: true });
+    } else {
+      res.status(204).json({ message: 'Las notas resueltas son menos de 100' });
     }
 
   } catch (error) {
