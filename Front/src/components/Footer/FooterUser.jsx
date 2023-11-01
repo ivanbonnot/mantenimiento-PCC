@@ -14,7 +14,7 @@ const NavBar = () => {
                 }
             })
         } catch (error) {
-            console.error("Error al cerrar sesión:", error);
+            console.error("Error al borrar notas resueltas", error);
         }
     }
 
