@@ -17,9 +17,8 @@ const mongoStore = require('connect-mongo')
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
-const { config, mongodbSecretPin, userSessionTime, mongodbUri, jwtSecret } = require('../config/enviroment')
+const { config, mongodbSecretPin, userSessionTime, mongodbUri } = require('../config/enviroment')
 
-//require('dotenv').config()
 
 const advancedOptions = {
     useNewUrlParser: true,
