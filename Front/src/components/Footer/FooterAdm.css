@@ -1,3 +1,12 @@
 .bg-footer {
     background-color: var( --color-dark-nav-footer)
 }
+
+@media screen and (max-width: 768px) {
+    .bg-footer {
+        height: 6rem;
+        padding-left: 1rem;
+        padding-right: 0rem;
+        align-items: center;
+    }
+}
