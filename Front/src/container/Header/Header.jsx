@@ -12,7 +12,6 @@ import "./Header.css";
 
 const Header = () => {
   const [noteData, setNoteData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const isAdmin = localStorage.getItem('admin')
   const { setShouldRenderNavBar } = useNavBarContext();
@@ -34,15 +33,15 @@ const Header = () => {
         setNoteData(note);
       })
       .catch((err) => console.log(err))
-      .finally(() => setLoading(false))
   }, []);
 
   useEffect(() => {
-    renderNavBar()
+
     loadNotes()
 
   }, [loadNotes, setShouldRenderNavBar])
 
+  renderNavBar()
 
   return (
     <div>

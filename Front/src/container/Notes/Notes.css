@@ -13,9 +13,10 @@
 }
 
 .app__notes-read {
-    background-color: var(--color-dark-nav-footer);
+    background-color: var(--color-gray);
     border: 1.5px solid var(--color-dark-border);
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 .app__notes-read h1 {
@@ -43,7 +44,7 @@
 }
 
 .app__notes-write {
-    background-color: var(--color-dark-nav-footer);
+    background-color: var(--color-gray);
     border: 1.5px solid var(--color-dark-border);
     margin-top: 25px;
     display: flex;
@@ -75,7 +76,7 @@
 }
 
 .app__notes-delete {
-    background-color: var(--color-dark-nav-footer);
+    background-color: var(--color-gray);
     border: 1.5px solid var(--color-dark-border);
     margin-top: 25px;
     display: flex;

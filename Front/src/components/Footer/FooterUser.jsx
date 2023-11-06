@@ -5,7 +5,6 @@ import './FooterUser.css'
 
 const NavBar = () => {
 
-
     const deleteNotes = async () => {
         try {
             await axios.delete("http://localhost:8080/notesresolved", {
