@@ -5,6 +5,8 @@ import { useNavBarContext } from '../../context/NavBarContext';
 import { confirmAlert } from "react-confirm-alert";
 import axios from 'axios';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const LoginForm = () => {
   const navigate = useNavigate();
   const { setShouldRenderNavBar } = useNavBarContext();
@@ -50,7 +52,7 @@ const LoginForm = () => {
 
     const data = JSON.stringify(formData);
 
-    axios.post("http://localhost:8080/login", data, {
+    axios.post(`${apiUrl}/login`, data, {
       headers: {
         'Content-Type': 'application/json'
       }

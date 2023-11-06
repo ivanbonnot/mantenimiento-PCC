@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { confirmAlert } from "react-confirm-alert";
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const ChangeUserPassword = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -41,7 +43,7 @@ const ChangeUserPassword = () => {
 
     if (formData.newPassword === formData.verificationPassword) {
       axios
-        .put("http://localhost:8080/changepassword", data, {
+        .put(`${apiUrl}/changepassword`, data, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem("token")}`

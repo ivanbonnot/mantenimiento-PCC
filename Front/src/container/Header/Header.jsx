@@ -9,6 +9,7 @@ import FooterUser from '../../components/Footer/FooterUser'
 
 import "./Header.css";
 
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Header = () => {
   const [noteData, setNoteData] = useState([]);
@@ -23,7 +24,7 @@ const Header = () => {
 
   const loadNotes = useCallback(() => {
     axios
-      .get("http://localhost:8080/notes", {
+      .get(`${apiUrl}/notes`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -46,7 +47,6 @@ const Header = () => {
   return (
     <div>
       <div className="app__header-wrapper app__bg ">
-
         <div className="app__header-et">
           <h2>ET :</h2>
           {et.map(({ title, id }) => (

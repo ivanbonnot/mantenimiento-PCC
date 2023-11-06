@@ -8,6 +8,8 @@ import "react-confirm-alert/src/react-confirm-alert.css"; // Importa los estilos
 import "./Notes.css";
 import Spinner from '../../components/Spinner/Spinner';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const Notes = () => {
   const { id } = useParams();
   const [noteData, setNoteData] = useState([]);
@@ -20,7 +22,7 @@ const Notes = () => {
 
   const loadNotes = useCallback(() => {
     axios
-      .get("http://localhost:8080/notes", {
+      .get(`${apiUrl}/notes`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -36,7 +38,7 @@ const Notes = () => {
 
   const loadResolvedNotes = useCallback(() => {
     axios
-      .get("http://localhost:8080/notesresolved", {
+      .get(`${apiUrl}/notesresolved`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -79,7 +81,7 @@ const Notes = () => {
     };
 
     axios
-      .post("http://localhost:8080/notes", newNote, {
+      .post(`${apiUrl}/notes`, newNote, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -108,19 +110,19 @@ const Notes = () => {
           label: "Sí",
           onClick: async () => {
             try {
-              const getNoteById = await axios.get(`http://localhost:8080/notes/${idDelete}`, {
+              const getNoteById = await axios.get(`${apiUrl}/notes/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
               })
 
-              await axios.post(`http://localhost:8080/notesresolved/`, getNoteById.data, {
+              await axios.post(`${apiUrl}/notesresolved/`, getNoteById.data, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
               })
 
-              await axios.delete(`http://localhost:8080/notes/${idDelete}`, {
+              await axios.delete(`${apiUrl}/notes/${idDelete}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import axios from 'axios'
 import './FooterUser.css'
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const NavBar = () => {
 
     const deleteNotes = async () => {
         try {
-            await axios.delete("http://localhost:8080/notesresolved", {
+            await axios.delete(`${apiUrl}/notesresolved`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }

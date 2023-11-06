@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { confirmAlert } from "react-confirm-alert";
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const RegisterForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -26,7 +28,7 @@ const RegisterForm = () => {
     const data = JSON.stringify(formData);
 
     axios
-      .post("http://localhost:8080/admin/register", data, {
+      .post(`${apiUrl}/admin/register`, data, {
         headers: {
           'Content-Type': 'application/json'
         }

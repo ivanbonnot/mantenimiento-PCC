@@ -2,15 +2,15 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const AuthGuard = ({ children }) => {
   const isAuthenticated = localStorage.getItem('token');
-  //console.log(isAuthenticated)
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/verify", {
+      .get(`${apiUrl}/verify`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
