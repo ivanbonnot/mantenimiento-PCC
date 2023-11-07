@@ -17,4 +17,5 @@
 //___SERVIDOR NGINX___//
 
   nodemon BackEnd/server.js -m FORK -p 8081
+  nodemon server.js -m FORK -p 8081
   nodemon BackEnd/server.js -m CLUSTER -p 8082 -a 1 ### crea un cluster en los puertos 8082 al 8085
