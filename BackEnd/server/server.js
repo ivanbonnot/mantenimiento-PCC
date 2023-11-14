@@ -53,10 +53,10 @@ const baseProcces = () => {
     app.use(morgan('dev'))
     app.use(express.urlencoded({ extended: true }))
     app.use(express.json())
+
     // Habilita CORS para todas las rutas y orígenes (en desarrollo puedes ajustarlo según tus necesidades)
     app.use(cors());
-    //app.use(express.static(staticFiles))
-    //app.use(express.static('./public'))
+
 
     app.use(expressSession({
         store: mongoStore.create({
@@ -79,18 +79,18 @@ const baseProcces = () => {
     app.use((req, res, next) => {
         res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.header('Access-Control-Allow-Origin', 'https://anotador.ivanbodeveloper.com/');
+        res.header('Access-Control-Allow-Origin', 'http://anotador.ivanbodeveloper.com/');
         // Puedes configurar otros encabezados CORS según sea necesario
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
         next();
     });
 
-    const PORT = 443
+    const PORT = 8080
     const server = httpServer.listen(PORT, () => {
         connectToDb("mongo")
         //logger.info(`Servidor http escuchando en el puerto ${server.address().port}`)
     })
     server.on('error', error => logger.error(`Error en servidor ${error}`))
-
 
     //Routes
     app.use("/", infoRouter)
