@@ -54,7 +54,7 @@ const LoginForm = () => {
 
     axios.post(`${apiUrl}/login`, data, {
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       }
     })
 
