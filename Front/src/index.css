@@ -65,3 +65,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@media screen and (max-width: 450px) {
+  .react-confirm-alert-body {
+    width: 350px;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .react-confirm-alert-body {
+    width: 275px;
+  }
+}
