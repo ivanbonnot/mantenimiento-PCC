@@ -11,3 +11,11 @@
         align-items: center;
     }
 }
+
+
+@media screen and (max-width: 450px) {
+    .bg-footer {
+        height: 10rem;
+
+    }
+}

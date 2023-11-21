@@ -145,7 +145,7 @@
 
 @media screen and (max-width: 410px) {
   .app__header-et button, .app__header-set button {
-    width: 90vw;
+    width: 90%;
   }
 }
 
