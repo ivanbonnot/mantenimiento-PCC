@@ -39,8 +39,6 @@ const RegisterForm = () => {
         if (res.status === 200) {
           alert(`Usuario añadido con éxito: ${user.username}, ${user.password}`, '¿Agregar otro usuario?')
           setFormData({
-            admusername: '',
-            admpassword: '',
             username: '',
             password: '',
           });
