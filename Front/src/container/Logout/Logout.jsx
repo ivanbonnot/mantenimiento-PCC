@@ -22,6 +22,7 @@ const Logout = () => {
 
   useEffect((() =>
     renderNavBar()
+    
   ))
 
 

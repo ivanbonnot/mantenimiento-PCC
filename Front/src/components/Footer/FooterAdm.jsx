@@ -5,7 +5,7 @@ import './FooterAdm.css'
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
-const NavBar = () => {
+const Footer = () => {
 
     const deleteNotes = async () => {
         try {
@@ -60,4 +60,4 @@ const NavBar = () => {
     )
 };
 
-export default NavBar;
+export default Footer;

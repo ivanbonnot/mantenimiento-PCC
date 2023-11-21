@@ -56,7 +56,7 @@ const NavBar = () => {
     ];
 
 
-    return shouldRenderNavBar && isAuthorized ? (
+    return shouldRenderNavBar || isAuthorized ? (
         <div className="flex justify-between items-center w-full h-20 z-50 px-4 text-white bg-navbar fixed">
             <div className="text-4xl font-signature ml-2">
                 <Link to={'/'} >
@@ -109,9 +109,7 @@ const NavBar = () => {
     ) : (
         <div className="flex justify-between items-center w-full h-20 z-50 px-4 text-white bg-navbar fixed">
             <div className="text-4xl font-signature ml-2">
-                <Link to={'/login'} >
                     <img class="" src="img/1111-5.png" alt="" width="125" height="125" />
-                </Link>
             </div>
 
             <ul className=" hidden md:flex">
