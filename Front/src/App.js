@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import 'normalize.css'
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./container/Header/Header";
 import Notes from "./container/Notes/Notes";
