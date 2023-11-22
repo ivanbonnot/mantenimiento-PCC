@@ -75,7 +75,7 @@ const Notes = () => {
       idnota: uuid(),
       title,
       note,
-      fecha: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      fecha: moment().add(3, 'hours').format("MMMM Do YYYY, h:mm:ss a"),
       creador: localStorage.getItem("user"),
       estacion: id,
     };
