@@ -1,14 +1,22 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import { useNavBarContext } from '../../context/NavBarContext';
+
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const AuthGuard = ({ children }) => {
+  const { setShouldRenderNavBar } = useNavBarContext();
+  const renderNavBar = () => {
+    setShouldRenderNavBar(false)
+  }
+
   const isAuthenticated = localStorage.getItem('token');
   const navigate = useNavigate();
 
   useEffect(() => {
+    renderNavBar()
     axios
       .get(`${apiUrl}/verify`, {
         headers: {
