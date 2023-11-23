@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
-import { useNavBarContext } from "../../context/NavBarContext";
 import FooterAdm from '../../components/Footer/FooterAdm'
 import FooterUser from '../../components/Footer/FooterUser'
 
@@ -15,12 +14,6 @@ const Header = () => {
   const [noteData, setNoteData] = useState([]);
 
   const isAdmin = localStorage.getItem('admin')
-  const { setShouldRenderNavBar } = useNavBarContext();
-
-  const renderNavBar = () => {
-    setShouldRenderNavBar(true)
-  }
-
 
   const loadNotes = useCallback(() => {
     axios
@@ -40,9 +33,7 @@ const Header = () => {
 
     loadNotes()
 
-  }, [loadNotes, setShouldRenderNavBar])
-
-  renderNavBar()
+  }, [loadNotes])
 
   return (
     <div>
@@ -92,7 +83,7 @@ const Header = () => {
         </div>
 
       </div >
-      {isAdmin ? <FooterAdm /> : < FooterUser />}
+      {isAdmin === true ? <FooterAdm /> : < FooterUser />}
     </div >
   )
 };

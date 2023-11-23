@@ -3,6 +3,7 @@ import './Register.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { confirmAlert } from "react-confirm-alert";
+import NavBar from '../../components/NavBar/NavBar';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -79,6 +80,10 @@ const RegisterForm = () => {
   };
 
   return (
+    <div>
+
+    <NavBar />
+
     <div className="app__bg app__register-container">
       <div className='app__register-wrapper'>
         <h2>Registrar un usuario</h2>
@@ -134,6 +139,7 @@ const RegisterForm = () => {
           <button className='custom__button' disabled={formData.username.length < 4 && formData.password.length < 4} type="submit">Agregar usuario</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

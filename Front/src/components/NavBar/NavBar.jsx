@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useNavBarContext } from "../../context/NavBarContext";
 import axios from "axios";
 import "./NavBar.css";
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const NavBar = () => {
-    const { shouldRenderNavBar } = useNavBarContext();
+
     const [nav, setNav] = useState(false);
     const [isAuthorized, setIsAuthorized] = useState(localStorage.getItem('token'))
 
@@ -56,7 +55,7 @@ const NavBar = () => {
     ];
 
 
-    return shouldRenderNavBar || isAuthorized ? (
+    return isAuthorized ? (
         <div className="flex justify-between items-center w-full h-20 z-50 px-4 text-white bg-navbar fixed">
             <div className="text-4xl font-signature ml-2">
                 <Link to={'/'} >

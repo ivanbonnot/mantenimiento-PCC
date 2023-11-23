@@ -3,6 +3,7 @@ import './ChangePassword.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { confirmAlert } from "react-confirm-alert";
+import NavBar from '../../components/NavBar/NavBar';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -81,6 +82,10 @@ const ChangeUserPassword = () => {
   };
 
   return (
+    <div>
+      
+    < NavBar />
+
     <div className="app__bg app__register-container">
       <div className='app__register-wrapper'>
         <h2>Cambiar contraseña</h2>
@@ -139,6 +144,7 @@ const ChangeUserPassword = () => {
           <button className='custom__button' disabled={formData.password.length < 4 && formData.verificationPassword.length < 4} >Cambiar contraseña</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

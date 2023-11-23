@@ -1,24 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Login.css'
 import { useNavigate } from 'react-router-dom';
-import { useNavBarContext } from '../../context/NavBarContext';
 import { confirmAlert } from "react-confirm-alert";
 import axios from 'axios';
+import NavBarAlt from '../../components/NavBar/NavBarAlt';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const { setShouldRenderNavBar } = useNavBarContext();
-
-
-  const renderNavBar = () => {
-    setShouldRenderNavBar(false)
-  }
-
-  useEffect((() =>
-    renderNavBar()
-  ))
 
   const [formData, setFormData] = useState({
     username: '',
@@ -74,6 +64,10 @@ const LoginForm = () => {
   };
 
   return (
+    <div>
+
+      < NavBarAlt />
+
     <div className="app__bg app__login-container">
       <div className='app__login-wrapper'>
         <h2>Iniciar sesión</h2>
@@ -105,6 +99,7 @@ const LoginForm = () => {
           <button className='custom__button' type="submit">Iniciar sesión</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

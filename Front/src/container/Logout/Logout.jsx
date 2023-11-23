@@ -1,16 +1,9 @@
 import React from 'react';
 import './Logout.css'
 import { useNavigate } from "react-router-dom";
-import { useNavBarContext } from '../../context/NavBarContext';
-import { useEffect } from 'react';
 
 const Logout = () => {
   const navigate = useNavigate();
-  const { setShouldRenderNavBar } = useNavBarContext();
-
-  const renderNavBar = () => {
-    setShouldRenderNavBar(false)
-  }
 
   localStorage.removeItem("token");
   localStorage.removeItem('user');
@@ -19,11 +12,6 @@ const Logout = () => {
   setTimeout(() => {
     navigate("/login");
   }, 3000);
-
-  useEffect((() =>
-    renderNavBar()
-    
-  ))
 
 
   return (
