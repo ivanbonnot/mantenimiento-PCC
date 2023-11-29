@@ -9,6 +9,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
     username: '',
@@ -26,6 +27,7 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const alert = (title, message, label, onClick) => {
       confirmAlert({
@@ -60,7 +62,12 @@ const LoginForm = () => {
         if (error.response.status === 401 || 404) {
           alert(`Usuario o contraseña incorrecto`, '¿Volver a Login?', 'Ok', () => { })
         }
-      });
+
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      })
+
   };
 
   return (
@@ -68,38 +75,40 @@ const LoginForm = () => {
 
       < NavBarAlt />
 
-    <div className="app__bg app__login-container">
-      <div className='app__login-wrapper'>
-        <h2>Iniciar sesión</h2>
-        <form onSubmit={handleSubmit} className='app__login-form'>
-          <div className="form-group app__login-email">
-            <label htmlFor="username">Correo Electrónico</label>
-            <input
-              type="email"
-              id="email"
-              name="username"
-              placeholder="Tu correo electrónico"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group app__login-password">
-            <label htmlFor="password">Contraseña</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Tu contraseña"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button className='custom__button' type="submit">Iniciar sesión</button>
-        </form>
+      <div className="app__bg app__login-container">
+        <div className='app__login-wrapper'>
+          <h2>Iniciar sesión</h2>
+          <form onSubmit={handleSubmit} className='app__login-form'>
+            <div className="form-group app__login-email">
+              <label htmlFor="username">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="username"
+                placeholder="Tu correo electrónico"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group app__login-password">
+              <label htmlFor="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Tu contraseña"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button className='custom__button' type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Iniciando sesión...' : 'Iniciar sesión'}
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

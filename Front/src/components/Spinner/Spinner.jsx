@@ -5,6 +5,7 @@ const override: CSSProperties = {
   display: "block",
   margin: "2",
   borderColor: "red",
+  background: "#282a3a"
 };
 
 function Spinner() {

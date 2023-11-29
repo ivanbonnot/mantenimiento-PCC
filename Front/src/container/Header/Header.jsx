@@ -5,6 +5,7 @@ import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
 import FooterAdm from '../../components/Footer/FooterAdm'
 import FooterUser from '../../components/Footer/FooterUser'
+import { ClipLoader } from "react-spinners"
 
 import "./Header.css";
 
@@ -12,10 +13,12 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 const Header = () => {
   const [noteData, setNoteData] = useState([]);
+  const [isLoadingNotes, setIsLoadingNotes] = useState(false)
 
   const isAdmin = localStorage.getItem('admin')
 
   const loadNotes = useCallback(() => {
+    setIsLoadingNotes(true)
     axios
       .get(`${apiUrl}/notes`, {
         headers: {
@@ -27,6 +30,7 @@ const Header = () => {
         setNoteData(note);
       })
       .catch((err) => console.log(err))
+      .finally(() => setIsLoadingNotes(false))
   }, []);
 
   useEffect(() => {
@@ -46,9 +50,15 @@ const Header = () => {
                 <button className="et">
                   <p>
                     {title}
-                    <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
-                      ({noteData.filter((item) => item.estacion === id).length})
-                    </span>
+                    {isLoadingNotes ?
+                      <span style={{ marginTop: '4px', marginLeft: '4px' }}>
+                        <ClipLoader size={25} color="#fff" />
+                      </span>
+                      :
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
+                        ({noteData.filter((item) => item.estacion === id).length})
+                      </span>
+                    }
 
                   </p>
                   <span className="arrow">
