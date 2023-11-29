@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { et, set } from "../../constants/stations";
 import { AiFillCaretRight } from "react-icons/ai";
-import FooterAdm from '../../components/Footer/FooterAdm'
 import FooterUser from '../../components/Footer/FooterUser'
 import { ClipLoader } from "react-spinners"
 
@@ -15,7 +14,6 @@ const Header = () => {
   const [noteData, setNoteData] = useState([]);
   const [isLoadingNotes, setIsLoadingNotes] = useState(false)
 
-  const isAdmin = localStorage.getItem('admin')
 
   const loadNotes = useCallback(() => {
     setIsLoadingNotes(true)
@@ -93,7 +91,7 @@ const Header = () => {
         </div>
 
       </div >
-      {isAdmin === true ? <FooterAdm /> : < FooterUser />}
+       < FooterUser />
     </div >
   )
 };

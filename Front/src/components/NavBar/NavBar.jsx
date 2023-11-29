@@ -31,22 +31,22 @@ const NavBar = () => {
 
 
     const links = [
-        {
-            id: 1,
-            link: "Estaciones",
-        },
-        {
-            id: 2,
-            link: "SubEstaciones",
-        },
-        {
-            id: 3,
-            link: "Comunicaciones",
-        },
-        {
-            id: 4,
-            link: "Cambios",
-        },
+        // {
+        //     id: 1,
+        //     link: "Estaciones",
+        // },
+        // {
+        //     id: 2,
+        //     link: "SubEstaciones",
+        // },
+        // {
+        //     id: 3,
+        //     link: "Comunicaciones",
+        // },
+        // {
+        //     id: 4,
+        //     link: "Cambios",
+        // },
         {
             id: 5,
             link: "logout",
