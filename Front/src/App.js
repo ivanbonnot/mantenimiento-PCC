@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import 'normalize.css'
 import NavBar from "./components/NavBar/NavBar";
@@ -24,6 +23,7 @@ function App() {
           <Route path="/changePassword" element={<ChangeUserPassword />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/warning" element={<Warning />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     </BrowserRouter>
   );
