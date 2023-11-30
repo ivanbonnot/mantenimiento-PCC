@@ -26,9 +26,10 @@ const ChangeUserPassword = () => {
   };
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
     const data = JSON.stringify(formData);
-
+    console.log(data)
     const alert = (title, message, label, onClick) => {
       confirmAlert({
         title: title,
@@ -51,6 +52,7 @@ const ChangeUserPassword = () => {
           }
         })
         .then((res) => {
+          console.log('sale')
           if (res.status === 200) {
             alert(`Contraseña modificada con éxito`, 'Redirigiendo a home', 'Ok', () => { navigate('/') })
             setFormData({
@@ -141,10 +143,10 @@ const ChangeUserPassword = () => {
             />
           </div>
 
-          <button className='custom__button' disabled={formData.password.length < 4 && formData.verificationPassword.length < 4} >Cambiar contraseña</button>
+          <button className='custom__button' disabled={formData.password.length <= 3 && formData.verificationPassword.length <= 3}>Cambiar contraseña</button>
         </form>
       </div>
-    </div>
+     </div>
     </div>
   );
 };

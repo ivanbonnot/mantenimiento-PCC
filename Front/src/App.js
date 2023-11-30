@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<AuthGuard children={Header}> <NavBar /> <Header /> </AuthGuard>} />
           <Route path="/notes/:id" element={<AuthGuard children={Notes}><NavBar /> <Notes /> </AuthGuard>} />
           <Route path="/register" element={ <Register />} />
-          <Route path="/changePassword" element={<ChangeUserPassword />} />
+          <Route path="/changepassword" element={<ChangeUserPassword />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/warning" element={<Warning />} />
           <Route path="*" element={<Navigate to="/" />} />

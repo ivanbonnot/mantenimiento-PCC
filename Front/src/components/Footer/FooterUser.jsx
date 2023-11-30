@@ -42,7 +42,7 @@ const Footer = () => {
     const links = [
         {
             id: 1,
-            link: "changePassword",
+            link: "changepassword",
             name: "Cambiar contraseña"
         },
         {
@@ -62,7 +62,7 @@ const Footer = () => {
         },
         {
             id: 2,
-            link: "changePassword",
+            link: "changepassword",
             name: "Cambiar contraseña"
         },
         {
