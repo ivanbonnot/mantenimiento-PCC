@@ -29,7 +29,6 @@ const ChangeUserPassword = () => {
 
     e.preventDefault();
     const data = JSON.stringify(formData);
-    console.log(data)
     const alert = (title, message, label, onClick) => {
       confirmAlert({
         title: title,
