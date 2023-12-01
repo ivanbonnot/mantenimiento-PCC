@@ -3,6 +3,7 @@ import "./App.css";
 import 'normalize.css'
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./container/Header/Header";
+import AllPendings from "./container/AllPendings/AllPendings";
 import Notes from "./container/Notes/Notes";
 import Login from "./container/Login/Login";
 import Register from "./container/Register/Register"
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<AuthGuard children={Header}> <NavBar /> <Header /> </AuthGuard>} />
           <Route path="/notes/:id" element={<AuthGuard children={Notes}><NavBar /> <Notes /> </AuthGuard>} />
+          <Route path="/allnotes" element={<AuthGuard children={Header}> <NavBar /> <AllPendings /> </AuthGuard>} />
           <Route path="/register" element={ <Register />} />
           <Route path="/changepassword" element={<ChangeUserPassword />} />
           <Route path="/logout" element={<Logout />} />
