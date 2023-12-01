@@ -89,7 +89,6 @@ const Header = () => {
             </div>
           ))}
         </div>
-
       </div >
        < FooterUser />
     </div >

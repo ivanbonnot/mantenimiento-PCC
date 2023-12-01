@@ -43,13 +43,15 @@ const NavBar = () => {
         //     id: 3,
         //     link: "Comunicaciones",
         // },
-        // {
-        //     id: 4,
-        //     link: "Cambios",
-        // },
+         {
+             id: 4,
+             link: "allnotes",
+             name: "Pendientes"
+         },
         {
             id: 5,
             link: "logout",
+            name: "Logout",
             onClick: handleLogout
         },
     ];
@@ -64,13 +66,13 @@ const NavBar = () => {
             </div>
 
             <ul className=" hidden md:flex">
-                {links.map(({ id, link, onClick }) => (
+                {links.map(({ id, link, name, onClick }) => (
                     <li
                         key={id}
                         className="px-4 cursor-pointer capitalize font-medium links-color"
                     >
                         <Link to={link} onClick={onClick}>
-                            {link}
+                            {name}
                         </Link>
                     </li>
                 ))}
