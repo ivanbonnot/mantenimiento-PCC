@@ -139,7 +139,7 @@ const Notes = () => {
     });
   };
 
-  const handleShareNote = async ( title, note) => {
+  const handleShareNote = async (title, note) => {
     try {
       if (navigator.share) {
         await navigator.share({
@@ -220,7 +220,7 @@ const Notes = () => {
           />
           <button
             className="custom__button"
-            disabled={title.length < 4 && note.length < 4}
+            disabled={!(title.length >= 4 && note.length >= 4)}
             onClick={() => handleAddNote()}
           >
             Agregar nota
