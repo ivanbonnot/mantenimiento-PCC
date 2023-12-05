@@ -42,7 +42,6 @@ const baseProcces = () => {
     //Settings
     app.engine('hbs', engine());
     app.set('view engine', 'hbs');
-    //app.set('views', 'views');
     app.set('port', process.env.PORT || 8080)
     app.set('json spaces', 2)
 
@@ -94,7 +93,7 @@ const baseProcces = () => {
         next();
     });
 
-
+   
     const PORT = 8080
     const server = httpServer.listen(PORT, () => {
         connectToDb("mongo")

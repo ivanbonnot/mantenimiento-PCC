@@ -2,8 +2,9 @@ const { Router } = require('express')
 const flash = require('connect-flash');
 const passport = require('passport');
 const logger = require("../../log/log4js")
+const bcrypt = require('bcrypt');
 
-const { newUserController, getUserController, updateUserController } = require('../../controllers/usersControler')
+const { newUserController, getUserController, updateUserController, checkUserController } = require('../../controllers/usersControler')
 require('../../middleware/auth');
 const { generateJwtToken, destroyJWT, isDeletedJWT } = require('../../middleware/auth')
 const { isAdmin } = require('../../middleware/isAdmin')
@@ -31,22 +32,26 @@ authWebRouter.post('/login', passport.authenticate('login', { failureRedirect: '
     }
 });
 
-authWebRouter.put('/changepassword', validationResult, passport.authenticate('jwt', { session: false }), async (req, res) => {
+authWebRouter.put('/changepassword',  passport.authenticate('jwt', { session: false }), async (req, res) => {
     try {
-        const errors = validationResult(req);
+        const { username, password, newPassword } = req.body;
+        const userCheckResult = await checkUserController(username, password);
+        
+        if (userCheckResult.result) {
+           
+            const saltRounds = 10;
+            const newHashedPassword = await bcrypt.hash(newPassword, saltRounds);
 
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
+            const userData = await getUserController(username);
+            const id = userData._id; 
+
+            const userUpdate = { password: newHashedPassword };
+            const updatedUser = await updateUserController(id, userUpdate);
+
+            res.status(200).json({ msg: 'Password changed successfully', user: updatedUser });
+        } else {
+            res.status(401).json({ msg: 'Incorrect username or password', result: false });
         }
-
-        const { username, password } = req.body;
-        const userUpdate = { password };
-
-        let userData = await getUserController(username)
-        const id = userData.id
-
-        let user = await updateUserController(id, userUpdate);
-        res.status(200).json(user)
 
     } catch (error) {
         handleServerError(res, error);
