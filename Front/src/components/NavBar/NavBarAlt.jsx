@@ -18,7 +18,7 @@ const NavBarAlt = () => {
                 <li
                     className="px-4 cursor-pointer capitalize font-medium links-color hover:scale-105 duration-200"
                 >
-                    <Link to={'login'}>
+                    <Link to={'/login'}>
                         {'login'}
                     </Link>
                 </li>
@@ -40,7 +40,7 @@ const NavBarAlt = () => {
                     >
                         <Link
                             onClick={() => setNav(!nav)}
-                            to={'login'}
+                            to={'/login'}
                         >
                             {'login'}
                         </Link>

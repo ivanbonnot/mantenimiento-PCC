@@ -16,17 +16,17 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<AuthGuard children={Header}> <NavBar /> <Header /> </AuthGuard>} />
-          <Route path="/notes/:id" element={<AuthGuard children={Notes}><NavBar /> <Notes /> </AuthGuard>} />
-          <Route path="/allnotes" element={<AuthGuard children={Header}> <NavBar /> <AllPendings /> </AuthGuard>} />
-          <Route path="/register" element={ <Register />} />
-          <Route path="/changepassword" element={<ChangeUserPassword />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/warning" element={<Warning />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+      <Routes>
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/" element={<AuthGuard children={Header}> <NavBar /> <Header /> </AuthGuard>} />
+        <Route exact path="/notes/:id" element={<AuthGuard children={Notes}><NavBar /> <Notes /> </AuthGuard>} />
+        <Route exact path="/allnotes" element={<AuthGuard children={Header}> <NavBar /> <AllPendings /> </AuthGuard>} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/changepassword" element={<ChangeUserPassword />} />
+        <Route exact path="/logout" element={<Logout />} />
+        <Route exact path="/warning" element={<Warning />} />
+        <Route exact path="*" element={<Navigate to="/" />} />
+      </Routes>
     </BrowserRouter>
   );
 }
