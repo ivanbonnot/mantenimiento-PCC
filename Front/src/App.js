@@ -11,6 +11,7 @@ import Logout from "./container/Logout/Logout";
 import AuthGuard from './components/Authentication/Authentication'
 import Warning from "./components/Warning/Warning";
 import ChangeUserPassword from "./container/ChangePassword/ChangePassword";
+import NoteLoader from "./components/NoteLoader/NoteLoader";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/noteloader" element={<NoteLoader />} />
         <Route exact path="/" element={<AuthGuard children={Header}> <NavBar /> <Header /> </AuthGuard>} />
         <Route exact path="/notes/:id" element={<AuthGuard children={Notes}><NavBar /> <Notes /> </AuthGuard>} />
         <Route exact path="/allnotes" element={<AuthGuard children={Header}> <NavBar /> <AllPendings /> </AuthGuard>} />

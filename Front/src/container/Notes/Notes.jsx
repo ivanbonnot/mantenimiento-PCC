@@ -7,6 +7,7 @@ import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css"; // Importa los estilos
 import "./Notes.css";
 import Spinner from '../../components/Spinner/Spinner';
+import NoteLoader from "../../components/NoteLoader/NoteLoader";
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -167,7 +168,7 @@ const Notes = () => {
             <h1 className="p__cormorant">Notas {id}</h1>
           ) : (
             <div className='spinner'>
-              <Spinner />
+              <NoteLoader />
             </div>
           )}
           {noteData.map(({ _id, idnota, title, note, fecha, creador }) => (

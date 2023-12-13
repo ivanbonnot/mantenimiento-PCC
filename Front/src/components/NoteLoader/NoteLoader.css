@@ -1,0 +1,107 @@
+.app__notes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.app__notes-wrapper {
+    margin: 6rem 0 3rem 0;
+    min-height: 80vh;
+    min-width: 90vw;
+}
+
+.app__notes-read {
+    background-color: var(--color-gray);
+    border: 1.5px solid var(--color-dark-border);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.app__notes-read h1 {
+    text-transform: capitalize;
+    padding: 1rem 1rem;
+    font-size: 1.75rem;
+}
+
+.app__notes-loading {
+    padding: 0.5rem 0 0.5rem 1rem;
+    text-align: left;
+    border: 3px solid var(--color-dark-nav-footer);
+    border: 1.5px solid var(--color-dark-border);
+    transition: all 3s ease;
+    
+}
+
+.app__notes-loading p:first-child {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    font-size: 1.25rem;
+    width: 30%;
+    height: 35px;
+}
+.app__notes-loading p:nth-child(2) {
+    width: 40%;
+}
+.app__notes-loading p:nth-child(3) {
+    width: 50%;
+    height: 120px;
+}
+.app__notes-loading p:nth-child(4) {
+    width: 30%;
+    height: 20px;
+}
+.app__notes-loading p:nth-child(5) {
+    width: 25%;
+    height: 20px;
+}
+
+.delete__button_loading {
+    width: 8%;
+    height: 25px;
+}
+
+
+.loading-animation {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #c0c0c085   8%, #c0c0c0 30%, #c0c0c085 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1s shine linear infinite;
+    color: #006fab;
+    margin-top: 5px;
+}
+
+@keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    .app__notes-write {
+        align-items: center;
+    }
+
+    .app__notes-write_title {
+        width: 90%;
+        margin: 1.5rem 0 0.5rem 0rem;
+    }
+
+    .app__notes-write_note {
+        width: 90%;
+        margin: 0.5rem 0 0rem 0rem;
+    }
+
+    .app__notes-write h2 {
+        margin: 2rem 0 0rem 0rem;
+        font-size: 1.75rem;
+    }
+
+    .app__notes-write button {
+        margin: 1.5rem 0 1.5rem 0rem;
+    }
+}
