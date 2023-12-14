@@ -1,14 +1,13 @@
 import React from 'react'
 import './NoteLoader.css'
-import DeleteNoteLoader from './DeleteNoteLoader'
 
 function NoteLoader() {
   return (
-    <div className="app__notes-read loading">
+    <>
+    <h1 className="p__cormorant">Notas</h1>
       <div className="app__notes-loading loading">
         <p className="title p__opensans loading-animation"></p>
         <p className="loading p__opensans loading-animation"></p>
-        <p className="loading p__opensans loading-animation"> </p>
         <p className="author p__opensans loading-animation"> </p>
         <p className="date p__opensans loading-animation"></p>
         <div>
@@ -19,10 +18,7 @@ function NoteLoader() {
          </button>
         </div>
       </div>
-      <div>
-        < DeleteNoteLoader />
-      </div>
-    </div>
+      </>
   )
 }
 

@@ -6,8 +6,8 @@ import moment from "moment";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css"; // Importa los estilos
 import "./Notes.css";
-import Spinner from '../../components/Spinner/Spinner';
 import NoteLoader from "../../components/NoteLoader/NoteLoader";
+import NoteDeleteLoader from "../../components/NoteLoader/NoteDeleteLoader";
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -167,7 +167,7 @@ const Notes = () => {
           {noteData && !loading ? (
             <h1 className="p__cormorant">Notas {id}</h1>
           ) : (
-            <div className='spinner'>
+            <div>
               <NoteLoader />
             </div>
           )}
@@ -233,8 +233,8 @@ const Notes = () => {
           {noteResolvedData && !loading ? (
             <h1 className="p__cormorant">Notas Eliminadas {id}</h1>
           ) : (
-            <div className='spinner'>
-              <Spinner />
+            <div>
+              <NoteDeleteLoader />
             </div>
           )}
           {windowWidth > 768 ? (

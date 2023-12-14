@@ -57,7 +57,6 @@ const Header = () => {
                         ({noteData.filter((item) => item.estacion === id).length})
                       </span>
                     }
-
                   </p>
                   <span className="arrow">
                     <AiFillCaretRight size={25} style={{ marginTop: '4px' }} />
@@ -74,18 +73,25 @@ const Header = () => {
 
           {set.map(({ title, id }) => (
             <div key={id}>
+              <Link to={`notes/${id}`}>
               <button className="set">
                 <p>
-                  <Link to={`notes/${id}`}> {title}
-                    <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
-                      ({noteData.filter((item) => item.estacion === id).length})
-                    </span>
-                  </Link>
+                {title}
+                    {isLoadingNotes ?
+                      <span style={{ marginTop: '4px', marginLeft: '4px' }}>
+                        <ClipLoader size={25} color="#fff" />
+                      </span>
+                      :
+                      <span style={{ color: noteData.filter((item) => item.estacion === id).length >= 1 ? "red" : "" }}>
+                        ({noteData.filter((item) => item.estacion === id).length})
+                      </span>
+                    }
                 </p>
                 <span className="arrow">
                   <AiFillCaretRight size={25} style={{ marginTop: '4px' }} />
                 </span>
               </button>
+              </Link>
             </div>
           ))}
         </div>
