@@ -79,6 +79,10 @@ export const set = [
     id: "set colonia roca",
   },
   {
+    title: "Charruas",
+    id: "set charruas",
+  },
+  {
     title: "El Puente",
     id: "set el puente",
   },
@@ -95,8 +99,8 @@ export const set = [
     id: "set humaitá",
   },
   {
-    title: "Ibicuicito",
-    id: "set ibicuicito",
+    title: "Ibicuycito",
+    id: "set ibicuycito",
   },
   {
     title: "Ibicuy",
